@@ -1,3 +1,24 @@
+/* Add this style to position the app icon, app name, and description */
+.app-info {
+    display: flex;
+    align-items: center;
+}
+
+.app-info img {
+    max-width: 40px; /* Adjust the size of the app icon */
+    margin-right: 10px; /* Adjust the spacing between the icon and text */
+}
+
+.app-text {
+    flex: 1;
+}
+
+.app-text h3 {
+    margin: 0; /* Remove default margin for h3 */
+    font-size: 24pt;
+}
+
+/* Other styles remain the same */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
@@ -59,38 +80,60 @@ a:hover {
 }
 
 section {
-    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     flex: 1;
     background-color: #f8f8f8;
     margin-bottom: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 80px; /* Adjusted to accommodate the fixed header */
+    margin-top: 80px;
+    align-content: center;
 }
 
 h2 {
     color: #333;
+    font-size: 42px;
 }
 
 .app {
     display: flex;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    background-color: white;
+    margin-bottom: 20px;
 }
 
+.spacer {
+    border-bottom: 2px solid #ddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 70%;
+}
 
+.app-info {
+    display: flex;
+    align-items: center;
+}
 
 .app-info img {
-    max-width: 40px; /* Adjust the size of the app icon */
-    margin-right: 10px; /* Adjust the spacing between the icon and title */
-    border-radius: 5px;
+    max-width: 15%; /* Adjust the size of the app icon */
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.app-text {
+    flex: 1;
 }
 
 .app-preview img {
-    max-width: 40%;
+    max-width: 60%;
     height: auto;
-    border-radius: 10px; /* Optional: Add border-radius for a rounded corner effect */
+    border-radius: 8px;
 }
 
-@media (max-width: 384px) {
+@media (max-width: 768px) {
     .app {
         flex-direction: column;
         text-align: center;
@@ -107,8 +150,6 @@ footer {
     color: #555;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
-    z-index: 1000;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
 }
 
