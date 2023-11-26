@@ -1,0 +1,117 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    color: #000;
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    background-color: #f8f8f8;
+    padding: 10px;
+    position: sticky;
+    top: 80px; /* Adjusted to accommodate the fixed header */
+    z-index: 100;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+section {
+    padding: 40px;
+    flex: 1;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Adjusted to accommodate the fixed header */
+}
+
+h2 {
+    color: #333;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.app-info img {
+    max-width: 40px; /* Adjust the size of the app icon */
+    margin-right: 10px; /* Adjust the spacing between the icon and title */
+    border-radius: 5px;
+}
+
+.app-preview img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add border-radius for a rounded corner effect */
+}
+
+@media (max-width: 384px) {
+    .app {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-info {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+    background-color: #f8f8f8;
+    color: #555;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color: #777;
+}
