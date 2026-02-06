@@ -106,6 +106,7 @@ body[data-theme="android"] .site-header {
     align-items: center;
     justify-content: space-between;
     padding: 18px 0;
+    gap: 16px;
 }
 
 .brand {
@@ -132,6 +133,12 @@ body[data-theme="android"] .site-header {
 
 .site-nav a:hover {
     color: var(--accent);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .hero {
@@ -495,6 +502,11 @@ h2 {
 @media (max-width: 720px) {
     .site-nav {
         display: none;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
 
     .contact {
