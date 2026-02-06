@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --bg: #f5f1ea;
+    --bg: radial-gradient(circle at 10% 20%, #f9f4ed 0%, #f5f1ea 50%, #efe7db 100%);
     --ink: #131313;
     --muted: #5d5d5d;
     --accent: #1a7f6e;
@@ -9,6 +10,53 @@
     --card: #ffffff;
     --glass: rgba(255, 255, 255, 0.55);
     --shadow: 0 20px 50px rgba(18, 18, 18, 0.15);
+    --ambient-1: rgba(255, 198, 120, 0.25);
+    --ambient-2: rgba(26, 127, 110, 0.2);
+    --font-sans: 'Space Grotesk', sans-serif;
+    --font-display: 'Playfair Display', serif;
+    --radius-lg: 24px;
+    --radius-md: 20px;
+    --radius-sm: 14px;
+    --radius-pill: 999px;
+    --border: rgba(0, 0, 0, 0.06);
+}
+
+body[data-theme="apple"] {
+    --bg: #f5f5f7;
+    --ink: #1d1d1f;
+    --muted: #6e6e73;
+    --accent: #0071e3;
+    --accent-dark: #0051a8;
+    --card: #ffffff;
+    --glass: rgba(255, 255, 255, 0.85);
+    --shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
+    --ambient-1: rgba(0, 113, 227, 0.08);
+    --ambient-2: rgba(0, 0, 0, 0.04);
+    --font-sans: -apple-system, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    --font-display: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    --radius-lg: 26px;
+    --radius-md: 20px;
+    --radius-sm: 12px;
+    --border: rgba(0, 0, 0, 0.08);
+}
+
+body[data-theme="android"] {
+    --bg: #f8f9fa;
+    --ink: #202124;
+    --muted: #5f6368;
+    --accent: #1a73e8;
+    --accent-dark: #185abc;
+    --card: #ffffff;
+    --glass: rgba(255, 255, 255, 0.9);
+    --shadow: 0 18px 40px rgba(32, 33, 36, 0.12);
+    --ambient-1: rgba(26, 115, 232, 0.1);
+    --ambient-2: rgba(52, 168, 83, 0.08);
+    --font-sans: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --radius-lg: 20px;
+    --radius-md: 16px;
+    --radius-sm: 10px;
+    --border: rgba(32, 33, 36, 0.12);
 }
 
 * {
@@ -17,17 +65,17 @@
 
 body {
     margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans);
     color: var(--ink);
-    background: radial-gradient(circle at 10% 20%, #f9f4ed 0%, #f5f1ea 50%, #efe7db 100%);
+    background: var(--bg);
     min-height: 100vh;
 }
 
 .ambient {
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at 80% 15%, rgba(255, 198, 120, 0.25), transparent 55%),
-        radial-gradient(circle at 15% 80%, rgba(26, 127, 110, 0.2), transparent 60%);
+    background: radial-gradient(circle at 80% 15%, var(--ambient-1), transparent 55%),
+        radial-gradient(circle at 15% 80%, var(--ambient-2), transparent 60%);
     pointer-events: none;
     z-index: 0;
 }
@@ -45,7 +93,12 @@ body {
     z-index: 10;
     backdrop-filter: blur(12px);
     background: rgba(245, 241, 234, 0.8);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid var(--border);
+}
+
+body[data-theme="apple"] .site-header,
+body[data-theme="android"] .site-header {
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .header-inner {
@@ -56,7 +109,7 @@ body {
 }
 
 .brand {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 20px;
     letter-spacing: 0.5px;
     text-decoration: none;
@@ -101,7 +154,7 @@ h1 {
     font-size: clamp(32px, 4.2vw, 56px);
     line-height: 1.05;
     margin: 0 0 20px;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
 }
 
 .lead {
@@ -119,7 +172,7 @@ h1 {
 
 .btn {
     padding: 12px 24px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 0.2px;
@@ -132,12 +185,12 @@ h1 {
 .btn.primary {
     background: var(--accent);
     color: white;
-    box-shadow: 0 12px 24px rgba(26, 127, 110, 0.25);
+    box-shadow: 0 12px 24px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 .btn.primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(26, 127, 110, 0.3);
+    box-shadow: 0 16px 30px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 .btn.ghost {
@@ -172,7 +225,7 @@ h1 {
 .glass-card {
     background: var(--glass);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 24px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
     overflow: hidden;
     max-width: 360px;
@@ -193,8 +246,8 @@ h1 {
 .pill {
     display: inline-block;
     padding: 4px 10px;
-    border-radius: 999px;
-    background: rgba(26, 127, 110, 0.15);
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
     color: var(--accent-dark);
     font-size: 12px;
     text-transform: uppercase;
@@ -214,7 +267,7 @@ h1 {
 h2 {
     font-size: clamp(26px, 3vw, 40px);
     margin: 0 0 12px;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
 }
 
 .section p {
@@ -230,7 +283,7 @@ h2 {
 
 .card {
     background: var(--card);
-    border-radius: 20px;
+    border-radius: var(--radius-md);
     padding: 24px;
     box-shadow: 0 18px 40px rgba(19, 19, 19, 0.08);
     display: flex;
@@ -252,16 +305,16 @@ h2 {
 .card-header img {
     width: 48px;
     height: 48px;
-    border-radius: 14px;
+    border-radius: var(--radius-sm);
 }
 
 .placeholder {
     width: 48px;
     height: 48px;
-    border-radius: 14px;
+    border-radius: var(--radius-sm);
     display: grid;
     place-items: center;
-    background: rgba(26, 127, 110, 0.12);
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
     color: var(--accent-dark);
     font-weight: 700;
 }
@@ -281,7 +334,7 @@ h2 {
 .card-tags span {
     background: rgba(0, 0, 0, 0.06);
     padding: 4px 10px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     font-size: 12px;
 }
 
@@ -301,9 +354,9 @@ h2 {
 
 .about-panel {
     background: rgba(255, 255, 255, 0.7);
-    border-radius: 20px;
+    border-radius: var(--radius-md);
     padding: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border);
 }
 
 .focus-list {
@@ -321,7 +374,7 @@ h2 {
     justify-content: space-between;
     gap: 20px;
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 24px;
+    border-radius: var(--radius-lg);
     padding: 40px;
     box-shadow: var(--shadow);
 }
@@ -363,7 +416,7 @@ h2 {
 .language-switch a {
     font-size: 18px;
     padding: 6px 8px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
@@ -371,6 +424,61 @@ h2 {
 
 .language-switch a:hover {
     transform: translateY(-2px);
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--border);
+}
+
+.theme-btn {
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    padding: 6px 10px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.theme-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.theme-btn[aria-pressed="true"] {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.theme-btn[aria-pressed="true"] svg path,
+.theme-btn[aria-pressed="true"] svg circle,
+.theme-btn[aria-pressed="true"] svg rect,
+.theme-btn[aria-pressed="true"] svg line {
+    stroke: #ffffff;
+    fill: #ffffff;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 @keyframes floatIn {
