@@ -1,4 +1,4 @@
-# IA.MD - Findings del sitio M2 Media
+# IA.MD - Findings del sitio Matías Fernández
 
 Fecha de análisis: 2026-02-06
 
