@@ -1,97 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M2 Media - Mobile & Web App Development</title>
+    <title>M2 Media | Marca Personal y Productos</title>
+    <meta name="description" content="M2 Media es una marca personal enfocada en crear productos digitales claros y utiles." />
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <h1>M2 Media - Mobile & Web App Development</h1>
+    <div class="ambient"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#top">M2 Media</a>
+            <nav class="site-nav">
+                <a href="#projects">Proyectos</a>
+                <a href="#about">Sobre mi</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#apps-section">Our Apps</a></li>
-            <li><a href="#privacy-section">Privacy</a></li>
-            <li><a href="#main-section">About Us</a></li>
-        </ul>
-    </nav>
-
-    <section id="apps-section">
-        <h2>Our Apps</h2>
-        
-        <div class="app">
-            <div class="app-info">
-                <img src="assets/dolar-icon-2.png" alt="App Icon">
-                <div class="app-text">
-                    <h3>Dolar +</h3>
-                    <p>An app to view currency exchange rates in Argentina.</p>
+    <main id="top">
+        <section class="hero container">
+            <div class="hero-copy">
+                <p class="eyebrow">Marca personal</p>
+                <h1>Productos digitales que se sienten simples, utiles y reales.</h1>
+                <p class="lead">Transformo ideas en experiencias mobile y web con foco en claridad, rendimiento y detalles que hacen que un producto se recuerde.</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#projects">Ver proyectos</a>
+                    <a class="btn ghost" href="https://www.linkedin.com/in/mr-fernandez/" target="_blank" rel="noopener">DM en LinkedIn</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <span class="stat">14+ anos</span>
+                        <span class="label">Construyendo productos</span>
+                    </div>
+                    <div>
+                        <span class="stat">Equipos</span>
+                        <span class="label">Grandes y distribuidos</span>
+                    </div>
+                    <div>
+                        <span class="stat">IA + automatizacion</span>
+                        <span class="label">Practica, sin humo</span>
+                    </div>
                 </div>
             </div>
-            <div class="app-preview">
-                <img src="assets/preview-ios.png" alt="Dolar + Preview">
-            </div>
-        </div>
-        
-        <!-- <div class="spacer"></div> -->
-
-        <div class="app">
-            <div class="app-info">
-                <div class="app-text">
-                    <h3>Musician's Toolkit (Coming Soon)</h3>
-                    <p>Stay tuned for our upcoming app designed for musicians.</p>
-                </div>
-                
-                
-            </div>
-            <div class="app-preview">
-                <!-- <img src="musician-toolkit-preview.jpg" alt="Musician's Toolkit Preview"> -->
-            </div>
-        </div>
-
-        <div class="app">
-            <div class="app-info">
-                <div class="app-text">
-                    <h3>What2Wear (Coming Soon)</h3>
-                    <p>Exciting new app in development to help you decide what to wear.</p>
+            <div class="hero-visual">
+                <div class="glass-card">
+                    <img src="assets/preview-ios.png" alt="Dolar+ vista previa iOS" />
+                    <div class="glass-content">
+                        <p class="pill">Destacado</p>
+                        <h3>Dolar +</h3>
+                        <p>Seguimiento de tipo de cambio en Argentina con una interfaz clara y rapida.</p>
+                    </div>
                 </div>
             </div>
-            <div class="app-preview">
-                <!-- <img src="what2wear-preview.jpg" alt="What2Wear Preview"> -->
+        </section>
+
+        <section id="projects" class="section container">
+            <div class="section-head">
+                <h2>Showcase de proyectos</h2>
+                <p>Productos en progreso enfocados en claridad, utilidad y pulido.</p>
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <div class="card-header">
+                        <img src="assets/dolar-icon-2.png" alt="Icono de Dolar+" />
+                        <div>
+                            <h3>Dolar +</h3>
+                            <p class="meta">WIP · iOS · Finanzas</p>
+                        </div>
+                    </div>
+                    <p>Tipo de cambio en un vistazo, pensado para velocidad y confianza. UI minima, contexto maximo.</p>
+                    <div class="card-tags">
+                        <span>Producto</span>
+                        <span>iOS</span>
+                        <span>Branding</span>
+                    </div>
+                    <a class="card-link" href="#contact">Pedir detalles</a>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div class="placeholder">MT</div>
+                        <div>
+                            <h3>Musician's Toolkit</h3>
+                            <p class="meta">WIP · Herramientas creativas</p>
+                        </div>
+                    </div>
+                    <p>Herramientas para practicar, medir progreso y tocar en vivo. Disenado para no estorbar.</p>
+                    <div class="card-tags">
+                        <span>Concepto</span>
+                        <span>Mobile</span>
+                        <span>Workflow</span>
+                    </div>
+                    <a class="card-link" href="#contact">Recibir novedades</a>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div class="placeholder">W2W</div>
+                        <div>
+                            <h3>What2Wear</h3>
+                            <p class="meta">WIP · Lifestyle</p>
+                        </div>
+                    </div>
+                    <p>Decisiones diarias simplificadas. Recomendaciones por clima, agenda y contexto.</p>
+                    <div class="card-tags">
+                        <span>IA aplicada</span>
+                        <span>Mobile</span>
+                        <span>Estrategia</span>
+                    </div>
+                    <a class="card-link" href="#contact">Sumarme a la lista</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section container split">
+            <div>
+                <h2>Sobre mi</h2>
+                <p>Llevo mas de 14 anos creando y escalando productos digitales que funcionan en el mundo real. He trabajado con equipos grandes y distribuidos, mejorando experiencias de usuario, optimizando costes tecnicos y consiguiendo que las cosas salgan a tiempo y con sentido.</p>
+                <p>Me muevo bien entre tecnologia, producto y negocio. Me interesa menos la teoria y mas como tomar buenas decisiones, simplificar lo complejo y convertir ideas en resultados concretos. Trabajo mucho con automatizacion e IA aplicada de forma practica, sin fuegos artificiales.</p>
+                <p>Disfruto construyendo equipos solidos, ayudando a crecer a otras personas y resolviendo problemas dificiles con calma, criterio y foco en impacto.</p>
+            </div>
+            <div class="about-panel">
+                <h3>Enfoque</h3>
+                <ul class="focus-list">
+                    <li>Decisiones que balancean producto, tecnologia y negocio</li>
+                    <li>Automatizacion e IA para resultados reales</li>
+                    <li>Equipos solidos y entregas con claridad</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section container contact">
+            <div>
+                <h2>Construyamos algo con criterio.</h2>
+                <p>Conta tu idea o pedi un walkthrough privado de los proyectos actuales.</p>
+            </div>
+            <a class="btn primary" href="https://www.linkedin.com/in/mr-fernandez/" target="_blank" rel="noopener">DM en LinkedIn</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 M2 Media. Hecho con claridad y cuidado.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacidad</a>
+                <div class="language-switch">
+                    <a href="index.html" aria-label="Cambiar a Espanol">🇪🇸</a>
+                    <a href="en.html" aria-label="Switch to English">🇺🇸</a>
+                </div>
             </div>
         </div>
-
-    </section>
-
-    <section id="privacy-section">
-        <h2>Privacy Policy</h2>
-        <p>We take your privacy seriously at M2 Media. This Privacy Policy is designed to help you understand how we collect, use, and safeguard your personal information.</p>
-
-        <h3>Information We Don't Collect</h3>
-        <p>We want to make it clear that we do not track any personal information about our users. We do not use cookies or any other tracking mechanisms.</p>
-
-        <h3>How We Use Your Information</h3>
-        <p>Since we don't collect any personal information, there is no information to use. Rest assured that your privacy is our top priority, and we strive to provide a secure and anonymous experience for all users.</p>
-
-        <h3>Changes to Our Privacy Policy</h3>
-        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page, so please review it periodically. Your continued use of our services after any modifications to the Privacy Policy will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.</p>
-
-        <h4>Contact</h4>
-        <p>If you have any questions about our Privacy Policy, please contact us at <a href="mailto:contact@m2media.com.ar">contact@m2media.com.ar</a>.</p>
-    </section>
-
-    <section id="main-section">
-        <h2>About Us</h2>
-        <p>We are a passionate group of people devoted to create great prod.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 M2 Media</p>
     </footer>
 </body>
-
 </html>
