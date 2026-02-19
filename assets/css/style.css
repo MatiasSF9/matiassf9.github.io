@@ -523,20 +523,34 @@ body.slideshow-open {
 .language-switch {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.language-switch a {
-    font-size: 18px;
-    padding: 6px 8px;
+    gap: 6px;
+    padding: 6px;
     border-radius: var(--radius-pill);
     background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
+    border: 1px solid var(--border);
 }
 
-.language-switch a:hover {
-    transform: translateY(-2px);
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    padding: 6px 10px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: color 0.2s ease;
+}
+
+.lang-btn[aria-pressed="true"] {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.lang-btn:not([aria-pressed="true"]):hover {
+    color: var(--accent);
 }
 
 .theme-switch {
