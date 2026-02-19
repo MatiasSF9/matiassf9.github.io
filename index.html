@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matías Fernández | Marca Personal y Productos</title>
-    <meta name="description" content="M2 Media es una marca personal enfocada en crear productos digitales claros y utiles." />
+    <meta name="description" content="Matías Fernández es una marca personal enfocada en crear productos digitales claros y utiles." />
     <link rel="stylesheet" href="css/style.css">
     <script src="javascript/theme.js" defer></script>
+    <script src="javascript/slideshow.js" defer></script>
 </head>
 <body data-theme="web">
     <div class="ambient"></div>
@@ -83,7 +84,7 @@
             </div>
             <div class="hero-visual">
                 <div class="glass-card">
-                    <img src="assets/preview-ios.png" alt="Dolar+ vista previa iOS" />
+                    <img src="assets/preview-dolar.png" alt="Dolar+ vista previa iOS" />
                     <div class="glass-content">
                         <p class="pill">Destacado</p>
                         <h3>Dolar +</h3>
@@ -100,9 +101,9 @@
             </div>
 
             <div class="cards">
-                <article class="card">
+                <article class="card" data-slideshow data-previews="assets/preview1.png|assets/preview2.png|assets/preview3.png" data-slideshow-title="Dolar +" tabindex="0" role="button" aria-label="Ver previews de Dolar +">
                     <div class="card-header">
-                        <img src="assets/dolar-icon-2.png" alt="Icono de Dolar+" />
+                        <img src="assets/dolar-icon-3.png" alt="Icono de Dolar+" />
                         <div>
                             <h3>Dolar +</h3>
                             <p class="meta">WIP · iOS · Finanzas</p>
@@ -114,7 +115,7 @@
                         <span>iOS</span>
                         <span>Branding</span>
                     </div>
-                    <a class="card-link" href="#contact">Pedir detalles</a>
+                    <a class="card-link" href="#">Ver previews</a>
                 </article>
 
                 <article class="card">
@@ -187,5 +188,22 @@
             </div>
         </div>
     </footer>
+
+    <div class="slideshow-modal" data-slideshow-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Previews de Dolar +">
+        <div class="slideshow-dialog">
+            <div class="slideshow-header">
+                <p class="slideshow-title" data-slideshow-title>Dolar +</p>
+                <button class="slideshow-close" type="button" data-slideshow-close>Cerrar</button>
+            </div>
+            <div class="slideshow-body">
+                <button class="slideshow-nav" type="button" data-slideshow-prev aria-label="Anterior">←</button>
+                <img class="slideshow-image" data-slideshow-image src="" alt="Preview de Dolar +" />
+                <button class="slideshow-nav" type="button" data-slideshow-next aria-label="Siguiente">→</button>
+            </div>
+            <div class="slideshow-footer">
+                <span class="slideshow-counter" data-slideshow-counter>1 / 3</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
