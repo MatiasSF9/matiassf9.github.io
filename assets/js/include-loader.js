@@ -90,7 +90,7 @@
             home:     base,
             projects: `${base}projects/`,
             about:    `${base}about/`,
-            contact:  `${base}#contact`,
+            contact:  `${base}contact/`,
             privacy:  `${base}privacy/`,
         };
         const text = NAV_TEXT[lang] || NAV_TEXT['es'];
