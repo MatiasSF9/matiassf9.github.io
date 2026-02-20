@@ -7,152 +7,104 @@
     <meta name="description" content="Matías Fernández is a personal brand focused on crafting thoughtful mobile and web products." />
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/theme.js" defer></script>
-    <script src="../assets/js/slideshow.js" defer></script>
 </head>
 <body data-theme="web">
     <div class="ambient"></div>
     <div data-include="header"></div>
 
     <main id="top">
-        <section class="hero container">
-            <div class="hero-copy">
-                <p class="eyebrow">Personal brand</p>
-                <h1>Designing calm, useful digital products that ship.</h1>
-                <p class="lead">I help turn ideas into mobile and web experiences that feel simple, fast, and human. Focused on clarity, performance, and details that make products memorable.</p>
-                <div class="hero-actions">
-                    <a class="btn primary" href="#projects">View projects</a>
-                    <a class="btn ghost" href="https://www.linkedin.com/in/mr-fernandez/" target="_blank" rel="noopener">DM on LinkedIn</a>
-                </div>
-                <div class="hero-stats">
-                    <div>
-                        <span class="stat">14+ years</span>
-                        <span class="label">Building products</span>
-                    </div>
-                    <div>
-                        <span class="stat">Teams</span>
-                        <span class="label">Large & distributed</span>
-                    </div>
-                    <div>
-                        <span class="stat">AI + automation</span>
-                        <span class="label">Practical, no fluff</span>
-                    </div>
+        <section class="hero">
+            <div class="hero-container">
+                <h1>I build and lead digital products with strategic clarity.</h1>
+                <p class="hero-subtitle">Senior Product Builder and Advisor for startups ready to scale.</p>
+                <p class="hero-description">I work at the intersection of business and technology. I make strategic decisions, lead product direction, and build real solutions as proof of execution.</p>
+                <div class="hero-cta">
+                    <a href="contact/" class="btn-primary">Discuss Strategy</a>
+                    <a href="projects/" class="btn-secondary">View Projects</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="glass-card">
-                    <img src="../assets/images/preview-dolar.png" alt="Dolar+ iOS preview" />
-                    <div class="glass-content">
-                        <p class="pill">Featured</p>
-                        <h3>Dolar +</h3>
-                        <p>Live exchange tracking for Argentina with a clean, glanceable UI.</p>
+        </section>
+
+        <section class="featured-product">
+            <div class="container">
+                <div class="featured-product-content">
+                    <div class="featured-product-text">
+                        <h2>Dolar+</h2>
+                        <p class="product-description">An exchange rate tracking app focused on the Argentine dollar, designed with clarity, precision, and real user experience in mind.</p>
+                        <p class="product-status">Status: Live</p>
+                        <a href="projects/dolarplus/" class="btn-primary">View Product</a>
+                    </div>
+                    <div class="featured-product-image">
+                        <img src="../assets/images/dolarplus-home.png" alt="Dolar+ iOS app showing exchange rates and currency conversion">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section container">
-            <div class="section-head">
-                <h2>Project Showcase</h2>
-                <p>Work-in-progress products focused on clarity, utility, and polish.</p>
-            </div>
-
-            <div class="cards">
-                <article class="card" data-slideshow data-previews="../assets/images/preview1.png|../assets/images/preview2.png|../assets/images/preview3.png" data-slideshow-title="Dolar +" tabindex="0" role="button" aria-label="View Dolar + previews">
-                    <div class="card-header">
-                        <img src="../assets/images/dolar-icon-3.png" alt="Dolar+ app icon" />
-                        <div>
-                            <h3>Dolar +</h3>
-                            <p class="meta">WIP · iOS · Finance</p>
-                        </div>
+        <section class="what-i-do">
+            <div class="container">
+                <h2>What I Do</h2>
+                <div class="what-i-do-grid">
+                    <div class="what-i-do-item">
+                        <h3>Product Strategy</h3>
+                        <p>I define direction, priorities, and decision frameworks. I focus on real impact and strategic clarity rather than endless feature lists.</p>
                     </div>
-                    <p>Currency exchange rates in one glance, designed for speed and trust. Minimal UI, maximum context.</p>
-                    <div class="card-tags">
-                        <span>Product</span>
-                        <span>iOS</span>
-                        <span>Branding</span>
+                    <div class="what-i-do-item">
+                        <h3>Business–Technology Leadership</h3>
+                        <p>I connect business vision with technical execution. I translate ambition into concrete roadmaps and sustainable decisions.</p>
                     </div>
-                    <a class="card-link" href="#">View previews</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-header">
-                        <div class="placeholder">MT</div>
-                        <div>
-                            <h3>Musician's Toolkit</h3>
-                            <p class="meta">WIP · Creator tools</p>
-                        </div>
+                    <div class="what-i-do-item">
+                        <h3>Building as Proof</h3>
+                        <p>I don't only advise. I build my own products to validate judgment, experiment, and stay close to real execution.</p>
                     </div>
-                    <p>A focused set of tools for practicing, tracking, and performing. Built to stay out of your way while you play.</p>
-                    <div class="card-tags">
-                        <span>Concept</span>
-                        <span>Mobile</span>
-                        <span>Workflow</span>
-                    </div>
-                    <a class="card-link" href="#contact">Get updates</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-header">
-                        <div class="placeholder">W2W</div>
-                        <div>
-                            <h3>What2Wear</h3>
-                            <p class="meta">WIP · Lifestyle</p>
-                        </div>
-                    </div>
-                    <p>Daily outfit decisions made simple. Smart recommendations based on weather, calendar, and mood.</p>
-                    <div class="card-tags">
-                        <span>AI assist</span>
-                        <span>Mobile</span>
-                        <span>Product strategy</span>
-                    </div>
-                    <a class="card-link" href="#contact">Join the waitlist</a>
-                </article>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="section container split">
-            <div>
-                <h2>About</h2>
-                <p>I have spent over 14 years creating and scaling digital products that work in the real world. I have worked with large and distributed teams, improving user experiences, reducing technical costs, and making sure things ship on time with meaning.</p>
-                <p>I move comfortably between technology, product, and business. I care less about theory and more about making good decisions, simplifying complexity, and turning ideas into concrete results. I work a lot with automation and applied AI in a practical way, without fireworks.</p>
-                <p>I enjoy building strong teams, helping people grow, and solving hard problems with calm, good judgment, and a focus on impact.</p>
-            </div>
-            <div class="about-panel">
-                <h3>Focus areas</h3>
-                <ul class="focus-list">
-                    <li>Decision-making that balances product, tech, and business</li>
-                    <li>Automation and applied AI for real outcomes</li>
-                    <li>Building strong teams and shipping with clarity</li>
-                </ul>
+        <section class="experience-evidence">
+            <div class="container">
+                <h2>Experience and Scale</h2>
+                <div class="experience-highlights">
+                    <div class="experience-item">
+                        <h3>14+ years building digital products</h3>
+                        <p>I have worked across corporate environments and startups, leading product initiatives with a focus on real impact and long-term sustainability.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Team leadership and strategic decisions</h3>
+                        <p>I have been involved in architectural decisions, roadmap definition, strategic prioritization, and cross-functional coordination.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Long-term vision</h3>
+                        <p>I understand product as a system: business, technology, experience, and execution aligned. My focus is not shipping features, but building direction.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="section container contact">
-            <div>
-                <h2>Let's build something with intent.</h2>
-                <p>Tell me about your idea or request a private walkthrough of current work.</p>
+        <section class="strategic-cta">
+            <div class="container">
+                <h2>Let's work on what truly matters</h2>
+                <div class="cta-grid">
+                    <div class="cta-card">
+                        <h3>Strategic Advisor</h3>
+                        <p>If you're building a startup and need product judgment, strategic direction, and decision clarity.</p>
+                        <a href="/en/contact/#advisor" class="btn-primary">Start a conversation</a>
+                    </div>
+                    <div class="cta-card">
+                        <h3>Startup Partnership</h3>
+                        <p>If you're looking for a product-focused partner with real execution experience to build something long-term.</p>
+                        <a href="/en/contact/#partnership" class="btn-primary">Explore collaboration</a>
+                    </div>
+                    <div class="cta-card">
+                        <h3>App Support</h3>
+                        <p>If you use one of my products and need assistance or want to share feedback.</p>
+                        <a href="/en/contact/#support" class="btn-secondary">Go to support</a>
+                    </div>
+                </div>
             </div>
-            <a class="btn primary" href="https://www.linkedin.com/in/mr-fernandez/" target="_blank" rel="noopener">DM on LinkedIn</a>
         </section>
     </main>
     <div data-include="footer"></div>
-
-    <div class="slideshow-modal" data-slideshow-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Dolar + previews">
-        <div class="slideshow-dialog">
-            <div class="slideshow-header">
-                <p class="slideshow-title" data-slideshow-title>Dolar +</p>
-                <button class="slideshow-close" type="button" data-slideshow-close>Close</button>
-            </div>
-            <div class="slideshow-body">
-                <button class="slideshow-nav" type="button" data-slideshow-prev aria-label="Previous">←</button>
-                <img class="slideshow-image" data-slideshow-image src="" alt="Dolar + preview" />
-                <button class="slideshow-nav" type="button" data-slideshow-next aria-label="Next">→</button>
-            </div>
-            <div class="slideshow-footer">
-                <span class="slideshow-counter" data-slideshow-counter>1 / 3</span>
-            </div>
-        </div>
-    </div>
 <script src="../assets/js/include-loader.js"></script>
 </body>
 </html>
