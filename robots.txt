@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://matiasrfernandez.com/sitemap.xml
