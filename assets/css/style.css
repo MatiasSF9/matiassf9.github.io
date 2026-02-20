@@ -307,6 +307,43 @@ body[data-theme="android"] .site-header {
     margin: 0;
 }
 
+/* ── Experience Evidence ──────────────────────────────── */
+.experience-evidence {
+    padding: 72px 0;
+    background: color-mix(in srgb, var(--accent) 4%, transparent);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.experience-evidence h2 {
+    margin-bottom: 48px;
+}
+
+.experience-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.experience-item h3 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.experience-item p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
 .eyebrow {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -842,6 +879,11 @@ body.slideshow-open {
     .what-i-do-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .experience-highlights {
+        grid-template-columns: 1fr;
+        gap: 28px;
     }
 
     .hero-description {
