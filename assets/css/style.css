@@ -217,6 +217,19 @@ body[data-theme="android"] .site-header {
     color: var(--accent);
 }
 
+/* ── Contact Hero ─────────────────────────────────────── */
+.contact-hero {
+    padding: 80px 0 64px;
+}
+
+.contact-intro {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0;
+}
+
 /* ── About Hero ───────────────────────────────────────── */
 .about-hero {
     padding: 80px 0 64px;
@@ -1433,6 +1446,10 @@ body.slideshow-open {
 }
 
 @media (max-width: 720px) {
+    .contact-hero {
+        padding: 56px 0 40px;
+    }
+
     .about-hero {
         padding: 56px 0 40px;
     }
