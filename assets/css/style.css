@@ -330,6 +330,24 @@ body[data-theme="android"] .site-header {
     margin: 0;
 }
 
+/* ── About Mentoring ──────────────────────────────────── */
+.about-mentoring {
+    padding: 72px 0;
+    border-top: 1px solid var(--border);
+}
+
+.about-mentoring h2 {
+    margin-bottom: 20px;
+}
+
+.about-mentoring p {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0;
+}
+
 /* ── Featured Product ─────────────────────────────────── */
 .featured-product {
     padding: 72px 0;
@@ -1411,6 +1429,10 @@ body.slideshow-open {
     .philosophy-principles {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+
+    .about-mentoring {
+        padding: 56px 0;
     }
 
     .hero {
