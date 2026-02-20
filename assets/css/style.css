@@ -19,6 +19,7 @@
     --radius-sm: 14px;
     --radius-pill: 999px;
     --border: rgba(0, 0, 0, 0.06);
+    --header-offset: 80px;
 }
 
 body[data-theme="apple"] {
@@ -63,12 +64,17 @@ body[data-theme="android"] {
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: var(--header-offset);
+}
+
 body {
     margin: 0;
     font-family: var(--font-sans);
     color: var(--ink);
     background: var(--bg);
     min-height: 100vh;
+    padding-top: var(--header-offset);
 }
 
 .ambient {
@@ -88,8 +94,10 @@ body {
 }
 
 .site-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
     backdrop-filter: blur(12px);
     background: rgba(245, 241, 234, 0.8);
@@ -1485,6 +1493,9 @@ body.slideshow-open {
 }
 
 @media (max-width: 720px) {
+    :root {
+        --header-offset: 148px;
+    }
     .contact-hero {
         padding: 56px 0 40px;
     }
@@ -1573,13 +1584,28 @@ body.slideshow-open {
         justify-content: center;
     }
 
+    .header-inner {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        row-gap: 12px;
+    }
+
     .site-nav {
-        display: none;
+        display: flex;
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+        flex-wrap: wrap;
     }
 
     .header-actions {
+        order: 2;
+        width: 100%;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
 
     .contact {

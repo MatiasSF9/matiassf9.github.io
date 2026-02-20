@@ -121,11 +121,11 @@
     const reinitTheme = () => {
         const STORAGE_KEY = 'm2-theme';
         const body = document.body;
-        const buttons = document.querySelectorAll('[data-theme-switch]');
+        const getButtons = () => Array.from(document.querySelectorAll('[data-theme-switch]'));
 
         const applyTheme = (theme) => {
             body.setAttribute('data-theme', theme);
-            buttons.forEach((btn) => {
+            getButtons().forEach((btn) => {
                 btn.setAttribute(
                     'aria-pressed',
                     btn.getAttribute('data-theme-switch') === theme ? 'true' : 'false'
@@ -135,10 +135,9 @@
 
         let saved;
         try { saved = localStorage.getItem(STORAGE_KEY); } catch (_) { /* ignore */ }
+        const currentTheme = saved || body.getAttribute('data-theme') || 'web';
 
-        applyTheme(saved || body.getAttribute('data-theme') || 'web');
-
-        buttons.forEach((btn) => {
+        getButtons().forEach((btn) => {
             // Avoid double-binding by cloning
             const fresh = btn.cloneNode(true);
             btn.parentNode.replaceChild(fresh, btn);
@@ -148,6 +147,8 @@
                 applyTheme(theme);
             });
         });
+
+        applyTheme(currentTheme);
     };
 
     const reinitLangSwitcher = () => {
