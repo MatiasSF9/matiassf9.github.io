@@ -4,92 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matías Fernández | Projects</title>
-    <meta name="description" content="Projects by Matías Fernández: work-in-progress digital products." />
+    <meta name="description" content="Personal products built as a natural extension of work in product strategy and leadership." />
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/theme.js" defer></script>
-    <script src="../../assets/js/slideshow.js" defer></script>
 </head>
 <body data-theme="web">
     <div class="ambient"></div>
     <div data-include="header"></div>
 
-    <main class="container section">
-        <div class="section-head">
-            <h2>Project Showcase</h2>
-            <p>Work-in-progress products focused on clarity, utility, and polish.</p>
-        </div>
+    <main>
+        <section class="projects-intro">
+            <div class="container">
+                <h1>Projects</h1>
+                <p class="projects-intro-text">I build my own products as a natural extension of my work in product strategy and leadership. Each project responds to a concrete hypothesis and is part of a long-term vision.</p>
+            </div>
+        </section>
 
-        <div class="cards">
-            <article class="card" data-slideshow data-previews="../../assets/images/preview1.png|../../assets/images/preview2.png|../../assets/images/preview3.png" data-slideshow-title="Dolar +" tabindex="0" role="button" aria-label="View Dolar + previews">
-                <div class="card-header">
-                    <img src="../../assets/images/dolar-icon.png" alt="Dolar+ app icon" />
-                    <div>
-                        <h3>Dolar +</h3>
-                        <p class="meta">WIP · iOS · Finance</p>
-                    </div>
-                </div>
-                <p>Currency exchange rates in one glance, designed for speed and trust. Minimal UI, maximum context.</p>
-                <div class="card-tags">
-                    <span>Product</span>
-                    <span>iOS</span>
-                    <span>Branding</span>
-                </div>
-                <a class="card-link" href="../../en/projects/dolarplus/">View detail</a>
-            </article>
+        <!--
+            TO ADD A NEW PRODUCT:
+            1. Create /en/projects/newapp/index.html and /es/projects/newapp/index.html
+               (use dolarplus/index.html as a reference)
+            2. Add a <div class="project-card"> inside the relevant section:
+               .live-grid | .progress-grid | .exploration-grid
+            3. Do not modify base CSS — the grid adapts automatically.
+        -->
+        <section class="projects-content">
+            <div class="container">
 
-            <article class="card">
-                <div class="card-header">
-                    <div class="placeholder">MT</div>
-                    <div>
-                        <h3>Musician's Toolkit</h3>
-                        <p class="meta">WIP · Creator tools</p>
+                <section class="projects-section live">
+                    <h2>Live</h2>
+                    <p class="projects-section-text">Published products in real use.</p>
+                    <div class="projects-grid live-grid">
+                        <div class="project-card">
+                            <h3 class="project-title">Dolar+</h3>
+                            <p class="project-description">iOS app focused on Argentine dollar exchange rates, currency conversion, and historical tracking.</p>
+                            <p class="project-status project-status--live">Live</p>
+                            <a href="/en/projects/dolarplus/" class="project-link">View Product</a>
+                        </div>
                     </div>
-                </div>
-                <p>A focused set of tools for practicing, tracking, and performing. Built to stay out of your way while you play.</p>
-                <div class="card-tags">
-                    <span>Concept</span>
-                    <span>Mobile</span>
-                    <span>Workflow</span>
-                </div>
-                <a class="card-link" href="../../en/#contact">Get updates</a>
-            </article>
+                </section>
 
-            <article class="card">
-                <div class="card-header">
-                    <div class="placeholder">W2W</div>
-                    <div>
-                        <h3>What2Wear</h3>
-                        <p class="meta">WIP · Lifestyle</p>
+                <section class="projects-section in-progress">
+                    <h2>In Progress</h2>
+                    <p class="projects-section-text">Active initiatives under construction.</p>
+                    <div class="projects-grid progress-grid">
+                        <div class="project-card">
+                            <h3 class="project-title">Next Product</h3>
+                            <p class="project-description">Initiative under development focused on solving real problems through digital product.</p>
+                            <p class="project-status">In Progress</p>
+                        </div>
                     </div>
-                </div>
-                <p>Daily outfit decisions made simple. Smart recommendations based on weather, calendar, and mood.</p>
-                <div class="card-tags">
-                    <span>AI assist</span>
-                    <span>Mobile</span>
-                    <span>Product strategy</span>
-                </div>
-                <a class="card-link" href="../../en/#contact">Join the waitlist</a>
-            </article>
-        </div>
+                </section>
+
+                <section class="projects-section explorations">
+                    <h2>Explorations</h2>
+                    <p class="projects-section-text">Hypotheses under evaluation and experimentation.</p>
+                    <div class="projects-grid exploration-grid">
+                        <div class="project-card">
+                            <h3 class="project-title">Active Exploration</h3>
+                            <p class="project-description">Product hypothesis under strategic evaluation and conceptual validation.</p>
+                            <p class="project-status">Exploration</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </section>
     </main>
-    <div data-include="footer"></div>
 
-    <div class="slideshow-modal" data-slideshow-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Dolar + previews">
-        <div class="slideshow-dialog">
-            <div class="slideshow-header">
-                <p class="slideshow-title" data-slideshow-title>Dolar +</p>
-                <button class="slideshow-close" type="button" data-slideshow-close>Close</button>
-            </div>
-            <div class="slideshow-body">
-                <button class="slideshow-nav" type="button" data-slideshow-prev aria-label="Previous">←</button>
-                <img class="slideshow-image" data-slideshow-image src="" alt="Dolar + preview" />
-                <button class="slideshow-nav" type="button" data-slideshow-next aria-label="Next">→</button>
-            </div>
-            <div class="slideshow-footer">
-                <span class="slideshow-counter" data-slideshow-counter>1 / 3</span>
-            </div>
-        </div>
-    </div>
+    <div data-include="footer"></div>
 <script src="../../assets/js/include-loader.js"></script>
 </body>
 </html>
