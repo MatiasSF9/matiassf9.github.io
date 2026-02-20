@@ -348,6 +348,30 @@ body[data-theme="android"] .site-header {
     margin: 0;
 }
 
+/* ── About CTA ────────────────────────────────────────── */
+.about-cta {
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+}
+
+.about-cta h2 {
+    margin-bottom: 16px;
+}
+
+.about-cta > .container > p {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 600px;
+    margin: 0 0 36px;
+}
+
+.about-cta-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
 /* ── Featured Product ─────────────────────────────────── */
 .featured-product {
     padding: 72px 0;
@@ -1433,6 +1457,20 @@ body.slideshow-open {
 
     .about-mentoring {
         padding: 56px 0;
+    }
+
+    .about-cta {
+        padding: 60px 0;
+    }
+
+    .about-cta-actions {
+        flex-direction: column;
+    }
+
+    .about-cta-actions .btn-primary,
+    .about-cta-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
     }
 
     .hero {
