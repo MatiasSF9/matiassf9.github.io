@@ -1,57 +1,40 @@
-# IA.MD - Findings del sitio Matías Fernández
+# IA.MD - Project Notes (Matías Fernández site)
 
-Fecha de análisis: 2026-02-06
+Fecha de actualización: 2026-02-20
 
-## Resumen rápido
-Sitio estático simple (HTML/CSS), sin JS. Contenido principal en `index.html` y una página de privacidad separada en `privacy.html`. Se detectan inconsistencias de contenido, enlaces y referencias a archivos inexistentes, además de oportunidades claras en accesibilidad, SEO y mantenimiento.
+## Overview
+Sitio estático multi-idioma (`/es` y `/en`) para Matías Fernández, publicado en GitHub Pages. Header/footer se inyectan por JS y hay selector de tema (web/apple/android).
 
-## Hallazgos por área
-### Contenido y consistencia
-- En `privacy.html` aparece el placeholder “Your Name” en el texto de privacidad. No coincide con la marca real. (`privacy.html`)
-- El texto “We are a passionate group of people devoted to create great prod.” está truncado. (`index.html`)
-- El footer indica `© 2023` y no se actualiza. (`index.html`)
-- Hay dos políticas de privacidad: una sección en `index.html` y una página completa en `privacy.html`. El contenido no es idéntico (títulos, encabezado, textos y estructura). Esto genera divergencias futuras.
+## Estructura
+- `index.html`: redirección al idioma.
+- `es/` y `en/`: contenido principal por idioma.
+- `components/header.html`, `components/footer.html`: navegación compartida (inyectada).
+- `assets/css/style.css`: estilos globales.
+- `assets/js/include-loader.js`: inyección de header/footer + nav links + reinit de theme/lang.
+- `assets/js/theme.js`: persistencia de tema.
+- `assets/js/screenshots-carousel.js`: carrusel continuo para screenshots en Dolar+.
+- `assets/images/`: imágenes del sitio.
 
-### Enlaces y recursos
-- `privacy.html` referencia `app.css`, pero no existe en el repo. Esto deja la página sin estilos. (`privacy.html`)
-- En `privacy.html` los links usan rutas absolutas (`/index.html`, `/privacy.html`). Si el sitio se publica bajo un subpath, esos enlaces fallan.
-- Carpeta `javascript/` existe pero está vacía; sugiere trabajo incompleto o limpieza pendiente.
+## Privacidad
+- Web privacy:
+  - `/es/privacy/`
+  - `/en/privacy/`
+- App privacy (Dolar+):
+  - `/es/privacy/apps/dolarplus/`
+  - `/en/privacy/apps/dolarplus/`
 
-### Accesibilidad
-- No hay landmark semántico `main` ni `aria`/`skip links` para navegación rápida. (Mejora de accesibilidad básica)
-- Imágenes con `alt` genérico (“App Icon”, “Dolar + Preview”). Se puede describir mejor el contenido real para lectores de pantalla. (`index.html`)
-- Tamaños tipográficos grandes sin ajuste responsivo específico en títulos; en pantallas pequeñas, el `h2` de 42px puede generar saltos visuales. (`css/style.css`)
+## SEO / metadata
+- Canonical + OG + Twitter Cards en páginas internas.
+- `sitemap.xml` con rutas principales, incluyendo privacy web + app.
 
-### SEO y metadatos
-- Falta `meta description` para index y privacy.
-- No hay `favicon` declarado.
-- No hay `og:` / `twitter:` meta tags para sharing.
+## Dolar+ – screenshots
+La sección “Interfaz / Interface and Experience” usa un carrusel infinito y continuo (sin interacción manual), con duplicado de items para loop. Respeta `prefers-reduced-motion` (se queda estático si el usuario lo pide).
 
-### CSS y layout
-- `box-sizing: border-box` solo está en `body`, no en todos los elementos. Esto puede producir layouts inconsistentes.
-- Se combina `header` fixed + `nav` sticky con `top: 80px` y `section` con `margin-top: 80px` y `scroll-margin-top: 140px`. En resoluciones/zoom distintos, puede haber solapamientos o scroll incorrecto a anchors. (`css/style.css`)
-- `.app-preview img` usa `max-width: 60%` sin contenedor definido; en desktop puede verse demasiado pequeño y en mobile puede comportarse de forma inesperada.
-
-### Assets
-- `assets/dolar-icon.png` y `assets/dolar-ios.png` no se usan en HTML/CSS actuales.
-- `assets/dolar-icon-2.png` pesa ~455KB para un ícono 40x40; conviene optimizar o exportar versión pequeña.
-
-## Archivos relevantes
-- `index.html` (home)
-- `privacy.html` (privacy page)
-- `css/style.css` (estilos)
-- `assets/` (imagenes)
-
-## Riesgos prácticos
-- La página de privacidad puede estar sin estilos en producción por `app.css` faltante.
-- Inconsistencias de copy entre páginas pueden afectar confianza y cumplimiento.
-- Navegación por anchors puede fallar con header fixed en móviles.
-
-## Recomendaciones prioritarias (orden sugerido)
-1. Unificar y corregir la política de privacidad (en página única o shared snippet) y reemplazar “Your Name”.
-2. Corregir el stylesheet de `privacy.html` para usar `css/style.css` o crear `app.css`.
-3. Revisar enlaces absolutos y migrarlos a relativos.
-4. Ajustar layout de header/nav/anchors para evitar solapamientos.
-5. Optimizar imágenes y eliminar assets no usados.
-6. Completar el copy truncado y actualizar el año del footer.
-
+## Pendientes / arquitectura
+- No hay banner de consentimiento de cookies (relevante si se apunta a EU/UK).
+- Header/footer dependen de JS (no hay fallback `noscript`).
+- `index.html` hace redirección client-side por idioma (impacto SEO/UX si JS está deshabilitado).
+- Enlaces absolutos (`/en/...`, `/es/...`) pueden romper si se publica bajo subpath sin CNAME.
+- `assets/js/lang-switcher.js` y `assets/js/slideshow.js` parecen no estar referenciados (código muerto).
+- Accesibilidad: faltan estilos `:focus-visible` y un “skip to content”.
+- Performance: PNGs grandes; ideal migrar a WebP/AVIF + tamaños responsivos.
