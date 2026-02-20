@@ -3,80 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matías Fernández | Dolar +</title>
-    <meta name="description" content="Dolar +: live exchange tracking for Argentina with a clean, glanceable UI." />
+    <title>Matías Fernández | Dolar+</title>
+    <meta name="description" content="Dolar+: Argentine dollar exchange rates with clarity and precision. Available on the App Store." />
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <script src="../../../assets/js/theme.js" defer></script>
-    <script src="../../../assets/js/slideshow.js" defer></script>
 </head>
 <body data-theme="web">
     <div class="ambient"></div>
     <div data-include="header"></div>
 
-    <main class="container section">
-        <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">Project · iOS · Finance</p>
-                <h1>Dolar +</h1>
-                <p class="lead">Currency exchange rates in one glance, designed for speed and trust. Minimal UI, maximum context.</p>
-                <div class="hero-actions">
-                    <a class="btn primary" href="../../../en/#contact">Contact</a>
-                    <a class="btn ghost" href="../../../en/projects/">View all projects</a>
+    <main>
+        <section class="product-hero">
+            <div class="container product-hero-content">
+                <div class="product-hero-text">
+                    <h1>Dolar+</h1>
+                    <p class="product-tagline">Argentine dollar exchange rates with clarity and precision.</p>
+                    <p class="product-description">Dolar+ was built to provide fast access to reliable exchange rates, with a clean experience and no unnecessary noise.</p>
+                    <div class="product-cta">
+                        <!-- TODO: replace with real App Store URL -->
+                        <a href="https://apps.apple.com" class="btn-primary" target="_blank" rel="noopener">View on App Store</a>
+                    </div>
+                </div>
+                <div class="product-hero-image">
+                    <img src="../../../assets/images/dolarplus-home.png" alt="Dolar+ iOS app showing exchange rates and currency conversion">
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="glass-card">
-                    <img src="../../../assets/images/preview-dolar.png" alt="Dolar+ iOS preview" />
-                    <div class="glass-content">
-                        <p class="pill">WIP</p>
-                        <h3>Dolar +</h3>
-                        <p>Live exchange tracking for Argentina with a clean, glanceable UI.</p>
+        </section>
+        <section class="product-problem">
+            <div class="container">
+                <h2>The Problem</h2>
+                <p class="problem-intro">In Argentina, accessing reliable and updated dollar exchange rates often requires navigating multiple sources, manually comparing values, and dealing with cluttered interfaces.</p>
+                <div class="problem-points">
+                    <div class="problem-item">
+                        <p>Information is fragmented across different exchange rate types.</p>
+                    </div>
+                    <div class="problem-item">
+                        <p>Interfaces prioritize ads or data volume over clarity.</p>
+                    </div>
+                    <div class="problem-item">
+                        <p>There is a lack of tools designed from the perspective of someone who checks exchange rates daily.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <div class="section-head" style="margin-top: 40px;">
-            <h2>Previews</h2>
-        </div>
-
-        <div class="cards">
-            <article class="card" data-slideshow data-previews="../../../assets/images/preview1.png|../../../assets/images/preview2.png|../../../assets/images/preview3.png" data-slideshow-title="Dolar +" tabindex="0" role="button" aria-label="View Dolar + previews">
-                <div class="card-header">
-                    <img src="../../../assets/images/dolar-icon.png" alt="Dolar+ app icon" />
-                    <div>
-                        <h3>Dolar +</h3>
-                        <p class="meta">WIP · iOS · Finance</p>
+        <section class="product-value">
+            <div class="container">
+                <h2>Value Proposition</h2>
+                <p class="value-intro">Dolar+ was designed prioritizing clarity, speed, and trust. Every decision aims to reduce friction and remove unnecessary noise.</p>
+                <div class="value-points">
+                    <div class="value-item">
+                        <h3>Clarity over volume</h3>
+                        <p>The interface focuses on essential information instead of overwhelming users with excessive data.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Fast access</h3>
+                        <p>Exchange rates are available immediately, without complex navigation or unnecessary steps.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Intentional decisions</h3>
+                        <p>It avoids superfluous features. The focus is on solving the core problem properly before expanding.</p>
                     </div>
                 </div>
-                <p>Currency exchange rates in one glance, designed for speed and trust. Minimal UI, maximum context.</p>
-                <div class="card-tags">
-                    <span>Product</span>
-                    <span>iOS</span>
-                    <span>Branding</span>
+            </div>
+        </section>
+        <section class="product-screenshots">
+            <div class="container">
+                <h2>Interface and Experience</h2>
+                <div class="screenshots-grid">
+                    <img src="../../../assets/images/dolar/screens/Rates.png" alt="Dolar+ – Exchange rates screen">
+                    <img src="../../../assets/images/dolar/screens/Spread.png" alt="Dolar+ – Spread between exchange rate types">
+                    <img src="../../../assets/images/dolar/screens/Convertion.png" alt="Dolar+ – Currency converter">
+                    <img src="../../../assets/images/dolar/screens/Smart.png" alt="Dolar+ – Smart view">
+                    <img src="../../../assets/images/dolar/screens/Widget.png" alt="Dolar+ – Rates widget">
                 </div>
-                <a class="card-link" href="#">View previews</a>
-            </article>
-        </div>
+            </div>
+        </section>
+        <section class="product-stack">
+            <div class="container">
+                <h2>Technical Stack</h2>
+                <p class="stack-intro">Dolar+ is built with a focus on simplicity, maintainability, and performance.</p>
+                <ul class="stack-list">
+                    <li>Native iOS built with SwiftUI.</li>
+                    <li>Modular architecture designed for clarity and testability.</li>
+                    <li>Integration with real-time exchange rate APIs.</li>
+                    <li>Widgets and extensions for the Apple ecosystem.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="product-status-section">
+            <div class="container">
+                <h2>Status</h2>
+                <p class="product-status-text">Current status: Live. Available on the App Store.</p>
+            </div>
+        </section>
+        <section class="product-links">
+            <div class="container">
+                <h2>Links</h2>
+                <ul class="product-links-list">
+                    <li><a href="https://apps.apple.com" target="_blank" rel="noopener">View on App Store</a></li>
+                    <li><a href="/en/contact/#support">Support</a></li>
+                    <li><a href="/en/privacy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
-    <div data-include="footer"></div>
 
-    <div class="slideshow-modal" data-slideshow-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Dolar + previews">
-        <div class="slideshow-dialog">
-            <div class="slideshow-header">
-                <p class="slideshow-title" data-slideshow-title>Dolar +</p>
-                <button class="slideshow-close" type="button" data-slideshow-close>Close</button>
-            </div>
-            <div class="slideshow-body">
-                <button class="slideshow-nav" type="button" data-slideshow-prev aria-label="Previous">←</button>
-                <img class="slideshow-image" data-slideshow-image src="" alt="Dolar + preview" />
-                <button class="slideshow-nav" type="button" data-slideshow-next aria-label="Next">→</button>
-            </div>
-            <div class="slideshow-footer">
-                <span class="slideshow-counter" data-slideshow-counter>1 / 3</span>
-            </div>
-        </div>
-    </div>
-<script src="../../../assets/js/include-loader.js"></script>
+    <div data-include="footer"></div>
+    <script src="../../../assets/js/include-loader.js"></script>
 </body>
 </html>
