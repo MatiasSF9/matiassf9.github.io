@@ -1,57 +1,52 @@
 # IA.MD - Findings del sitio Matías Fernández
 
-Fecha de análisis: 2026-02-06
+Fecha de análisis: 2026-02-20
 
 ## Resumen rápido
-Sitio estático simple (HTML/CSS), sin JS. Contenido principal en `index.html` y una página de privacidad separada en `privacy.html`. Se detectan inconsistencias de contenido, enlaces y referencias a archivos inexistentes, además de oportunidades claras en accesibilidad, SEO y mantenimiento.
+Sitio estático multi-idioma (/es y /en) con redirección por idioma en `index.html`, header/footer inyectados vía JS, selector de tema (web/apple/android) y Google Analytics. SEO básico (OG, Twitter Cards, sitemap) ya está presente en las páginas internas.
 
 ## Hallazgos por área
-### Contenido y consistencia
-- En `privacy.html` aparece el placeholder “Your Name” en el texto de privacidad. No coincide con la marca real. (`privacy.html`)
-- El texto “We are a passionate group of people devoted to create great prod.” está truncado. (`index.html`)
-- El footer indica `© 2023` y no se actualiza. (`index.html`)
-- Hay dos políticas de privacidad: una sección en `index.html` y una página completa en `privacy.html`. El contenido no es idéntico (títulos, encabezado, textos y estructura). Esto genera divergencias futuras.
+### Cumplimiento / privacidad
+- La política de privacidad afirma “No se utilizan SDKs de terceros para seguimiento o analítica”, pero todas las páginas cargan Google Analytics (`gtag.js`). Esto es inconsistente con lo declarado. (`es/privacy/index.html`, `en/privacy/index.html`, páginas `es/**` y `en/**`)
+- No hay mecanismo de consentimiento/cookies. Si apuntás a EU/UK, puede ser obligatorio. (todas las páginas con GA)
 
-### Enlaces y recursos
-- `privacy.html` referencia `app.css`, pero no existe en el repo. Esto deja la página sin estilos. (`privacy.html`)
-- En `privacy.html` los links usan rutas absolutas (`/index.html`, `/privacy.html`). Si el sitio se publica bajo un subpath, esos enlaces fallan.
-- Carpeta `javascript/` existe pero está vacía; sugiere trabajo incompleto o limpieza pendiente.
+### Navegación e i18n
+- `index.html` redirige por JS + meta refresh a `/es/`. Sin JS, fuerza ES y no ofrece selector de idioma en la home. Además, las redirecciones client-side pueden afectar SEO. (`index.html`)
+- Hay mezcla de enlaces absolutos (`/en/contact/#...`, `/en/privacy/`) y relativos. Si el sitio se publica bajo subpath (GitHub Pages sin CNAME), esos enlaces rompen. (ej: `en/index.html`, `en/projects/dolarplus/index.html`, equivalentes `es/**`)
+
+### Dependencia de JS / resiliencia
+- Header y footer se inyectan con `include-loader.js`. Si falla `fetch` o JS está deshabilitado, se pierde navegación y los selectores de idioma/tema. No hay fallback `<noscript>`. (`components/*.html`, `assets/js/include-loader.js`, páginas con `data-include`)
+- `assets/js/lang-switcher.js` y `assets/js/slideshow.js` no están referenciados en `/es` o `/en` (código muerto / assets sin uso).
+
+### Contenido / enlaces
+- En la página de Dolar+ el link al App Store es placeholder (`https://apps.apple.com`) con TODO. (`es/projects/dolarplus/index.html`, `en/projects/dolarplus/index.html`)
 
 ### Accesibilidad
-- No hay landmark semántico `main` ni `aria`/`skip links` para navegación rápida. (Mejora de accesibilidad básica)
-- Imágenes con `alt` genérico (“App Icon”, “Dolar + Preview”). Se puede describir mejor el contenido real para lectores de pantalla. (`index.html`)
-- Tamaños tipográficos grandes sin ajuste responsivo específico en títulos; en pantallas pequeñas, el `h2` de 42px puede generar saltos visuales. (`css/style.css`)
+- Botones de idioma/tema no tienen estilos de foco visibles (`:focus-visible`). La navegación por teclado queda poco clara. (`assets/css/style.css`)
+- No hay “skip to content”. Recomendable para navegación con teclado/lectores. (todas las páginas)
 
-### SEO y metadatos
-- Falta `meta description` para index y privacy.
-- No hay `favicon` declarado.
-- No hay `og:` / `twitter:` meta tags para sharing.
-
-### CSS y layout
-- `box-sizing: border-box` solo está en `body`, no en todos los elementos. Esto puede producir layouts inconsistentes.
-- Se combina `header` fixed + `nav` sticky con `top: 80px` y `section` con `margin-top: 80px` y `scroll-margin-top: 140px`. En resoluciones/zoom distintos, puede haber solapamientos o scroll incorrecto a anchors. (`css/style.css`)
-- `.app-preview img` usa `max-width: 60%` sin contenedor definido; en desktop puede verse demasiado pequeño y en mobile puede comportarse de forma inesperada.
-
-### Assets
-- `assets/dolar-icon.png` y `assets/dolar-ios.png` no se usan en HTML/CSS actuales.
-- `assets/dolar-icon-2.png` pesa ~455KB para un ícono 40x40; conviene optimizar o exportar versión pequeña.
+### Performance / assets
+- PNGs grandes (ej. `assets/images/dolarplus-home.png` ~383KB, `assets/images/dolar-icon.png` ~204KB). Sería mejor WebP/AVIF + tamaños responsivos. (`assets/images/*`)
 
 ## Archivos relevantes
-- `index.html` (home)
-- `privacy.html` (privacy page)
-- `css/style.css` (estilos)
-- `assets/` (imagenes)
+- `index.html` (redirige a /es o /en)
+- `es/**` y `en/**` (páginas principales)
+- `components/header.html`, `components/footer.html`
+- `assets/css/style.css`
+- `assets/js/include-loader.js`, `assets/js/theme.js`
+- `assets/js/lang-switcher.js`, `assets/js/slideshow.js` (posibles sobrantes)
+- `sitemap.xml`, `robots.txt`
 
 ## Riesgos prácticos
-- La página de privacidad puede estar sin estilos en producción por `app.css` faltante.
-- Inconsistencias de copy entre páginas pueden afectar confianza y cumplimiento.
-- Navegación por anchors puede fallar con header fixed en móviles.
+- Declaración de privacidad inconsistente con uso real de GA.
+- Enlaces absolutos pueden fallar en subpaths.
+- Navegación depende de JS (si falla, se pierde el header/footer).
 
 ## Recomendaciones prioritarias (orden sugerido)
-1. Unificar y corregir la política de privacidad (en página única o shared snippet) y reemplazar “Your Name”.
-2. Corregir el stylesheet de `privacy.html` para usar `css/style.css` o crear `app.css`.
-3. Revisar enlaces absolutos y migrarlos a relativos.
-4. Ajustar layout de header/nav/anchors para evitar solapamientos.
-5. Optimizar imágenes y eliminar assets no usados.
-6. Completar el copy truncado y actualizar el año del footer.
-
+1. Alinear la política de privacidad con el uso real de GA (y, si aplica, añadir consentimiento).
+2. Reemplazar links placeholders de App Store por URLs reales.
+3. Unificar enlaces a rutas relativas o generar rutas con prefijo para soportar subpaths.
+4. Agregar fallback para header/footer (noscript) o prerender estático.
+5. Eliminar JS no utilizado o integrarlo donde corresponda.
+6. Agregar estilos `:focus-visible` y un “skip to content”.
+7. Optimizar imágenes grandes (WebP/AVIF + tamaños responsivos).
