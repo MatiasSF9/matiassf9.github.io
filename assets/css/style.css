@@ -882,6 +882,36 @@ body.slideshow-open {
     padding: 0 0 100px;
 }
 
+.projects-section {
+    padding: 56px 0 0;
+}
+
+.projects-section + .projects-section {
+    border-top: 1px solid var(--border);
+    margin-top: 56px;
+}
+
+.projects-section h2 {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--muted);
+    margin: 0 0 8px;
+}
+
+.projects-section-text {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 40px;
+    line-height: 1.6;
+}
+
+.projects-grid {
+    min-height: 1px;
+}
+
 @media (max-width: 720px) {
     .hero {
         padding: 64px 0 48px;
@@ -991,5 +1021,13 @@ body.slideshow-open {
 
     .projects-content {
         padding: 0 0 60px;
+    }
+
+    .projects-section {
+        padding: 40px 0 0;
+    }
+
+    .projects-section + .projects-section {
+        margin-top: 40px;
     }
 }
