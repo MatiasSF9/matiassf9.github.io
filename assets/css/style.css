@@ -1103,6 +1103,55 @@ body.slideshow-open {
     margin: 0;
 }
 
+.product-value {
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+}
+
+.product-value h2 {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--muted);
+    margin: 0 0 24px;
+}
+
+.value-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 680px;
+    margin: 0 0 48px;
+}
+
+.value-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.value-item {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+.value-item h3 {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+
+.value-item p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0;
+}
+
 @media (max-width: 720px) {
     .hero {
         padding: 64px 0 48px;
@@ -1240,6 +1289,15 @@ body.slideshow-open {
     }
 
     .problem-points {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .product-value {
+        padding: 56px 0;
+    }
+
+    .value-points {
         grid-template-columns: 1fr;
         gap: 24px;
     }
