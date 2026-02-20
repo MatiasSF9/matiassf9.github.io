@@ -238,6 +238,30 @@ body[data-theme="android"] .site-header {
     margin: 0;
 }
 
+/* ── About Experience ─────────────────────────────────── */
+.about-experience {
+    padding: 0 0 72px;
+    border-top: 1px solid var(--border);
+}
+
+.about-experience h2 {
+    margin-bottom: 32px;
+}
+
+.about-experience-content {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about-experience-content p {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.75;
+    margin: 0;
+}
+
 /* ── Featured Product ─────────────────────────────────── */
 .featured-product {
     padding: 72px 0;
