@@ -1734,6 +1734,7 @@ body.slideshow-open {
     .screenshots-grid {
         --carousel-items: 1;
         --carousel-gap: 16px;
+        --carousel-item-max: 200px;
     }
 
     .product-hero-content {

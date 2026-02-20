@@ -25,6 +25,7 @@
                 const styles = window.getComputedStyle(container);
                 const gapValue = styles.getPropertyValue('--carousel-gap') || '24px';
                 const itemsValue = styles.getPropertyValue('--carousel-items') || '3';
+                const maxValue = styles.getPropertyValue('--carousel-item-max') || '';
                 const gap = parseFloat(gapValue) || 24;
                 const itemsPerView = parseFloat(itemsValue) || 3;
                 const containerWidth = container.clientWidth;
@@ -32,7 +33,11 @@
                     return;
                 }
 
-                const itemWidth = (containerWidth - gap * (itemsPerView - 1)) / itemsPerView;
+                let itemWidth = (containerWidth - gap * (itemsPerView - 1)) / itemsPerView;
+                const maxWidth = parseFloat(maxValue);
+                if (!Number.isNaN(maxWidth) && maxWidth > 0) {
+                    itemWidth = Math.min(itemWidth, maxWidth);
+                }
                 const distance = images.length * itemWidth + gap * (images.length - 1);
 
                 track.style.setProperty('--item-width', `${itemWidth}px`);
