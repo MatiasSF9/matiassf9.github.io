@@ -1,52 +1,42 @@
-# IA.MD - Findings del sitio Matías Fernández
+# IA.MD - Project Notes (Matías Fernández site)
 
-Fecha de análisis: 2026-02-20
+Fecha de actualización: 2026-02-20
 
-## Resumen rápido
-Sitio estático multi-idioma (/es y /en) con redirección por idioma en `index.html`, header/footer inyectados vía JS, selector de tema (web/apple/android) y Google Analytics. SEO básico (OG, Twitter Cards, sitemap) ya está presente en las páginas internas.
+## Overview
+Sitio estático multi-idioma (`/es` y `/en`) para Matías Fernández, publicado en GitHub Pages. Header/footer se inyectan por JS y hay selector de tema (web/apple/android).
 
-## Hallazgos por área
-### Cumplimiento / privacidad
-- La política de privacidad afirma “No se utilizan SDKs de terceros para seguimiento o analítica”, pero todas las páginas cargan Google Analytics (`gtag.js`). Esto es inconsistente con lo declarado. (`es/privacy/index.html`, `en/privacy/index.html`, páginas `es/**` y `en/**`)
-- No hay mecanismo de consentimiento/cookies. Si apuntás a EU/UK, puede ser obligatorio. (todas las páginas con GA)
+## Estructura
+- `index.html`: redirección al idioma.
+- `es/` y `en/`: contenido principal por idioma.
+- `components/header.html`, `components/footer.html`: navegación compartida (inyectada).
+- `assets/css/style.css`: estilos globales.
+- `assets/js/include-loader.js`: inyección de header/footer + nav links + reinit de theme/lang.
+- `assets/js/theme.js`: persistencia de tema.
+- `assets/js/screenshots-carousel.js`: carrusel continuo para screenshots en Dolar+.
+- `assets/images/`: imágenes del sitio.
 
-### Navegación e i18n
-- `index.html` redirige por JS + meta refresh a `/es/`. Sin JS, fuerza ES y no ofrece selector de idioma en la home. Además, las redirecciones client-side pueden afectar SEO. (`index.html`)
-- Hay mezcla de enlaces absolutos (`/en/contact/#...`, `/en/privacy/`) y relativos. Si el sitio se publica bajo subpath (GitHub Pages sin CNAME), esos enlaces rompen. (ej: `en/index.html`, `en/projects/dolarplus/index.html`, equivalentes `es/**`)
+## Privacidad
+- Web privacy:
+  - `/es/privacy/`
+  - `/en/privacy/`
+- App privacy (Dolar+):
+  - `/es/privacy/apps/dolarplus/`
+  - `/en/privacy/apps/dolarplus/`
 
-### Dependencia de JS / resiliencia
-- Header y footer se inyectan con `include-loader.js`. Si falla `fetch` o JS está deshabilitado, se pierde navegación y los selectores de idioma/tema. No hay fallback `<noscript>`. (`components/*.html`, `assets/js/include-loader.js`, páginas con `data-include`)
-- `assets/js/lang-switcher.js` y `assets/js/slideshow.js` no están referenciados en `/es` o `/en` (código muerto / assets sin uso).
+## SEO / metadata
+- Canonical + OG + Twitter Cards en páginas internas.
+- `sitemap.xml` con rutas principales, incluyendo privacy web + app.
 
-### Contenido / enlaces
-- En la página de Dolar+ el link al App Store es placeholder (`https://apps.apple.com`) con TODO. (`es/projects/dolarplus/index.html`, `en/projects/dolarplus/index.html`)
+## Dolar+ – screenshots
+La sección “Interfaz / Interface and Experience” usa un carrusel infinito y continuo (sin interacción manual), con duplicado de items para loop. Respeta `prefers-reduced-motion` (se queda estático si el usuario lo pide).
 
-### Accesibilidad
-- Botones de idioma/tema no tienen estilos de foco visibles (`:focus-visible`). La navegación por teclado queda poco clara. (`assets/css/style.css`)
-- No hay “skip to content”. Recomendable para navegación con teclado/lectores. (todas las páginas)
-
-### Performance / assets
-- PNGs grandes (ej. `assets/images/dolarplus-home.png` ~383KB, `assets/images/dolar-icon.png` ~204KB). Sería mejor WebP/AVIF + tamaños responsivos. (`assets/images/*`)
-
-## Archivos relevantes
-- `index.html` (redirige a /es o /en)
-- `es/**` y `en/**` (páginas principales)
-- `components/header.html`, `components/footer.html`
-- `assets/css/style.css`
-- `assets/js/include-loader.js`, `assets/js/theme.js`
-- `assets/js/lang-switcher.js`, `assets/js/slideshow.js` (posibles sobrantes)
-- `sitemap.xml`, `robots.txt`
-
-## Riesgos prácticos
-- Declaración de privacidad inconsistente con uso real de GA.
-- Enlaces absolutos pueden fallar en subpaths.
-- Navegación depende de JS (si falla, se pierde el header/footer).
-
-## Recomendaciones prioritarias (orden sugerido)
-1. Alinear la política de privacidad con el uso real de GA (y, si aplica, añadir consentimiento).
-2. Reemplazar links placeholders de App Store por URLs reales.
-3. Unificar enlaces a rutas relativas o generar rutas con prefijo para soportar subpaths.
-4. Agregar fallback para header/footer (noscript) o prerender estático.
-5. Eliminar JS no utilizado o integrarlo donde corresponda.
-6. Agregar estilos `:focus-visible` y un “skip to content”.
-7. Optimizar imágenes grandes (WebP/AVIF + tamaños responsivos).
+## Pendientes / arquitectura
+- Link de App Store para Dolar+ sigue siendo placeholder (`https://apps.apple.com`) en `/es/projects/dolarplus/` y `/en/projects/dolarplus/`.
+- URL de privacidad usada en App Store / dentro de la app debe apuntar a `.../privacy/apps/dolarplus/` (fuera de este repo).
+- No hay banner de consentimiento de cookies (relevante si se apunta a EU/UK).
+- Header/footer dependen de JS (no hay fallback `noscript`).
+- `index.html` hace redirección client-side por idioma (impacto SEO/UX si JS está deshabilitado).
+- Enlaces absolutos (`/en/...`, `/es/...`) pueden romper si se publica bajo subpath sin CNAME.
+- `assets/js/lang-switcher.js` y `assets/js/slideshow.js` parecen no estar referenciados (código muerto).
+- Accesibilidad: faltan estilos `:focus-visible` y un “skip to content”.
+- Performance: PNGs grandes; ideal migrar a WebP/AVIF + tamaños responsivos.
