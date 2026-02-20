@@ -4,36 +4,33 @@
       text: 'Usamos cookies de analítica para entender el tráfico del sitio. Puedes aceptar o rechazar.',
       accept: 'Aceptar analítica',
       reject: 'Rechazar',
-      link: 'Ver política de privacidad',
+      link: 'Ver política de privacidad →',
       href: '/es/privacy/',
     },
     en: {
       text: 'We use analytics cookies to understand site traffic. You can accept or reject.',
       accept: 'Accept analytics',
       reject: 'Reject',
-      link: 'View privacy policy',
+      link: 'View privacy policy →',
       href: '/en/privacy/',
     },
   };
 
-  const detectLang = () => {
-    const htmlLang = document.documentElement.getAttribute('lang');
-    if (htmlLang) {
-      return htmlLang.toLowerCase().startsWith('en') ? 'en' : 'es';
-    }
-    const path = window.location.pathname || '';
-    if (/(^|\/)en(\/|$)/.test(path)) return 'en';
-    if (/(^|\/)es(\/|$)/.test(path)) return 'es';
-    return 'es';
-  };
+  function detectLang() {
+    const path = window.location.pathname || '/';
+    if (path === '/es' || path.startsWith('/es/')) return 'es';
+    if (path === '/en' || path.startsWith('/en/')) return 'en';
+    return 'en';
+  }
 
-  const buildBanner = (lang) => {
-    const copy = COPY[lang] || COPY.es;
+  function buildBanner(lang) {
+    const copy = COPY[lang] || COPY.en;
 
     const banner = document.createElement('div');
     banner.className = 'cookie-banner';
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-live', 'polite');
+    banner.setAttribute('aria-label', 'Cookie consent');
 
     const content = document.createElement('div');
     content.className = 'cookie-banner__content';
@@ -47,17 +44,21 @@
 
     const accept = document.createElement('button');
     accept.type = 'button';
+    accept.className = 'cookie-banner__btn cookie-banner__btn--primary';
     accept.setAttribute('data-cc', 'accept');
     accept.textContent = copy.accept;
 
     const reject = document.createElement('button');
     reject.type = 'button';
+    reject.className = 'cookie-banner__btn';
     reject.setAttribute('data-cc', 'reject');
     reject.textContent = copy.reject;
 
     const link = document.createElement('a');
+    link.className = 'cookie-banner__link';
+    link.setAttribute('data-cc', 'privacy');
     link.href = copy.href;
-    link.textContent = `${copy.link} →`;
+    link.textContent = copy.link;
 
     actions.appendChild(accept);
     actions.appendChild(reject);
@@ -68,26 +69,16 @@
     banner.appendChild(content);
 
     return banner;
-  };
+  }
 
-  const init = () => {
-    if (!window.CookieConsent || typeof window.CookieConsent.getConsent !== 'function') {
-      return;
-    }
-    if (document.querySelector('.cookie-banner')) return;
-
-    const lang = detectLang();
-    const banner = buildBanner(lang);
-    document.body.appendChild(banner);
-
-    const setVisibility = (value) => {
-      const visible = value == null;
-      banner.classList.toggle('cookie-banner--visible', visible);
-      banner.setAttribute('aria-hidden', visible ? 'false' : 'true');
-    };
+  function init() {
+    if (!window.CookieConsent || typeof window.CookieConsent.getConsent !== 'function') return;
 
     const current = window.CookieConsent.getConsent();
-    setVisibility(current);
+    if (current !== null) return;
+
+    const banner = buildBanner(detectLang());
+    document.body.appendChild(banner);
 
     banner.addEventListener('click', (event) => {
       const target = event.target;
@@ -95,17 +86,14 @@
       const action = target.getAttribute('data-cc');
       if (action === 'accept') {
         window.CookieConsent.accept();
+        banner.remove();
       }
       if (action === 'reject') {
         window.CookieConsent.reject();
+        banner.remove();
       }
     });
-
-    window.addEventListener('consent:changed', (event) => {
-      const detail = event.detail || {};
-      setVisibility(detail.value ?? null);
-    });
-  };
+  }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
