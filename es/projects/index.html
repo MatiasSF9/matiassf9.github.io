@@ -4,92 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matías Fernández | Proyectos</title>
-    <meta name="description" content="Proyectos de Matías Fernández: productos digitales en progreso." />
+    <meta name="description" content="Productos propios construidos como extensión natural del trabajo en estrategia y liderazgo de producto." />
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/theme.js" defer></script>
-    <script src="../../assets/js/slideshow.js" defer></script>
 </head>
 <body data-theme="web">
     <div class="ambient"></div>
     <div data-include="header"></div>
 
-    <main class="container section">
-        <div class="section-head">
-            <h2>Showcase de proyectos</h2>
-            <p>Productos en progreso enfocados en claridad, utilidad y pulido.</p>
-        </div>
+    <main>
+        <section class="projects-intro">
+            <div class="container">
+                <h1>Proyectos</h1>
+                <p class="projects-intro-text">Construyo productos propios como extensión natural de mi trabajo en estrategia y liderazgo de producto. Cada proyecto responde a una hipótesis concreta y forma parte de una visión de largo plazo.</p>
+            </div>
+        </section>
 
-        <div class="cards">
-            <article class="card" data-slideshow data-previews="../../assets/images/preview1.png|../../assets/images/preview2.png|../../assets/images/preview3.png" data-slideshow-title="Dolar +" tabindex="0" role="button" aria-label="Ver previews de Dolar +">
-                <div class="card-header">
-                    <img src="../../assets/images/dolar-icon.png" alt="Icono de Dolar+" />
-                    <div>
-                        <h3>Dolar +</h3>
-                        <p class="meta">WIP · iOS · Finanzas</p>
-                    </div>
-                </div>
-                <p>Tipo de cambio en un vistazo, pensado para velocidad y confianza. UI minima, contexto maximo.</p>
-                <div class="card-tags">
-                    <span>Producto</span>
-                    <span>iOS</span>
-                    <span>Branding</span>
-                </div>
-                <a class="card-link" href="../../es/projects/dolarplus/">Ver detalle</a>
-            </article>
+        <section class="projects-content">
+            <div class="container">
 
-            <article class="card">
-                <div class="card-header">
-                    <div class="placeholder">MT</div>
-                    <div>
-                        <h3>Musician's Toolkit</h3>
-                        <p class="meta">WIP · Herramientas creativas</p>
+                <section class="projects-section live">
+                    <h2>Live</h2>
+                    <p class="projects-section-text">Productos publicados y en uso real.</p>
+                    <div class="projects-grid live-grid">
+                        <!-- Cards Live irán aquí -->
                     </div>
-                </div>
-                <p>Herramientas para practicar, medir progreso y tocar en vivo. Disenado para no estorbar.</p>
-                <div class="card-tags">
-                    <span>Concepto</span>
-                    <span>Mobile</span>
-                    <span>Workflow</span>
-                </div>
-                <a class="card-link" href="../../es/#contact">Recibir novedades</a>
-            </article>
+                </section>
 
-            <article class="card">
-                <div class="card-header">
-                    <div class="placeholder">W2W</div>
-                    <div>
-                        <h3>What2Wear</h3>
-                        <p class="meta">WIP · Lifestyle</p>
+                <section class="projects-section in-progress">
+                    <h2>En desarrollo</h2>
+                    <p class="projects-section-text">Iniciativas activas en construcción.</p>
+                    <div class="projects-grid progress-grid">
+                        <!-- Cards WIP irán aquí -->
                     </div>
-                </div>
-                <p>Decisiones diarias simplificadas. Recomendaciones por clima, agenda y contexto.</p>
-                <div class="card-tags">
-                    <span>IA aplicada</span>
-                    <span>Mobile</span>
-                    <span>Estrategia</span>
-                </div>
-                <a class="card-link" href="../../es/#contact">Sumarme a la lista</a>
-            </article>
-        </div>
+                </section>
+
+                <section class="projects-section explorations">
+                    <h2>Exploraciones</h2>
+                    <p class="projects-section-text">Hipótesis en evaluación y experimentación.</p>
+                    <div class="projects-grid exploration-grid">
+                        <!-- Cards Exploración irán aquí -->
+                    </div>
+                </section>
+
+            </div>
+        </section>
     </main>
-    <div data-include="footer"></div>
 
-    <div class="slideshow-modal" data-slideshow-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Previews de Dolar +">
-        <div class="slideshow-dialog">
-            <div class="slideshow-header">
-                <p class="slideshow-title" data-slideshow-title>Dolar +</p>
-                <button class="slideshow-close" type="button" data-slideshow-close>Cerrar</button>
-            </div>
-            <div class="slideshow-body">
-                <button class="slideshow-nav" type="button" data-slideshow-prev aria-label="Anterior">←</button>
-                <img class="slideshow-image" data-slideshow-image src="" alt="Preview de Dolar +" />
-                <button class="slideshow-nav" type="button" data-slideshow-next aria-label="Siguiente">→</button>
-            </div>
-            <div class="slideshow-footer">
-                <span class="slideshow-counter" data-slideshow-counter>1 / 3</span>
-            </div>
-        </div>
-    </div>
+    <div data-include="footer"></div>
 <script src="../../assets/js/include-loader.js"></script>
 </body>
 </html>
