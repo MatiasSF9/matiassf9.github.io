@@ -855,6 +855,33 @@ body.slideshow-open {
     flex: 1;
 }
 
+/* ===== PROJECTS ===== */
+.projects-intro {
+    padding: 100px 0 64px;
+}
+
+.projects-intro h1 {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0 0 32px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.projects-intro-text {
+    max-width: 640px;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--muted);
+    margin: 0;
+}
+
+.projects-content {
+    padding: 0 0 100px;
+}
+
 @media (max-width: 720px) {
     .hero {
         padding: 64px 0 48px;
@@ -952,5 +979,17 @@ body.slideshow-open {
 
     .strategic-cta {
         padding: 60px 0;
+    }
+
+    .projects-intro {
+        padding: 64px 0 40px;
+    }
+
+    .projects-intro-text {
+        font-size: 16px;
+    }
+
+    .projects-content {
+        padding: 0 0 60px;
     }
 }
