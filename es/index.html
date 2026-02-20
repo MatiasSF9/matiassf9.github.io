@@ -23,6 +23,18 @@
     <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/theme.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4P6GBFYSSK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4P6GBFYSSK', {
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false
+        });
+    </script>
 </head>
 <body data-theme="web">
     <div class="ambient"></div>
@@ -104,12 +116,12 @@
                     <div class="cta-card">
                         <h3>Advisor Estratégico</h3>
                         <p>Si estás construyendo una startup y necesitas criterio en producto, dirección estratégica y claridad de decisiones.</p>
-                        <a href="/es/contact/#advisor" class="btn-primary">Iniciar conversación</a>
+                        <a href="/es/contact/#advisor" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">Iniciar conversación</a>
                     </div>
                     <div class="cta-card">
                         <h3>Partnership en Startup</h3>
                         <p>Si buscas un socio con experiencia en producto y ejecución real para construir algo con visión de largo plazo.</p>
-                        <a href="/es/contact/#partnership" class="btn-primary">Explorar colaboración</a>
+                        <a href="/es/contact/#partnership" class="btn-primary" onclick="gtag('event', 'click_partnership', {'event_category': 'engagement'});">Explorar colaboración</a>
                     </div>
                     <div class="cta-card">
                         <h3>Soporte de Aplicaciones</h3>

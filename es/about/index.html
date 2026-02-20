@@ -23,6 +23,18 @@
     <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/theme.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4P6GBFYSSK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4P6GBFYSSK', {
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false
+        });
+    </script>
 </head>
 <body data-theme="web">
     <div class="ambient"></div>
@@ -100,8 +112,8 @@
             <h2>Si estás construyendo algo con ambición</h2>
             <p>Estoy abierto a conversaciones donde producto, dirección y ejecución estratégica sean centrales.</p>
             <div class="about-cta-actions">
-                <a href="/es/contact/#advisor" class="btn-primary">Hablar sobre advisory</a>
-                <a href="/es/contact/#partnership" class="btn-secondary">Explorar partnership</a>
+                <a href="/es/contact/#advisor" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">Hablar sobre advisory</a>
+                <a href="/es/contact/#partnership" class="btn-secondary" onclick="gtag('event', 'click_partnership', {'event_category': 'engagement'});">Explorar partnership</a>
             </div>
         </div>
     </section>

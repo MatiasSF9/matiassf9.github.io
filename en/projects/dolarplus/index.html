@@ -23,6 +23,18 @@
     <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <script src="../../../assets/js/theme.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4P6GBFYSSK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4P6GBFYSSK', {
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false
+        });
+    </script>
 </head>
 <body data-theme="web">
     <div class="ambient"></div>
@@ -37,7 +49,7 @@
                     <p class="product-description">Dolar+ was built to provide fast access to reliable exchange rates, with a clean experience and no unnecessary noise.</p>
                     <div class="product-cta">
                         <!-- TODO: replace with real App Store URL -->
-                        <a href="https://apps.apple.com" class="btn-primary" target="_blank" rel="noopener">View on App Store</a>
+                        <a href="https://apps.apple.com" class="btn-primary" target="_blank" rel="noopener" onclick="gtag('event', 'click_app_store', {'event_category': 'engagement', 'event_label': 'dolarplus'});">View on App Store</a>
                     </div>
                 </div>
                 <div class="product-hero-image">
@@ -116,7 +128,7 @@
             <div class="container">
                 <h2>Links</h2>
                 <ul class="product-links-list">
-                    <li><a href="https://apps.apple.com" target="_blank" rel="noopener">View on App Store</a></li>
+                    <li><a href="https://apps.apple.com" target="_blank" rel="noopener" onclick="gtag('event', 'click_app_store', {'event_category': 'engagement', 'event_label': 'dolarplus'});">View on App Store</a></li>
                     <li><a href="/en/contact/#support">Support</a></li>
                     <li><a href="/en/privacy/">Privacy Policy</a></li>
                 </ul>
