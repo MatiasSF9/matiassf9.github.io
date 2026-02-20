@@ -112,7 +112,7 @@
 
         // Footer cookies link
         root.querySelectorAll('[data-footer-cookies]').forEach((el) => {
-            el.setAttribute('href', links.privacy);
+            el.setAttribute('href', `${links.privacy}#cookies`);
             el.textContent = 'Cookies';
         });
     };
