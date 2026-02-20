@@ -1265,6 +1265,22 @@ body.slideshow-open {
     margin-top: 8px;
 }
 
+.app-store-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.app-store-link:hover {
+    opacity: 0.9;
+}
+
+.app-store-badge {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .product-hero-image {
     display: flex;
     justify-content: center;
@@ -1509,6 +1525,10 @@ body.slideshow-open {
     color: var(--ink);
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.product-links-list .app-store-link {
+    text-decoration: none;
 }
 
 .product-links-list a:hover {
