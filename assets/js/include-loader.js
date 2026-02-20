@@ -88,7 +88,7 @@
         const base = `${prefix}${lang}/`;
         const links = {
             home:     base,
-            projects: `${base}#projects`,
+            projects: `${base}projects/`,
             about:    `${base}#about`,
             contact:  `${base}#contact`,
             privacy:  `${base}privacy/`,
