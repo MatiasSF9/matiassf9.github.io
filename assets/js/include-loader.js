@@ -89,7 +89,7 @@
         const links = {
             home:     base,
             projects: `${base}projects/`,
-            about:    `${base}#about`,
+            about:    `${base}about/`,
             contact:  `${base}#contact`,
             privacy:  `${base}privacy/`,
         };
