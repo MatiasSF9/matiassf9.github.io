@@ -109,6 +109,12 @@
         root.querySelectorAll('[data-footer-tagline]').forEach((el) => {
             el.textContent = FOOTER_TAGLINE[lang] || FOOTER_TAGLINE['es'];
         });
+
+        // Footer cookies link
+        root.querySelectorAll('[data-footer-cookies]').forEach((el) => {
+            el.setAttribute('href', links.privacy);
+            el.textContent = 'Cookies';
+        });
     };
 
     // ─────────────────────────────────────────────
