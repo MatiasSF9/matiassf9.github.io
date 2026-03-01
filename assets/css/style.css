@@ -1263,6 +1263,10 @@ body.slideshow-open {
 
 .product-cta {
     margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: fit-content;
 }
 
 .app-store-link {
@@ -1276,9 +1280,10 @@ body.slideshow-open {
 }
 
 .app-store-badge {
-    height: 40px;
+    height: auto;
     width: auto;
     display: block;
+    max-height: 60px;
 }
 
 .product-hero-image {
