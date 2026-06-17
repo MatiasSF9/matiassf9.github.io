@@ -55,15 +55,29 @@ node_modules/
 # ignore composer vendor directory
 /vendor
 
+# ignore Ruby/Bundler local artifacts
+/.bundle/
+/vendor/bundle/
+
 # ignore components loaded via Bower
 /bower_components
 
 # ignore jekyll build directory
 /_site
 
+# ignore Jekyll local cache/metadata
+/.jekyll-cache/
+/.jekyll-metadata
+/.sass-cache/
+
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
+.DS_Store
+
+# ignore local editor/assistant folders
+/.vscode/
+/.claude/
 
 # ignore Editor files
 *.sublime-project

@@ -1,156 +1,110 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matías Fernández — Arquitectura Mobile, Liderazgo Técnico y Ejecución Potenciada por AI</title>
-    <meta name="description" content="Senior technical product builder con más de 14 años en arquitectura mobile, liderazgo técnico, productos digitales y ejecución potenciada por AI." />
-    <link rel="canonical" href="https://matiasrfernandez.com/es/" />
-    <link rel="alternate" hreflang="es" href="https://matiasrfernandez.com/es/" />
-    <link rel="alternate" hreflang="en" href="https://matiasrfernandez.com/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://matiasrfernandez.com/en/" />
-    <!-- Open Graph -->
-    <meta property="og:title" content="Matías Fernández — Arquitectura Mobile, Liderazgo Técnico y Ejecución Potenciada por AI" />
-    <meta property="og:description" content="Senior technical product builder con más de 14 años en arquitectura mobile, liderazgo técnico, productos digitales y ejecución potenciada por AI." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://matiasrfernandez.com/es/" />
-    <meta property="og:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <meta property="og:locale" content="es_ES" />
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Matías Fernández — Arquitectura Mobile, Liderazgo Técnico y Ejecución Potenciada por AI" />
-    <meta name="twitter:description" content="Senior technical product builder con más de 14 años en arquitectura mobile, liderazgo técnico, productos digitales y ejecución potenciada por AI." />
-    <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/theme.js" defer></script>
-    <link rel="stylesheet" href="/assets/css/cookie-banner.css">
-    <script defer src="/assets/js/cookie-consent.js"></script>
-    <script defer src="/assets/js/cookie-banner.js"></script>
-    <script defer src="/assets/js/ga4-consent-loader.js"></script>
-</head>
-<body data-theme="web">
-    <div class="ambient"></div>
-    <div data-include="header"></div>
+---
+layout: default
+lang: es
+copy_group: home
+translation_path: ""
+permalink: /es/
+---
+{% assign copy = site.data.copy[page.lang].home %}
+<main id="top">
+    <section class="hero">
+        <div class="hero-container">
+            <h1>{{ copy.hero.title }}</h1>
+            <p class="hero-description">{{ copy.hero.description }}</p>
+            <div class="hero-cta">
+                <a href="contact/#architecture" class="btn-primary">{{ copy.hero.primaryCta }}</a>
+                <a href="projects/" class="btn-secondary">{{ copy.hero.secondaryCta }}</a>
+            </div>
+        </div>
+    </section>
 
-    <main id="top">
-        <section class="hero">
-            <div class="hero-container">
-                <h1>Construyo mejores productos digitales combinando arquitectura mobile, liderazgo técnico y ejecución potenciada por AI.</h1>
-                <p class="hero-description">Trabajo en la intersección entre producto, ingeniería y estrategia, con más de 14 años construyendo productos mobile y digitales, liderando equipos técnicos, definiendo arquitectura y llevando ideas a software real.</p>
-                <div class="hero-cta">
-                    <a href="contact/#architecture" class="btn-primary">Hablar de un reto técnico/producto</a>
-                    <a href="projects/" class="btn-secondary">Ver productos publicados</a>
+    <section class="credibility-strip">
+        <div class="container">
+            <h2 class="sr-only">{{ copy.credibility.title }}</h2>
+            <div class="credibility-grid">
+                {% for item in copy.credibility.items %}
+                <p class="credibility-item">{{ item }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-product">
+        <div class="container">
+            <div class="featured-product-content">
+                <div class="featured-product-text">
+                    <h2>{{ copy.featuredProduct.title }}</h2>
+                    <p class="product-description">{{ copy.featuredProduct.description }}</p>
+                    <p class="product-status">{{ copy.featuredProduct.status }}</p>
+                    <a href="projects/dolarplus/" class="btn-primary">{{ copy.featuredProduct.cta }}</a>
+                </div>
+                <div class="featured-product-image">
+                    <img src="../assets/images/dolarplus-home.png" alt="{{ copy.featuredProduct.imageAlt }}">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="credibility-strip">
-            <div class="container">
-                <h2 class="sr-only">Puntos de credibilidad</h2>
-                <div class="credibility-grid">
-                    <p class="credibility-item">14+ años construyendo productos digitales</p>
-                    <p class="credibility-item">Arquitectura mobile nativa</p>
-                    <p class="credibility-item">Liderazgo técnico y sistemas de delivery</p>
-                    <p class="credibility-item">Productos iOS publicados</p>
-                    <p class="credibility-item">AI y automatización aplicada</p>
+    <section class="what-i-do">
+        <div class="container">
+            <h2>{{ copy.whatIDo.title }}</h2>
+            <div class="what-i-do-grid">
+                {% for item in copy.whatIDo.items %}
+                <div class="what-i-do-item">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.body }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="how-i-work">
+        <div class="container">
+            <h2>{{ copy.howIWork.title }}</h2>
+            <p class="how-i-work-intro">{{ copy.howIWork.intro }}</p>
+            <div class="how-i-work-grid">
+                {% for item in copy.howIWork.items %}
+                <p class="how-i-work-item">{{ item }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="experience-evidence">
+        <div class="container">
+            <h2>{{ copy.experience.title }}</h2>
+            <div class="experience-highlights">
+                {% for item in copy.experience.items %}
+                <div class="experience-item">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.body }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="strategic-cta">
+        <div class="container">
+            <h2>{{ copy.cta.title }}</h2>
+            <div class="cta-grid">
+                <div class="cta-card">
+                    <h3>{{ copy.cta.cards[0].title }}</h3>
+                    <p>{{ copy.cta.cards[0].body }}</p>
+                    <a href="/es/contact/#architecture" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">{{ copy.cta.cards[0].cta }}</a>
+                </div>
+                <div class="cta-card">
+                    <h3>{{ copy.cta.cards[1].title }}</h3>
+                    <p>{{ copy.cta.cards[1].body }}</p>
+                    <a href="/es/contact/#ai" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">{{ copy.cta.cards[1].cta }}</a>
+                </div>
+                <div class="cta-card">
+                    <h3>{{ copy.cta.cards[2].title }}</h3>
+                    <p>{{ copy.cta.cards[2].body }}</p>
+                    <a href="/es/contact/#startup" class="btn-secondary" onclick="gtag('event', 'click_partnership', {'event_category': 'engagement'});">{{ copy.cta.cards[2].cta }}</a>
                 </div>
             </div>
-        </section>
-
-        <section class="featured-product">
-            <div class="container">
-                <div class="featured-product-content">
-                    <div class="featured-product-text">
-                        <h2>Dolar+</h2>
-                        <p class="product-description">Producto iOS nativo para cotizaciones argentinas, construido con SwiftUI, arquitectura modular, APIs de cotización en tiempo real, widgets, integraciones del ecosistema Apple y un enfoque respetuoso con la privacidad.</p>
-                        <p class="product-status">Estado: Live</p>
-                        <a href="projects/dolarplus/" class="btn-primary">Ver producto</a>
-                    </div>
-                    <div class="featured-product-image">
-                        <img src="../assets/images/dolarplus-home.png" alt="Dolar+ iOS app showing exchange rates and currency conversion">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="what-i-do">
-            <div class="container">
-                <h2>Qué hago</h2>
-                <div class="what-i-do-grid">
-                    <div class="what-i-do-item">
-                        <h3>Arquitectura Mobile y de Producto</h3>
-                        <p>Defino bases mobile nativas, arquitectura modular, integración con APIs, performance, calidad de release y decisiones técnicas sostenibles para productos digitales.</p>
-                    </div>
-                    <div class="what-i-do-item">
-                        <h3>Liderazgo Técnico y Sistemas de Delivery</h3>
-                        <p>Creo claridad en equipos de ingeniería mediante estándares técnicos, CI/CD, sistemas de release, alineación arquitectónica, mentoring y coordinación entre producto, diseño e ingeniería.</p>
-                    </div>
-                    <div class="what-i-do-item">
-                        <h3>Ejecución Potenciada por AI</h3>
-                        <p>Uso AI y automatización de forma práctica para mejorar discovery, documentación técnica, workflows de ingeniería, velocidad de delivery y calidad de decisión.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="how-i-work">
-            <div class="container">
-                <h2>Cómo trabajo</h2>
-                <p class="how-i-work-intro">Combino criterio de producto con ejecución técnica. Aclaro el problema real, defino arquitectura y trade-offs, construyo o guío la primera implementación, creo sistemas de delivery y estándares técnicos, y uso AI cuando mejora velocidad, calidad o capacidad de ejecución.</p>
-                <div class="how-i-work-grid">
-                    <p class="how-i-work-item">Aclaro el problema real de producto y técnico</p>
-                    <p class="how-i-work-item">Defino arquitectura, restricciones y trade-offs</p>
-                    <p class="how-i-work-item">Construyo o guío la implementación</p>
-                    <p class="how-i-work-item">Creo estándares, sistemas de delivery y ciclos de feedback</p>
-                    <p class="how-i-work-item">Aplico AI donde genera ventaja práctica</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="experience-evidence">
-            <div class="container">
-                <h2>Experiencia y escala</h2>
-                <div class="experience-highlights">
-                    <div class="experience-item">
-                        <h3>+14 años construyendo productos mobile y digitales</h3>
-                        <p>He trabajado en entornos corporativos y startups, combinando profundidad técnica, criterio de producto y ejecución en contextos de alta complejidad.</p>
-                    </div>
-                    <div class="experience-item">
-                        <h3>Arquitectura, delivery y liderazgo técnico</h3>
-                        <p>He participado en decisiones de arquitectura, sistemas de delivery, CI/CD, release readiness, estándares técnicos y coordinación de equipos distribuidos.</p>
-                    </div>
-                    <div class="experience-item">
-                        <h3>Producto como sistema</h3>
-                        <p>Entiendo el producto como un sistema donde negocio, tecnología, experiencia y ejecución deben estar alineados para sostener calidad y dirección.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="strategic-cta">
-            <div class="container">
-                <h2>Trabajemos en problemas donde la tecnología y el producto importan.</h2>
-                <div class="cta-grid">
-                    <div class="cta-card">
-                        <h3>Arquitectura Mobile / Liderazgo Técnico</h3>
-                        <p>Si necesitas criterio senior sobre arquitectura mobile, calidad técnica, delivery, release systems o dirección técnica de producto.</p>
-                        <a href="/es/contact/#architecture" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">Hablar de arquitectura</a>
-                    </div>
-                    <div class="cta-card">
-                        <h3>AI Solutions / Technical Advisory</h3>
-                        <p>Si estás explorando adopción práctica de AI, automatización, workflows técnicos o mejoras de delivery con herramientas AI-enabled.</p>
-                        <a href="/es/contact/#ai" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">Hablar de AI aplicada</a>
-                    </div>
-                    <div class="cta-card">
-                        <h3>Advisory Técnico / Producto para Startups</h3>
-                        <p>Si estás construyendo un producto y necesitas conectar dirección, arquitectura y ejecución real.</p>
-                        <a href="/es/contact/#startup" class="btn-secondary" onclick="gtag('event', 'click_partnership', {'event_category': 'engagement'});">Explorar colaboración</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <div data-include="footer"></div>
-<script src="../assets/js/include-loader.js"></script>
-</body>
-</html>
+        </div>
+    </section>
+</main>
