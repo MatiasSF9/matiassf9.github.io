@@ -1,116 +1,73 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mí – Matías Fernández</title>
-    <meta name="description" content="Senior technical product builder con profundidad en arquitectura mobile, experiencia en liderazgo técnico y ejecución potenciada por AI." />
-    <link rel="canonical" href="https://matiasrfernandez.com/es/about/" />
-    <link rel="alternate" hreflang="es" href="https://matiasrfernandez.com/es/about/" />
-    <link rel="alternate" hreflang="en" href="https://matiasrfernandez.com/en/about/" />
-    <link rel="alternate" hreflang="x-default" href="https://matiasrfernandez.com/en/about/" />
-    <!-- Open Graph -->
-    <meta property="og:title" content="Sobre mí – Matías Fernández" />
-    <meta property="og:description" content="Senior technical product builder con profundidad en arquitectura mobile, experiencia en liderazgo técnico y ejecución potenciada por AI." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://matiasrfernandez.com/es/about/" />
-    <meta property="og:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <meta property="og:locale" content="es_ES" />
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sobre mí – Matías Fernández" />
-    <meta name="twitter:description" content="Senior technical product builder con profundidad en arquitectura mobile, experiencia en liderazgo técnico y ejecución potenciada por AI." />
-    <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <script src="../../assets/js/theme.js" defer></script>
-    <link rel="stylesheet" href="/assets/css/cookie-banner.css">
-    <script defer src="/assets/js/cookie-consent.js"></script>
-    <script defer src="/assets/js/cookie-banner.js"></script>
-    <script defer src="/assets/js/ga4-consent-loader.js"></script>
-</head>
-<body data-theme="web">
-    <div class="ambient"></div>
-    <div data-include="header"></div>
+---
+layout: default
+lang: es
+copy_group: about
+translation_path: about/
+permalink: /es/about/
+---
+{% assign copy = site.data.copy[page.lang].about %}
+<section class="about-hero">
+    <div class="container">
+        <h1>{{ copy.hero.name }}</h1>
+        <p class="about-role">{{ copy.hero.role }}</p>
+        <p class="about-intro">{{ copy.hero.intro }}</p>
+    </div>
+</section>
 
-    <section class="about-hero">
-        <div class="container">
-            <h1>Matías Fernández</h1>
-            <p class="about-role">Senior technical product builder enfocado en arquitectura mobile, liderazgo técnico y ejecución potenciada por AI.</p>
-            <p class="about-intro">Trabajo donde se cruzan producto, ingeniería y estrategia, combinando profundidad mobile nativa con liderazgo de delivery y construcción directa.</p>
+<section class="about-experience">
+    <div class="container">
+        <h2>{{ copy.experience.title }}</h2>
+        <div class="about-experience-content">
+            {% for paragraph in copy.experience.paragraphs %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="about-experience">
-        <div class="container">
-            <h2>Experiencia profesional</h2>
-            <div class="about-experience-content">
-                <p>Llevo más de 14 años construyendo y escalando productos mobile y digitales en startups y entornos corporativos, en contextos que exigían tanto profundidad técnica como criterio de producto.</p>
-                <p>Mi recorrido empezó en la construcción directa y evolucionó hacia definición de arquitectura, liderazgo técnico, ejecución cross-functional y sistemas de delivery para publicar con confiabilidad.</p>
-                <p>Esa combinación me permite moverme desde bases nativas de iOS y estructura de APIs hasta trade-offs de roadmap, claridad de equipo y calidad de ejecución, siempre con foco en resultados prácticos.</p>
+<section class="about-decisions">
+    <div class="container">
+        <h2>{{ copy.leverage.title }}</h2>
+        <div class="decision-grid">
+            {% for item in copy.leverage.items %}
+            <div class="decision-item">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.body }}</p>
             </div>
+            {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="about-decisions">
-        <div class="container">
-                <h2>Dónde aporto más valor</h2>
-                <div class="decision-grid">
-                    <div class="decision-item">
-                        <h3>Arquitectura Mobile y de Producto</h3>
-                        <p>Ayudo a definir bases nativas, límites modulares, contratos de APIs, calidad de release, prioridades de performance y los trade-offs técnicos que afectan la salud del producto a largo plazo.</p>
-                    </div>
-                    <div class="decision-item">
-                        <h3>Liderazgo Técnico y Sistemas de Delivery</h3>
-                        <p>Mejoro la claridad de ingeniería mediante estándares, CI/CD, readiness de releases, mentoring y alineación cross-functional que vuelven a los equipos más confiables.</p>
-                    </div>
-                    <div class="decision-item">
-                        <h3>AI y Priorización</h3>
-                        <p>Aplico AI y automatización donde mejoran discovery, documentación, velocidad de ejecución y calidad de decisión, sin agregar complejidad superficial.</p>
-                    </div>
-                </div>
+<section class="about-philosophy">
+    <div class="container">
+        <h2>{{ copy.philosophy.title }}</h2>
+        <p class="philosophy-intro">{{ copy.philosophy.intro }}</p>
+        <div class="philosophy-principles">
+            {% for item in copy.philosophy.items %}
+            <div class="philosophy-item">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.body }}</p>
             </div>
-        </section>
-
-    <section class="about-philosophy">
-        <div class="container">
-            <h2>Principios de trabajo</h2>
-            <p class="philosophy-intro">Creo que el mejor trabajo de producto aparece cuando arquitectura, delivery, valor para el usuario y calidad de decisión funcionan como un mismo sistema.</p>
-            <div class="philosophy-principles">
-                <div class="philosophy-item">
-                    <h3>Profundidad práctica</h3>
-                    <p>La calidad técnica importa cuando mejora capacidad de ejecución, confiabilidad y la posibilidad de seguir publicando con criterio.</p>
-                </div>
-                <div class="philosophy-item">
-                    <h3>Claridad antes que complejidad</h3>
-                    <p>Arquitectura, proceso y alcance deberían reducir ruido, proteger foco y hacer más sostenibles las buenas decisiones.</p>
-                </div>
-                <div class="philosophy-item">
-                    <h3>Construir para aprender</h3>
-                    <p>La ejecución directa mantiene el criterio honesto. Prefiero decisiones probadas en productos reales, workflows y restricciones de delivery.</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="about-mentoring">
-        <div class="container">
-            <h2>Advisory técnico</h2>
-            <p>Colaboro selectivamente con equipos y founders que necesitan criterio senior en arquitectura mobile, dirección de producto, sistemas de delivery o adopción práctica de AI. Soy más útil donde la estrategia tiene que conectarse con la ejecución técnica real.</p>
+<section class="about-mentoring">
+    <div class="container">
+        <h2>{{ copy.advisory.title }}</h2>
+        <p>{{ copy.advisory.body }}</p>
+    </div>
+</section>
+
+<section class="about-cta">
+    <div class="container">
+        <h2>{{ copy.cta.title }}</h2>
+        <p>{{ copy.cta.body }}</p>
+        <div class="about-cta-actions">
+            <a href="/es/contact/#architecture" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">{{ copy.cta.primaryCta }}</a>
+            <a href="/es/contact/#startup" class="btn-secondary" onclick="gtag('event', 'click_partnership', {'event_category': 'engagement'});">{{ copy.cta.secondaryCta }}</a>
         </div>
-    </section>
-
-    <section class="about-cta">
-        <div class="container">
-            <h2>Si estás construyendo algo que necesita profundidad técnica</h2>
-            <p>Estoy abierto a conversaciones donde arquitectura mobile, liderazgo de delivery, ejecución potenciada por AI o dirección de producto para startups sean centrales.</p>
-            <div class="about-cta-actions">
-                <a href="/es/contact/#architecture" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">Hablar de arquitectura</a>
-                <a href="/es/contact/#startup" class="btn-secondary" onclick="gtag('event', 'click_partnership', {'event_category': 'engagement'});">Explorar colaboración</a>
-            </div>
-        </div>
-    </section>
-
-    <div data-include="footer"></div>
-<script src="../../assets/js/include-loader.js"></script>
-</body>
-</html>
+    </div>
+</section>

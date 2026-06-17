@@ -1,70 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto – Matías Fernández</title>
-    <meta name="description" content="Contacto para arquitectura mobile, liderazgo técnico, soluciones AI, advisory para startups y soporte de aplicaciones." />
-    <link rel="canonical" href="https://matiasrfernandez.com/es/contact/" />
-    <link rel="alternate" hreflang="es" href="https://matiasrfernandez.com/es/contact/" />
-    <link rel="alternate" hreflang="en" href="https://matiasrfernandez.com/en/contact/" />
-    <link rel="alternate" hreflang="x-default" href="https://matiasrfernandez.com/en/contact/" />
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contacto – Matías Fernández" />
-    <meta property="og:description" content="Contacto para arquitectura mobile, liderazgo técnico, soluciones AI, advisory para startups y soporte de aplicaciones." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://matiasrfernandez.com/es/contact/" />
-    <meta property="og:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <meta property="og:locale" content="es_ES" />
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contacto – Matías Fernández" />
-    <meta name="twitter:description" content="Contacto para arquitectura mobile, liderazgo técnico, soluciones AI, advisory para startups y soporte de aplicaciones." />
-    <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <script src="../../assets/js/theme.js" defer></script>
-    <link rel="stylesheet" href="/assets/css/cookie-banner.css">
-    <script defer src="/assets/js/cookie-consent.js"></script>
-    <script defer src="/assets/js/cookie-banner.js"></script>
-    <script defer src="/assets/js/ga4-consent-loader.js"></script>
-</head>
-<body data-theme="web">
-    <div class="ambient"></div>
-    <div data-include="header"></div>
+---
+layout: default
+lang: es
+copy_group: contact
+translation_path: contact/
+permalink: /es/contact/
+---
+{% assign copy = site.data.copy[page.lang].contact %}
+{% assign emails = site.data.copy.shared.emails %}
+<section class="contact-hero">
+    <div class="container">
+        <h1>{{ copy.hero.title }}</h1>
+        <p class="contact-intro">{{ copy.hero.intro }}</p>
+    </div>
+</section>
 
-    <section class="contact-hero">
-        <div class="container">
-            <h1>Contacto</h1>
-            <p class="contact-intro">Si estás evaluando arquitectura mobile, liderazgo técnico, ejecución potenciada por AI o construcción de producto para startup, este es el punto de partida.</p>
+<section class="contact-segmentation">
+    <div class="container">
+        <div id="architecture" class="contact-block">
+            <h2>{{ copy.blocks[0].title }}</h2>
+            <p>{{ copy.blocks[0].body }}</p>
+            <p class="contact-email"><a href="{{ emails.contactHref }}">{{ emails.contact }}</a></p>
         </div>
-    </section>
-
-    <section class="contact-segmentation">
-        <div class="container">
-            <div id="architecture" class="contact-block">
-                <h2>Arquitectura Mobile / Liderazgo Técnico</h2>
-                <p>Conversaciones sobre bases mobile nativas, decisiones de arquitectura, calidad de release, sistemas de delivery y necesidades de liderazgo técnico senior.</p>
-                <p class="contact-email"><a href="mailto:contact@matiasrfernandez.com">contact@matiasrfernandez.com</a></p>
-            </div>
-            <div id="ai" class="contact-block">
-                <h2>AI Solutions / Technical Advisory</h2>
-                <p>Conversaciones enfocadas en adopción práctica de AI, workflows de automatización, documentación técnica, capacidad de ejecución en ingeniería y mejora del delivery.</p>
-                <p class="contact-email"><a href="mailto:contact@matiasrfernandez.com">contact@matiasrfernandez.com</a></p>
-            </div>
-            <div id="startup" class="contact-block">
-                <h2>Advisory Técnico / de Producto para Startups</h2>
-                <p>Iniciativas donde dirección de producto, arquitectura y ejecución necesitan involucramiento activo de un perfil senior que combine producto y ejecución técnica.</p>
-                <p class="contact-email"><a href="mailto:contact@matiasrfernandez.com">contact@matiasrfernandez.com</a></p>
-            </div>
-            <div id="support" class="contact-block">
-                <h2>Soporte de aplicaciones</h2>
-                <p>Consultas relacionadas con aplicaciones publicadas, incidencias o solicitudes de mejora.</p>
-                <p class="contact-email"><a href="mailto:support@matiasrfernandez.com" onclick="gtag('event', 'click_support_email', {'event_category': 'engagement'});">support@matiasrfernandez.com</a></p>
-            </div>
+        <div id="ai" class="contact-block">
+            <h2>{{ copy.blocks[1].title }}</h2>
+            <p>{{ copy.blocks[1].body }}</p>
+            <p class="contact-email"><a href="{{ emails.contactHref }}">{{ emails.contact }}</a></p>
         </div>
-    </section>
-
-    <div data-include="footer"></div>
-<script src="../../assets/js/include-loader.js"></script>
-</body>
-</html>
+        <div id="startup" class="contact-block">
+            <h2>{{ copy.blocks[2].title }}</h2>
+            <p>{{ copy.blocks[2].body }}</p>
+            <p class="contact-email"><a href="{{ emails.contactHref }}">{{ emails.contact }}</a></p>
+        </div>
+        <div id="support" class="contact-block">
+            <h2>{{ copy.blocks[3].title }}</h2>
+            <p>{{ copy.blocks[3].body }}</p>
+            <p class="contact-email"><a href="{{ emails.supportHref }}" onclick="gtag('event', 'click_support_email', {'event_category': 'engagement'});">{{ emails.support }}</a></p>
+        </div>
+    </div>
+</section>

@@ -1,139 +1,98 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dolar+ – Producto – Matías Fernández</title>
-    <meta name="description" content="Producto iOS nativo para cotizaciones argentinas, construido con SwiftUI, arquitectura modular, APIs en tiempo real, widgets y una experiencia de producto enfocada." />
-    <link rel="canonical" href="https://matiasrfernandez.com/es/projects/dolarplus/" />
-    <link rel="alternate" hreflang="es" href="https://matiasrfernandez.com/es/projects/dolarplus/" />
-    <link rel="alternate" hreflang="en" href="https://matiasrfernandez.com/en/projects/dolarplus/" />
-    <link rel="alternate" hreflang="x-default" href="https://matiasrfernandez.com/en/projects/dolarplus/" />
-    <!-- Open Graph -->
-    <meta property="og:title" content="Dolar+ – Producto – Matías Fernández" />
-    <meta property="og:description" content="Producto iOS nativo para cotizaciones argentinas, construido con SwiftUI, arquitectura modular, APIs en tiempo real, widgets y una experiencia de producto enfocada." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://matiasrfernandez.com/es/projects/dolarplus/" />
-    <meta property="og:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <meta property="og:locale" content="es_ES" />
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dolar+ – Producto – Matías Fernández" />
-    <meta name="twitter:description" content="Producto iOS nativo para cotizaciones argentinas, construido con SwiftUI, arquitectura modular, APIs en tiempo real, widgets y una experiencia de producto enfocada." />
-    <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <script src="../../../assets/js/theme.js" defer></script>
-    <link rel="stylesheet" href="/assets/css/cookie-banner.css">
-    <script defer src="/assets/js/cookie-consent.js"></script>
-    <script defer src="/assets/js/cookie-banner.js"></script>
-    <script defer src="/assets/js/ga4-consent-loader.js"></script>
-</head>
-<body data-theme="web">
-    <div class="ambient"></div>
-    <div data-include="header"></div>
-
-    <main>
-        <section class="product-hero">
-            <div class="container product-hero-content">
-                <div class="product-hero-text">
-                    <h1>Dolar+</h1>
-                    <p class="product-tagline">Producto iOS nativo para cotizaciones argentinas, construido para claridad, velocidad y uso confiable todos los días.</p>
-                    <p class="product-description">Dolar+ es prueba actual de ejecución nativa en iOS: construido con SwiftUI, arquitectura modular, integraciones de cotización en tiempo real, widgets y un enfoque de producto respetuoso con la privacidad, pensado para decisiones cotidianas.</p>
-                    <div class="product-cta">
-                        <a href="https://apps.apple.com/app/id6473115030" class="app-store-link" target="_blank" rel="noopener" onclick="gtag('event', 'click_app_store', {'event_category': 'engagement', 'event_label': 'dolarplus'});">
-                            <img class="app-store-badge" src="../../../assets/images/app-store/app-store-badge-es.svg" alt="Descargar en App Store">
-                        </a>
-                        <a href="https://www.producthunt.com/products/dolar?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-dollar-2" target="_blank" rel="noopener noreferrer">
-                            <img alt="Dollar+ - The app Argentinians who save in USD have been waiting for. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1086595&theme=light&t=1772275499785">
-                        </a>
-                    </div>
-                </div>
-                <div class="product-hero-image">
-                    <img src="../../../assets/images/dolarplus-home.png" alt="Dolar+ iOS app showing exchange rates and currency conversion">
+---
+layout: default
+lang: es
+copy_group: projects
+copy_key: dolarplus
+translation_path: projects/dolarplus/
+permalink: /es/projects/dolarplus/
+extra_js:
+  - /assets/js/screenshots-carousel.js
+---
+{% assign copy = site.data.copy[page.lang].projects.dolarplus %}
+<main>
+    <section class="product-hero">
+        <div class="container product-hero-content">
+            <div class="product-hero-text">
+                <h1>{{ copy.hero.title }}</h1>
+                <p class="product-tagline">{{ copy.hero.tagline }}</p>
+                <p class="product-description">{{ copy.hero.description }}</p>
+                <div class="product-cta">
+                    <a href="https://apps.apple.com/app/id6473115030" class="app-store-link" target="_blank" rel="noopener" onclick="gtag('event', 'click_app_store', {'event_category': 'engagement', 'event_label': 'dolarplus'});">
+                        <img class="app-store-badge" src="../../../assets/images/app-store/app-store-badge-es.svg" alt="{{ copy.hero.appStoreAlt }}">
+                    </a>
+                    <a href="https://www.producthunt.com/products/dolar?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-dollar-2" target="_blank" rel="noopener noreferrer">
+                        <img alt="Dollar+ - The app Argentinians who save in USD have been waiting for. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1086595&theme=light&t=1772275499785">
+                    </a>
                 </div>
             </div>
-        </section>
-        <section class="product-problem">
-            <div class="container">
-                <h2>El problema</h2>
-                <p class="problem-intro">En Argentina, acceder a cotizaciones del dólar confiables y actualizadas implica navegar múltiples fuentes, comparar manualmente y lidiar con interfaces saturadas.</p>
-                <div class="problem-points">
-                    <div class="problem-item">
-                        <p>La información suele estar fragmentada entre distintos tipos de cambio.</p>
-                    </div>
-                    <div class="problem-item">
-                        <p>Las interfaces priorizan publicidad o volumen de datos antes que claridad.</p>
-                    </div>
-                    <div class="problem-item">
-                        <p>Falta una herramienta pensada desde la experiencia real de quien consulta el dólar todos los días.</p>
-                    </div>
+            <div class="product-hero-image">
+                <img src="../../../assets/images/dolarplus-home.png" alt="{{ copy.hero.imageAlt }}">
+            </div>
+        </div>
+    </section>
+    <section class="product-problem">
+        <div class="container">
+            <h2>{{ copy.problem.title }}</h2>
+            <p class="problem-intro">{{ copy.problem.intro }}</p>
+            <div class="problem-points">
+                {% for item in copy.problem.items %}
+                <div class="problem-item">
+                    <p>{{ item }}</p>
                 </div>
+                {% endfor %}
             </div>
-        </section>
-        <section class="product-value">
-            <div class="container">
-                <h2>Propuesta de valor</h2>
-                <p class="value-intro">Dolar+ fue diseñado como un producto nativo enfocado: rápido de leer, técnicamente mantenible y sin ruido innecesario.</p>
-                <div class="value-points">
-                    <div class="value-item">
-                        <h3>Core flow enfocado</h3>
-                        <p>El producto convierte una consulta financiera repetitiva en una experiencia rápida y legible, en lugar de un dashboard saturado.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Encaje con el ecosistema nativo</h3>
-                        <p>Widgets e integraciones del ecosistema Apple ponen la información en el contexto correcto, no solo dentro de la app.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Base técnica sostenible</h3>
-                        <p>La arquitectura favorece límites modulares, flujos de datos claros y decisiones que permiten iterar sin complejidad innecesaria.</p>
-                    </div>
+        </div>
+    </section>
+    <section class="product-value">
+        <div class="container">
+            <h2>{{ copy.value.title }}</h2>
+            <p class="value-intro">{{ copy.value.intro }}</p>
+            <div class="value-points">
+                {% for item in copy.value.items %}
+                <div class="value-item">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.body }}</p>
                 </div>
+                {% endfor %}
             </div>
-        </section>
-        <section class="product-screenshots">
-            <div class="container">
-                <h2>Interfaz y experiencia</h2>
-                <div class="screenshots-grid" data-screenshots-carousel>
-                    <img src="../../../assets/images/dolar/screens/Rates.png" alt="Dolar+ – Pantalla de cotizaciones">
-                    <img src="../../../assets/images/dolar/screens/Spread.png" alt="Dolar+ – Spread entre tipos de cambio">
-                    <img src="../../../assets/images/dolar/screens/Convertion.png" alt="Dolar+ – Conversor de moneda">
-                    <img src="../../../assets/images/dolar/screens/Smart.png" alt="Dolar+ – Vista inteligente">
-                    <img src="../../../assets/images/dolar/screens/Widget.png" alt="Dolar+ – Widget de cotizaciones">
-                </div>
+        </div>
+    </section>
+    <section class="product-screenshots">
+        <div class="container">
+            <h2>{{ copy.screenshots.title }}</h2>
+            <div class="screenshots-grid" data-screenshots-carousel>
+                <img src="../../../assets/images/dolar/screens/Rates.png" alt="{{ copy.screenshots.items[0] }}">
+                <img src="../../../assets/images/dolar/screens/Spread.png" alt="{{ copy.screenshots.items[1] }}">
+                <img src="../../../assets/images/dolar/screens/Convertion.png" alt="{{ copy.screenshots.items[2] }}">
+                <img src="../../../assets/images/dolar/screens/Smart.png" alt="{{ copy.screenshots.items[3] }}">
+                <img src="../../../assets/images/dolar/screens/Widget.png" alt="{{ copy.screenshots.items[4] }}">
             </div>
-        </section>
-        <section class="product-stack">
-            <div class="container">
-                <h2>Arquitectura y alcance técnico</h2>
-                <p class="stack-intro">Dolar+ está construido como un producto iOS real de producción, con atención a mantenibilidad, performance, calidad de release y encaje con el ecosistema.</p>
-                <ul class="stack-list">
-                    <li>Aplicación iOS nativa construida con SwiftUI.</li>
-                    <li>Arquitectura modular diseñada para mantenibilidad, límites claros y testabilidad.</li>
-                    <li>Integración con APIs de cotización en tiempo real y normalización de datos.</li>
-                    <li>Widgets e integraciones del ecosistema Apple para acceso rápido y visible.</li>
-                    <li>Decisiones de producto orientadas a mantener una experiencia enfocada, sin ruido innecesario y respetuosa con la privacidad.</li>
-                </ul>
-            </div>
-        </section>
-        <section class="product-status-section">
-            <div class="container">
-                <h2>Estado</h2>
-                <p class="product-status-text">Estado actual: Live en App Store.</p>
-            </div>
-        </section>
-        <section class="product-links">
-            <div class="container">
-                <h2>Enlaces</h2>
-                <ul class="product-links-list">
-                    <li><a href="/es/contact/#support">Soporte</a></li>
-                    <li><a href="/es/privacy/apps/dolarplus/">Política de privacidad</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <div data-include="footer"></div>
-    <script src="../../../assets/js/screenshots-carousel.js"></script>
-    <script src="../../../assets/js/include-loader.js"></script>
-</body>
-</html>
+        </div>
+    </section>
+    <section class="product-stack">
+        <div class="container">
+            <h2>{{ copy.stack.title }}</h2>
+            <p class="stack-intro">{{ copy.stack.intro }}</p>
+            <ul class="stack-list">
+                {% for item in copy.stack.items %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <section class="product-status-section">
+        <div class="container">
+            <h2>{{ copy.status.title }}</h2>
+            <p class="product-status-text">{{ copy.status.body }}</p>
+        </div>
+    </section>
+    <section class="product-links">
+        <div class="container">
+            <h2>{{ copy.links.title }}</h2>
+            <ul class="product-links-list">
+                <li><a href="/es/contact/#support">{{ copy.links.support }}</a></li>
+                <li><a href="/es/privacy/apps/dolarplus/">{{ copy.links.privacy }}</a></li>
+            </ul>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,570 @@
+{
+  "shared": {
+    "emails": {
+      "contact": "contact@matiasrfernandez.com",
+      "contactHref": "mailto:contact@matiasrfernandez.com",
+      "support": "support@matiasrfernandez.com",
+      "supportHref": "mailto:support@matiasrfernandez.com"
+    }
+  },
+  "es": {
+    "shared": {
+      "nav": {
+        "projects": "Proyectos",
+        "about": "Sobre mí",
+        "contact": "Contacto",
+        "privacy": "Privacidad"
+      },
+      "footer": {
+        "tagline": "Hecho con claridad y cuidado.",
+        "cookies": "Cookies"
+      }
+    },
+    "home": {
+      "meta": {
+        "title": "Matías Fernández — Arquitectura Mobile, Liderazgo Técnico y Ejecución Potenciada por AI",
+        "description": "Senior technical product builder con más de 14 años en arquitectura mobile, liderazgo técnico, productos digitales y ejecución potenciada por AI."
+      },
+      "hero": {
+        "title": "Construyo mejores productos digitales combinando arquitectura mobile, liderazgo técnico y ejecución potenciada por AI.",
+        "description": "Trabajo en la intersección entre producto, ingeniería y estrategia, con más de 14 años construyendo productos mobile y digitales, liderando equipos técnicos, definiendo arquitectura y llevando ideas a software real.",
+        "primaryCta": "Hablar de un reto técnico/producto",
+        "secondaryCta": "Ver productos publicados"
+      },
+      "credibility": {
+        "title": "Puntos de credibilidad",
+        "items": [
+          "14+ años construyendo productos digitales",
+          "Arquitectura mobile nativa",
+          "Liderazgo técnico y sistemas de delivery",
+          "Productos iOS publicados",
+          "AI y automatización aplicada"
+        ]
+      },
+      "featuredProduct": {
+        "title": "Dolar+",
+        "description": "Producto iOS nativo para cotizaciones argentinas, construido con SwiftUI, arquitectura modular, APIs de cotización en tiempo real, widgets, integraciones del ecosistema Apple y un enfoque respetuoso con la privacidad.",
+        "status": "Estado: Live",
+        "cta": "Ver producto",
+        "imageAlt": "Dolar+ iOS app showing exchange rates and currency conversion"
+      },
+      "whatIDo": {
+        "title": "Qué hago",
+        "items": [
+          {
+            "title": "Arquitectura Mobile y de Producto",
+            "body": "Defino bases mobile nativas, arquitectura modular, integración con APIs, performance, calidad de release y decisiones técnicas sostenibles para productos digitales."
+          },
+          {
+            "title": "Liderazgo Técnico y Sistemas de Delivery",
+            "body": "Creo claridad en equipos de ingeniería mediante estándares técnicos, CI/CD, sistemas de release, alineación arquitectónica, mentoring y coordinación entre producto, diseño e ingeniería."
+          },
+          {
+            "title": "Ejecución Potenciada por AI",
+            "body": "Uso AI y automatización de forma práctica para mejorar discovery, documentación técnica, workflows de ingeniería, velocidad de delivery y calidad de decisión."
+          }
+        ]
+      },
+      "howIWork": {
+        "title": "Cómo trabajo",
+        "intro": "Combino criterio de producto con ejecución técnica. Aclaro el problema real, defino arquitectura y trade-offs, construyo o guío la primera implementación, creo sistemas de delivery y estándares técnicos, y uso AI cuando mejora velocidad, calidad o capacidad de ejecución.",
+        "items": [
+          "Aclaro el problema real de producto y técnico",
+          "Defino arquitectura, restricciones y trade-offs",
+          "Construyo o guío la implementación",
+          "Creo estándares, sistemas de delivery y ciclos de feedback",
+          "Aplico AI donde genera ventaja práctica"
+        ]
+      },
+      "experience": {
+        "title": "Experiencia y escala",
+        "items": [
+          {
+            "title": "+14 años construyendo productos mobile y digitales",
+            "body": "He trabajado en entornos corporativos y startups, combinando profundidad técnica, criterio de producto y ejecución en contextos de alta complejidad."
+          },
+          {
+            "title": "Arquitectura, delivery y liderazgo técnico",
+            "body": "He participado en decisiones de arquitectura, sistemas de delivery, CI/CD, preparación de releases, estándares técnicos y coordinación de equipos distribuidos."
+          },
+          {
+            "title": "Producto como sistema",
+            "body": "Entiendo el producto como un sistema donde negocio, tecnología, experiencia y ejecución deben estar alineados para sostener calidad y dirección."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Trabajemos en problemas donde la tecnología y el producto importan.",
+        "cards": [
+          {
+            "title": "Arquitectura Mobile / Liderazgo Técnico",
+            "body": "Para equipos que necesitan criterio senior sobre arquitectura mobile, calidad técnica, delivery, sistemas de release o dirección técnica de producto.",
+            "cta": "Hablar de arquitectura"
+          },
+          {
+            "title": "AI Solutions / Advisory Técnico",
+            "body": "Para equipos que están explorando adopción práctica de AI, automatización, workflows técnicos o mejoras de delivery con herramientas AI-enabled.",
+            "cta": "Hablar de AI aplicada"
+          },
+          {
+            "title": "Advisory Técnico / Producto para Startups",
+            "body": "Para iniciativas que necesitan conectar dirección de producto, arquitectura y ejecución real.",
+            "cta": "Explorar colaboración"
+          }
+        ]
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "Sobre mí — Matías Fernández | Arquitectura Mobile, Liderazgo Técnico y AI Aplicada",
+        "description": "Senior technical product builder con más de 14 años en arquitectura mobile, liderazgo técnico, productos digitales y ejecución potenciada por AI."
+      },
+      "hero": {
+        "name": "Matías Fernández",
+        "role": "Senior technical product builder enfocado en arquitectura mobile, liderazgo técnico y ejecución potenciada por AI.",
+        "intro": "Trabajo donde se cruzan producto, ingeniería y estrategia, combinando profundidad mobile nativa con liderazgo de delivery y construcción real."
+      },
+      "experience": {
+        "title": "Experiencia profesional",
+        "paragraphs": [
+          "Llevo más de 14 años construyendo y escalando productos mobile y digitales en startups y entornos corporativos, en contextos que exigían tanto profundidad técnica como criterio de producto.",
+          "Mi recorrido empezó en la construcción directa y evolucionó hacia definición de arquitectura, liderazgo técnico, ejecución entre producto e ingeniería, y sistemas de delivery para publicar con confiabilidad.",
+          "Esa combinación me permite moverme desde bases nativas de iOS y estructura de APIs hasta trade-offs de roadmap, claridad de equipo y calidad de ejecución, siempre con foco en resultados prácticos."
+        ]
+      },
+      "leverage": {
+        "title": "Dónde aporto criterio técnico",
+        "items": [
+          {
+            "title": "Arquitectura Mobile y de Producto",
+            "body": "Ayudo a definir bases nativas, límites modulares, contratos de APIs, calidad de release, prioridades de performance y trade-offs técnicos que afectan la salud del producto a largo plazo."
+          },
+          {
+            "title": "Liderazgo Técnico y Sistemas de Delivery",
+            "body": "Mejoro la claridad de ingeniería mediante estándares, CI/CD, preparación de releases, mentoring y alineación entre producto, diseño e ingeniería."
+          },
+          {
+            "title": "AI Aplicada y Priorización",
+            "body": "Aplico AI y automatización donde mejoran discovery, documentación, velocidad de ejecución y calidad de decisión sin sumar complejidad superficial."
+          }
+        ]
+      },
+      "philosophy": {
+        "title": "Principios de trabajo",
+        "intro": "Creo que el mejor trabajo de producto aparece cuando arquitectura, delivery, valor para el usuario y calidad de decisión funcionan como un mismo sistema.",
+        "items": [
+          {
+            "title": "Profundidad práctica",
+            "body": "La calidad técnica importa cuando mejora capacidad de ejecución, confiabilidad y la posibilidad de seguir publicando con criterio."
+          },
+          {
+            "title": "Claridad antes que complejidad",
+            "body": "Arquitectura, proceso y alcance deberían reducir ruido, proteger foco y hacer más sostenibles las buenas decisiones."
+          },
+          {
+            "title": "Construir para aprender",
+            "body": "La ejecución directa mantiene el criterio honesto. Prefiero decisiones probadas en productos reales, workflows y restricciones de delivery."
+          }
+        ]
+      },
+      "advisory": {
+        "title": "Advisory técnico",
+        "body": "Colaboro selectivamente con equipos y founders que necesitan criterio senior en arquitectura mobile, dirección de producto, sistemas de delivery o adopción práctica de AI. Soy más útil cuando la estrategia necesita conectarse con ejecución técnica real."
+      },
+      "cta": {
+        "title": "Si estás construyendo algo que necesita profundidad técnica",
+        "body": "Estoy abierto a conversaciones donde arquitectura mobile, liderazgo de delivery, ejecución potenciada por AI o dirección técnica de producto sean centrales.",
+        "primaryCta": "Hablar de arquitectura",
+        "secondaryCta": "Explorar colaboración"
+      }
+    },
+    "contact": {
+      "meta": {
+        "title": "Contacto — Matías Fernández",
+        "description": "Contacto para arquitectura mobile, liderazgo técnico, soluciones AI, advisory para startups y soporte de aplicaciones."
+      },
+      "hero": {
+        "title": "Contacto",
+        "intro": "Si estás evaluando arquitectura mobile, liderazgo técnico, ejecución potenciada por AI o construcción de producto para startup, este es el punto de partida."
+      },
+      "blocks": [
+        {
+          "id": "architecture",
+          "title": "Arquitectura Mobile / Liderazgo Técnico",
+          "body": "Conversaciones sobre bases mobile nativas, decisiones de arquitectura, calidad de release, sistemas de delivery y necesidades de liderazgo técnico senior.",
+          "emailKey": "contact"
+        },
+        {
+          "id": "ai",
+          "title": "AI Solutions / Advisory Técnico",
+          "body": "Conversaciones enfocadas en adopción práctica de AI, workflows de automatización, documentación técnica, capacidad de ejecución en ingeniería y mejora del delivery.",
+          "emailKey": "contact"
+        },
+        {
+          "id": "startup",
+          "title": "Advisory Técnico / Producto para Startups",
+          "body": "Iniciativas donde dirección de producto, arquitectura y ejecución necesitan involucramiento activo de un perfil senior que combine producto y ejecución técnica.",
+          "emailKey": "contact"
+        },
+        {
+          "id": "support",
+          "title": "Soporte de aplicaciones",
+          "body": "Consultas relacionadas con aplicaciones publicadas, incidencias o solicitudes de mejora.",
+          "emailKey": "support"
+        }
+      ]
+    },
+    "projects": {
+      "dolarplus": {
+        "meta": {
+          "title": "Dolar+ — Producto — Matías Fernández",
+          "description": "Producto iOS nativo para cotizaciones argentinas, construido con SwiftUI, arquitectura modular, APIs en tiempo real, widgets, ecosistema Apple y un enfoque respetuoso con la privacidad."
+        },
+        "hero": {
+          "title": "Dolar+",
+          "tagline": "Producto iOS nativo para cotizaciones argentinas, construido para claridad, velocidad y uso confiable todos los días.",
+          "description": "Dolar+ es prueba actual de ejecución nativa en iOS: construido con SwiftUI, arquitectura modular, APIs en tiempo real, widgets, integraciones del ecosistema Apple y un enfoque de producto respetuoso con la privacidad, pensado para decisiones cotidianas.",
+          "appStoreAlt": "Descargar en App Store",
+          "imageAlt": "Dolar+ iOS app showing exchange rates and currency conversion"
+        },
+        "problem": {
+          "title": "El problema",
+          "intro": "En Argentina, acceder a cotizaciones del dólar confiables y actualizadas implica navegar múltiples fuentes, comparar manualmente y lidiar con interfaces saturadas.",
+          "items": [
+            "La información suele estar fragmentada entre distintos tipos de cambio.",
+            "Las interfaces priorizan publicidad o volumen de datos antes que claridad.",
+            "Falta una herramienta pensada desde la experiencia real de quien consulta el dólar todos los días."
+          ]
+        },
+        "value": {
+          "title": "Propuesta de valor",
+          "intro": "Dolar+ fue diseñado como un producto nativo enfocado: rápido de leer, técnicamente mantenible y sin ruido innecesario.",
+          "items": [
+            {
+              "title": "Core flow enfocado",
+              "body": "El producto convierte una consulta financiera repetitiva en una experiencia rápida y legible, en lugar de un dashboard saturado."
+            },
+            {
+              "title": "Encaje con el ecosistema nativo",
+              "body": "Widgets e integraciones del ecosistema Apple ponen la información en el contexto correcto, no solo dentro de la app."
+            },
+            {
+              "title": "Base técnica sostenible",
+              "body": "La arquitectura favorece límites modulares, flujos de datos claros y decisiones que permiten iterar sin complejidad innecesaria."
+            }
+          ]
+        },
+        "screenshots": {
+          "title": "Interfaz y experiencia",
+          "items": [
+            "Dolar+ — Pantalla de cotizaciones",
+            "Dolar+ — Spread entre tipos de cambio",
+            "Dolar+ — Conversor de moneda",
+            "Dolar+ — Vista inteligente",
+            "Dolar+ — Widget de cotizaciones"
+          ]
+        },
+        "stack": {
+          "title": "Arquitectura y alcance técnico",
+          "intro": "Dolar+ está construido como un producto iOS real de producción, con atención a mantenibilidad, performance, calidad de release y encaje con el ecosistema.",
+          "items": [
+            "Aplicación iOS nativa construida con SwiftUI.",
+            "Arquitectura modular diseñada para mantenibilidad, límites claros y testabilidad.",
+            "Integración con APIs de cotización en tiempo real y normalización de datos.",
+            "Widgets e integraciones del ecosistema Apple para acceso rápido y visible.",
+            "Decisiones de producto orientadas a mantener una experiencia enfocada, sin ruido innecesario y respetuosa con la privacidad."
+          ]
+        },
+        "status": {
+          "title": "Estado",
+          "body": "Estado actual: Live en App Store."
+        },
+        "links": {
+          "title": "Enlaces",
+          "support": "Soporte",
+          "privacy": "Política de privacidad"
+        }
+      }
+    }
+  },
+  "en": {
+    "shared": {
+      "nav": {
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact",
+        "privacy": "Privacy"
+      },
+      "footer": {
+        "tagline": "Built with clarity and care.",
+        "cookies": "Cookies"
+      }
+    },
+    "home": {
+      "meta": {
+        "title": "Matías Fernández — Mobile Product Architect & AI-Enabled Technical Leader",
+        "description": "Senior technical product builder with 14+ years in mobile architecture, technical leadership, digital products, and practical AI-enabled execution."
+      },
+      "hero": {
+        "title": "I help teams build better digital products through mobile architecture, technical leadership, and AI-enabled execution.",
+        "description": "I work at the intersection of product, engineering, and strategy — with 14+ years building mobile and digital products, leading technical teams, defining architecture, and turning ideas into shipped software.",
+        "primaryCta": "Discuss a technical/product challenge",
+        "secondaryCta": "View shipped products"
+      },
+      "credibility": {
+        "title": "Credibility Highlights",
+        "items": [
+          "14+ years building digital products",
+          "Native mobile architecture",
+          "Technical leadership and delivery systems",
+          "Shipped iOS products",
+          "Practical AI and automation workflows"
+        ]
+      },
+      "featuredProduct": {
+        "title": "Dolar+",
+        "description": "Native iOS product for Argentine exchange rates, built with SwiftUI, modular architecture, real-time exchange rate APIs, widgets, Apple ecosystem integrations, and a privacy-conscious product approach.",
+        "status": "Status: Live",
+        "cta": "View product",
+        "imageAlt": "Dolar+ iOS app showing exchange rates and currency conversion"
+      },
+      "whatIDo": {
+        "title": "What I Do",
+        "items": [
+          {
+            "title": "Mobile & Product Architecture",
+            "body": "I help define native mobile and digital product architecture: iOS foundations, modular structure, APIs, performance, release quality, and long-term technical decisions."
+          },
+          {
+            "title": "Technical Leadership & Delivery Systems",
+            "body": "I create clarity across engineering teams through technical standards, CI/CD, release readiness, architecture alignment, mentoring, and cross-functional execution."
+          },
+          {
+            "title": "AI-Enabled Execution",
+            "body": "I use practical AI and automation to improve product discovery, engineering workflows, technical documentation, delivery speed, and decision quality."
+          }
+        ]
+      },
+      "howIWork": {
+        "title": "How I Work",
+        "intro": "I combine product judgment with technical execution. I clarify the real problem, define architecture and trade-offs, build or guide the first implementation, create delivery systems and technical standards, and use AI where it improves speed, quality, or leverage.",
+        "items": [
+          "Clarify the real product and technical problem",
+          "Define architecture, constraints, and trade-offs",
+          "Build or guide implementation",
+          "Create standards, delivery systems, and feedback loops",
+          "Apply AI where it creates practical leverage"
+        ]
+      },
+      "experience": {
+        "title": "Experience and Scale",
+        "items": [
+          {
+            "title": "14+ years building mobile and digital products",
+            "body": "I have worked across corporate environments and startups, combining technical depth, product judgment, and execution in high-complexity contexts."
+          },
+          {
+            "title": "Architecture, delivery, and technical leadership",
+            "body": "I have contributed to architecture decisions, delivery systems, CI/CD, release readiness, technical standards, and distributed team coordination."
+          },
+          {
+            "title": "Product as a system",
+            "body": "I understand product as a system where business, technology, experience, and execution must stay aligned to sustain quality and direction."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Let’s work on problems where technology and product both matter.",
+        "cards": [
+          {
+            "title": "Mobile Architecture / Technical Leadership",
+            "body": "For teams that need senior judgment around mobile architecture, technical quality, delivery systems, release readiness, or product technical direction.",
+            "cta": "Discuss architecture"
+          },
+          {
+            "title": "AI Solutions / Technical Advisory",
+            "body": "For teams exploring practical AI adoption, automation workflows, technical documentation, engineering execution, or delivery improvement.",
+            "cta": "Discuss applied AI"
+          },
+          {
+            "title": "Technical / Product Advisory for Startups",
+            "body": "For product initiatives where direction, architecture, and real execution need senior technical involvement.",
+            "cta": "Explore collaboration"
+          }
+        ]
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "About — Matías Fernández | Mobile Architecture, Technical Leadership & AI-Enabled Execution",
+        "description": "Senior technical product builder with mobile architecture depth, technical leadership experience, and practical AI-enabled execution."
+      },
+      "hero": {
+        "name": "Matías Fernández",
+        "role": "Senior technical product builder focused on mobile architecture, technical leadership, and AI-enabled execution.",
+        "intro": "I work where product, engineering, and strategy meet, combining native mobile depth with delivery leadership and hands-on building."
+      },
+      "experience": {
+        "title": "Professional Experience",
+        "paragraphs": [
+          "I have spent more than 14 years building and scaling mobile and digital products across startups and corporate environments, in contexts that required both technical depth and product judgment.",
+          "My background started in direct building and evolved into architecture definition, technical leadership, cross-functional execution, and the systems needed to ship reliably.",
+          "That combination lets me operate from native iOS foundations and API structure up to roadmap trade-offs, team clarity, and delivery quality, always focused on practical outcomes."
+        ]
+      },
+      "leverage": {
+        "title": "Where I Add Leverage",
+        "items": [
+          {
+            "title": "Mobile and Product Architecture",
+            "body": "I help define native foundations, modular boundaries, API contracts, release quality, performance priorities, and the technical trade-offs that shape long-term product health."
+          },
+          {
+            "title": "Technical Leadership and Delivery Systems",
+            "body": "I improve engineering clarity through standards, CI/CD, release readiness, mentoring, and cross-functional alignment that make teams more reliable over time."
+          },
+          {
+            "title": "AI Leverage and Prioritization",
+            "body": "I apply AI and automation where they improve discovery, documentation, execution speed, and decision quality without adding superficial complexity."
+          }
+        ]
+      },
+      "philosophy": {
+        "title": "Working Principles",
+        "intro": "I believe strong product work comes from aligned systems: architecture, delivery, user value, and decision-making working together.",
+        "items": [
+          {
+            "title": "Practical Depth",
+            "body": "Technical quality matters when it improves leverage, reliability, and the ability to keep shipping with confidence."
+          },
+          {
+            "title": "Clarity Before Complexity",
+            "body": "Architecture, process, and scope should reduce noise, preserve focus, and make better decisions easier to sustain."
+          },
+          {
+            "title": "Build to Learn",
+            "body": "Hands-on execution keeps judgment honest. I prefer decisions tested in real products, workflows, and delivery constraints."
+          }
+        ]
+      },
+      "advisory": {
+        "title": "Technical Advisory",
+        "body": "I collaborate selectively with teams and founders who need senior judgment across mobile architecture, product direction, delivery systems, or practical AI adoption. I am most useful where strategy needs to connect to real technical execution."
+      },
+      "cta": {
+        "title": "If you're building something that needs technical depth",
+        "body": "I'm open to conversations where mobile architecture, delivery leadership, AI-enabled execution, or technical product direction are central.",
+        "primaryCta": "Discuss architecture",
+        "secondaryCta": "Explore collaboration"
+      }
+    },
+    "contact": {
+      "meta": {
+        "title": "Contact — Matías Fernández",
+        "description": "Contact for mobile architecture, technical leadership, AI solutions, startup advisory, and app support."
+      },
+      "hero": {
+        "title": "Contact",
+        "intro": "If you are evaluating mobile architecture, technical leadership, AI-enabled execution, or startup product building, this is the starting point."
+      },
+      "blocks": [
+        {
+          "id": "architecture",
+          "title": "Mobile Architecture / Technical Leadership",
+          "body": "Conversations about native mobile foundations, architecture decisions, release quality, delivery systems, and senior technical leadership needs.",
+          "emailKey": "contact"
+        },
+        {
+          "id": "ai",
+          "title": "AI Solutions / Technical Advisory",
+          "body": "Conversations focused on practical AI adoption, automation workflows, technical documentation, engineering execution capability, and delivery improvement.",
+          "emailKey": "contact"
+        },
+        {
+          "id": "startup",
+          "title": "Technical / Product Advisory for Startups",
+          "body": "Initiatives where product direction, architecture, and execution need active involvement from a senior profile combining product and technical execution.",
+          "emailKey": "contact"
+        },
+        {
+          "id": "support",
+          "title": "App Support",
+          "body": "Inquiries related to published applications, issues, or feature requests.",
+          "emailKey": "support"
+        }
+      ]
+    },
+    "projects": {
+      "dolarplus": {
+        "meta": {
+          "title": "Dolar+ — Product — Matías Fernández",
+          "description": "Native iOS product for Argentine exchange rates, built with SwiftUI, modular architecture, real-time APIs, widgets, Apple ecosystem integrations, and a privacy-conscious product approach."
+        },
+        "hero": {
+          "title": "Dolar+",
+          "tagline": "Native iOS product for Argentine exchange rates, built for clarity, speed, and reliable daily use.",
+          "description": "Dolar+ is current proof of native iOS execution: built with SwiftUI, modular architecture, real-time exchange rate APIs, widgets, Apple ecosystem integrations, and a privacy-conscious product approach designed for everyday decision-making.",
+          "appStoreAlt": "Download on the App Store",
+          "imageAlt": "Dolar+ iOS app showing exchange rates and currency conversion"
+        },
+        "problem": {
+          "title": "The Problem",
+          "intro": "In Argentina, accessing reliable and updated dollar exchange rates often requires navigating multiple sources, manually comparing values, and dealing with cluttered interfaces.",
+          "items": [
+            "Information is fragmented across different exchange rate types.",
+            "Interfaces prioritize ads or data volume over clarity.",
+            "There is a lack of tools designed from the perspective of someone who checks exchange rates daily."
+          ]
+        },
+        "value": {
+          "title": "Value Proposition",
+          "intro": "Dolar+ was designed as a focused native product: fast to read, technically maintainable, and deliberately low-noise.",
+          "items": [
+            {
+              "title": "Focused core flow",
+              "body": "The product turns a repetitive financial check into a fast, readable experience instead of a cluttered market dashboard."
+            },
+            {
+              "title": "Native ecosystem fit",
+              "body": "Widgets and Apple ecosystem integrations make exchange rates available in the right context, not only inside the app."
+            },
+            {
+              "title": "Sustainable technical base",
+              "body": "The architecture favors modular boundaries, clear data flows, and decisions that support iteration without unnecessary complexity."
+            }
+          ]
+        },
+        "screenshots": {
+          "title": "Interface and Experience",
+          "items": [
+            "Dolar+ — Exchange rates screen",
+            "Dolar+ — Spread between exchange rate types",
+            "Dolar+ — Currency converter",
+            "Dolar+ — Smart view",
+            "Dolar+ — Rates widget"
+          ]
+        },
+        "stack": {
+          "title": "Architecture and Technical Scope",
+          "intro": "Dolar+ is built as a real production iOS product, with attention to maintainability, performance, release quality, and ecosystem fit.",
+          "items": [
+            "Native iOS application built with SwiftUI.",
+            "Modular architecture designed for maintainability, clear boundaries, and testability.",
+            "Integration with real-time exchange rate APIs and data normalization.",
+            "Widgets and Apple ecosystem integrations for fast, glanceable access.",
+            "Product decisions shaped to stay focused, low-noise, and privacy-conscious."
+          ]
+        },
+        "status": {
+          "title": "Status",
+          "body": "Current status: Live on the App Store."
+        },
+        "links": {
+          "title": "Links",
+          "support": "Support",
+          "privacy": "Privacy Policy"
+        }
+      }
+    }
+  }
+}
