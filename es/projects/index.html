@@ -1,98 +1,72 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos – Matías Fernández</title>
-    <meta name="description" content="Productos que muestran ejecución real: delivery iOS nativo, decisiones técnicas y exploración activa de producto." />
-    <link rel="canonical" href="https://matiasrfernandez.com/es/projects/" />
-    <link rel="alternate" hreflang="es" href="https://matiasrfernandez.com/es/projects/" />
-    <link rel="alternate" hreflang="en" href="https://matiasrfernandez.com/en/projects/" />
-    <link rel="alternate" hreflang="x-default" href="https://matiasrfernandez.com/en/projects/" />
-    <!-- Open Graph -->
-    <meta property="og:title" content="Proyectos – Matías Fernández" />
-    <meta property="og:description" content="Productos que muestran ejecución real: delivery iOS nativo, decisiones técnicas y exploración activa de producto." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://matiasrfernandez.com/es/projects/" />
-    <meta property="og:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <meta property="og:locale" content="es_ES" />
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Proyectos – Matías Fernández" />
-    <meta name="twitter:description" content="Productos que muestran ejecución real: delivery iOS nativo, decisiones técnicas y exploración activa de producto." />
-    <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <script src="../../assets/js/theme.js" defer></script>
-    <link rel="stylesheet" href="/assets/css/cookie-banner.css">
-    <script defer src="/assets/js/cookie-consent.js"></script>
-    <script defer src="/assets/js/cookie-banner.js"></script>
-    <script defer src="/assets/js/ga4-consent-loader.js"></script>
-</head>
-<body data-theme="web">
-    <div class="ambient"></div>
-    <div data-include="header"></div>
+---
+layout: default
+lang: es
+copy_group: projectsHub
+translation_path: projects/
+permalink: /es/projects/
+---
+{% assign copy = site.data.copy[page.lang].projectsHub %}
+<main>
+    <section class="projects-intro">
+        <div class="container">
+            <h1>{{ copy.hero.title }}</h1>
+            <p class="projects-intro-text">{{ copy.hero.text }}</p>
+        </div>
+    </section>
 
-    <main>
-        <section class="projects-intro">
-            <div class="container">
-                <h1>Proyectos</h1>
-                <p class="projects-intro-text">Construyo productos para mantenerme cerca de la ejecución real. Estos proyectos son donde pongo a prueba criterio de producto, arquitectura mobile y sistemas de delivery en software publicado y exploraciones activas.</p>
-            </div>
-        </section>
+    {% comment %}
+        PARA AGREGAR UN NUEVO PRODUCTO:
+        1. Crear /es/projects/nuevaapp/index.html y /en/projects/nuevaapp/index.html
+           (usar la estructura de dolarplus/index.html como referencia)
+        2. Agregar un item en copy.json bajo projectsHub.sections.live/inProgress/explorations
+        3. No modificar CSS base — el grid se adapta automáticamente.
+    {% endcomment %}
+    <section class="projects-content">
+        <div class="container">
 
-        <!--
-            PARA AGREGAR UN NUEVO PRODUCTO:
-            1. Crear /es/projects/nuevaapp/index.html y /en/projects/nuevaapp/index.html
-               (usar la estructura de dolarplus/index.html como referencia)
-            2. Agregar una <div class="project-card"> dentro de la sección correspondiente:
-               .live-grid | .progress-grid | .exploration-grid
-            3. No modificar CSS base — el grid se adapta automáticamente.
-        -->
-        <section class="projects-content">
-            <div class="container">
-
-                <section class="projects-section live">
-                    <h2>Live</h2>
-                    <p class="projects-section-text">Productos publicados que muestran ejecución técnica actual.</p>
-                    <div class="projects-grid live-grid">
-                        <div class="project-card">
-                            <h3 class="project-title">Dolar+</h3>
-                            <p class="project-description">Producto iOS nativo para cotizaciones argentinas, construido con SwiftUI, arquitectura modular, APIs en tiempo real, widgets y seguimiento histórico.</p>
-                            <p class="project-status project-status--live">Live</p>
-                            <a href="/es/projects/dolarplus/" class="project-link">Ver producto</a>
-                        </div>
+            <section class="projects-section live">
+                <h2>{{ copy.sections.live.title }}</h2>
+                <p class="projects-section-text">{{ copy.sections.live.text }}</p>
+                <div class="projects-grid live-grid">
+                    {% for item in copy.sections.live.items %}
+                    <div class="project-card">
+                        <h3 class="project-title">{{ item.title }}</h3>
+                        <p class="project-description">{{ item.description }}</p>
+                        <p class="project-status project-status--live">{{ item.status }}</p>
+                        <a href="{{ item.link }}" class="project-link">{{ item.linkText }}</a>
                     </div>
-                </section>
+                    {% endfor %}
+                </div>
+            </section>
 
-                <section class="projects-section in-progress">
-                    <h2>En desarrollo</h2>
-                    <p class="projects-section-text">Iniciativas activas donde todavía se está definiendo dirección de producto y base técnica.</p>
-                    <div class="projects-grid progress-grid">
-                        <div class="project-card">
-                            <h3 class="project-title">Próximo Producto</h3>
-                            <p class="project-description">Iniciativa en desarrollo enfocada en resolver problemas reales mediante producto, arquitectura y ejecución práctica.</p>
-                            <p class="project-status">En desarrollo</p>
-                        </div>
+            <section class="projects-section in-progress">
+                <h2>{{ copy.sections.inProgress.title }}</h2>
+                <p class="projects-section-text">{{ copy.sections.inProgress.text }}</p>
+                <div class="projects-grid progress-grid">
+                    {% for item in copy.sections.inProgress.items %}
+                    <div class="project-card">
+                        <h3 class="project-title">{{ item.title }}</h3>
+                        <p class="project-description">{{ item.description }}</p>
+                        <p class="project-status">{{ item.status }}</p>
                     </div>
-                </section>
+                    {% endfor %}
+                </div>
+            </section>
 
-                <section class="projects-section explorations">
-                    <h2>Exploraciones</h2>
-                    <p class="projects-section-text">Hipótesis evaluadas mediante pensamiento de producto, exploración técnica y experimentación.</p>
-                    <div class="projects-grid exploration-grid">
-                        <div class="project-card">
-                            <h3 class="project-title">Exploración en curso</h3>
-                            <p class="project-description">Hipótesis de producto en evaluación a través de framing técnico, validación conceptual y pensamiento temprano de ejecución.</p>
-                            <p class="project-status">Exploración</p>
-                        </div>
+            <section class="projects-section explorations">
+                <h2>{{ copy.sections.explorations.title }}</h2>
+                <p class="projects-section-text">{{ copy.sections.explorations.text }}</p>
+                <div class="projects-grid exploration-grid">
+                    {% for item in copy.sections.explorations.items %}
+                    <div class="project-card">
+                        <h3 class="project-title">{{ item.title }}</h3>
+                        <p class="project-description">{{ item.description }}</p>
+                        <p class="project-status">{{ item.status }}</p>
                     </div>
-                </section>
+                    {% endfor %}
+                </div>
+            </section>
 
-            </div>
-        </section>
-    </main>
-
-    <div data-include="footer"></div>
-<script src="../../assets/js/include-loader.js"></script>
-</body>
-</html>
+        </div>
+    </section>
+</main>

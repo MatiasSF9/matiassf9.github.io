@@ -214,6 +214,121 @@
         }
       ]
     },
+    "projectsHub": {
+      "meta": {
+        "title": "Proyectos – Matías Fernández",
+        "description": "Productos que muestran ejecución real: delivery iOS nativo, decisiones técnicas y exploración activa de producto."
+      },
+      "hero": {
+        "title": "Proyectos",
+        "text": "Construyo productos para mantenerme cerca de la ejecución real. Estos proyectos son donde pongo a prueba criterio de producto, arquitectura mobile y sistemas de delivery en software publicado y exploraciones activas."
+      },
+      "sections": {
+        "live": {
+          "title": "Live",
+          "text": "Productos publicados que muestran ejecución técnica actual.",
+          "items": [
+            {
+              "title": "Dolar+",
+              "description": "Producto iOS nativo para cotizaciones argentinas, construido con SwiftUI, arquitectura modular, APIs en tiempo real, widgets y seguimiento histórico.",
+              "status": "Live",
+              "link": "/es/projects/dolarplus/",
+              "linkText": "Ver producto"
+            }
+          ]
+        },
+        "inProgress": {
+          "title": "En desarrollo",
+          "text": "Iniciativas activas donde todavía se está definiendo dirección de producto y base técnica.",
+          "items": [
+            {
+              "title": "Próximo Producto",
+              "description": "Iniciativa en desarrollo enfocada en resolver problemas reales mediante producto, arquitectura y ejecución práctica.",
+              "status": "En desarrollo"
+            }
+          ]
+        },
+        "explorations": {
+          "title": "Exploraciones",
+          "text": "Hipótesis evaluadas mediante pensamiento de producto, exploración técnica y experimentación.",
+          "items": [
+            {
+              "title": "Exploración en curso",
+              "description": "Hipótesis de producto en evaluación a través de framing técnico, validación conceptual y pensamiento temprano de ejecución.",
+              "status": "Exploración"
+            }
+          ]
+        }
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "Política de privacidad (sitio web) – Matías Fernández",
+        "description": "Política de privacidad del sitio web de Matías Fernández."
+      },
+      "hero": {
+        "title": "Política de privacidad (sitio web)",
+        "intro": "Esta política describe cómo se recopila, utiliza y protege la información al navegar por este sitio web."
+      },
+      "informationCollected": {
+        "title": "Información recopilada",
+        "body": "Este sitio puede recopilar información de uso de forma agregada y anónima (por ejemplo, páginas visitadas y duración de la visita). No se recopilan datos personales identificables a través del sitio."
+      },
+      "analytics": {
+        "title": "Analítica",
+        "body": "El sitio utiliza Google Analytics 4 (GA4) para comprender tráfico general y mejorar la experiencia. La configuración está orientada a minimizar datos (por ejemplo, anonimización de IP y sin señales publicitarias)."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "El sitio puede utilizar cookies técnicas y/o de analítica. Si no deseas analítica, puedes usar el sitio con bloqueadores de tracking o configuraciones del navegador.",
+        "changeLink": "Cambiar preferencia de cookies"
+      },
+      "contact": {
+        "title": "Contacto",
+        "body": "Para consultas relacionadas con privacidad, puedes escribir a:"
+      }
+    },
+    "privacyDolarplus": {
+      "meta": {
+        "title": "Política de privacidad (Dolar+) – Matías Fernández",
+        "description": "Política de privacidad de la app Dolar+."
+      },
+      "hero": {
+        "title": "Política de Privacidad (Dolar+)",
+        "intro": "Esta política describe cómo se maneja la información en relación con la aplicación Dolar+."
+      },
+      "informationCollected": {
+        "title": "Información recopilada",
+        "paragraphs": [
+          "La aplicación utiliza herramientas de analítica de terceros (como Mixpanel) para recopilar datos de uso anónimos con el fin de mejorar el producto.",
+          "Estos datos pueden incluir eventos de interacción dentro de la aplicación, tipo de dispositivo, versión del sistema operativo y métricas técnicas.",
+          "La aplicación no recopila información personal identificable, datos de cuentas ni datos financieros del usuario."
+        ]
+      },
+      "useOfInformation": {
+        "title": "Uso de la información",
+        "paragraphs": [
+          "Los datos de analítica se utilizan exclusivamente para comprender el uso de funcionalidades, mejorar el rendimiento y optimizar la experiencia del usuario.",
+          "Las cotizaciones mostradas en la aplicación provienen de APIs públicas y se utilizan únicamente para mostrar información de mercado dentro de la app."
+        ]
+      },
+      "thirdParty": {
+        "title": "Servicios de terceros",
+        "paragraphs": [
+          "La aplicación utiliza servicios de analítica de terceros (como Mixpanel). Estos servicios pueden recopilar identificadores técnicos del dispositivo (por ejemplo, IDFV) y dirección IP con fines estrictamente analíticos.",
+          "Los datos de analítica no están vinculados a la identidad del usuario y no se utilizan con fines publicitarios.",
+          "La aplicación no utiliza SDKs de publicidad ni realiza seguimiento entre aplicaciones o sitios web con fines publicitarios."
+        ]
+      },
+      "dataStorage": {
+        "title": "Almacenamiento de datos",
+        "body": "Los datos ingresados por el usuario en el Ledger se almacenan exclusivamente de forma local en el dispositivo y no se transmiten a servidores externos."
+      },
+      "contact": {
+        "title": "Contacto",
+        "body": "Para consultas relacionadas con privacidad, puedes escribir a:"
+      }
+    },
     "projects": {
       "dolarplus": {
         "meta": {
@@ -493,6 +608,120 @@
           "emailKey": "support"
         }
       ]
+    },
+    "projectsHub": {
+      "meta": {
+        "title": "Projects – Matías Fernández",
+        "description": "Products that show real execution: native iOS delivery, technical decisions, and active product exploration."
+      },
+      "hero": {
+        "title": "Projects",
+        "text": "I build products to stay close to real execution. These projects are where product judgment, mobile architecture, and delivery systems are tested in shipped software and active explorations."
+      },
+      "sections": {
+        "live": {
+          "title": "Live",
+          "text": "Published products that show current technical execution.",
+          "items": [
+            {
+              "title": "Dolar+",
+              "description": "Native iOS product for Argentine exchange rates, built with SwiftUI, modular architecture, real-time APIs, widgets, and historical tracking.",
+              "status": "Live",
+              "link": "/en/projects/dolarplus/",
+              "linkText": "View Product"
+            }
+          ]
+        },
+        "inProgress": {
+          "title": "In Progress",
+          "text": "Active initiatives where product direction and technical foundations are still being shaped.",
+          "items": [
+            {
+              "title": "Next Product",
+              "description": "Initiative under development focused on solving real problems through product, architecture, and practical execution.",
+              "status": "In Progress"
+            }
+          ]
+        },
+        "explorations": {
+          "title": "Explorations",
+          "text": "Hypotheses being evaluated through product thinking, technical exploration, and experimentation.",
+          "items": [
+            {
+              "title": "Active Exploration",
+              "description": "Product hypothesis under evaluation through technical framing, concept validation, and early execution thinking.",
+              "status": "Exploration"
+            }
+          ]
+        }
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy (website) – Matías Fernández",
+        "description": "Privacy policy for the Matías Fernández website."
+      },
+      "hero": {
+        "title": "Privacy Policy (website)",
+        "intro": "This policy describes how information is collected, used, and protected when browsing this website."
+      },
+      "informationCollected": {
+        "title": "Information Collected",
+        "body": "This website may collect aggregated and anonymous usage information (such as visited pages and visit duration). No personally identifiable information is collected through the website."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "body": "The website uses Google Analytics 4 (GA4) to understand general traffic and improve user experience. The configuration is intended to minimize data (for example, IP anonymization and no advertising signals)."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "The website may use technical and/or analytics cookies. If you prefer no analytics, you can browse using tracking blockers or browser settings.",
+        "changeLink": "Change cookie preference"
+      },
+      "contact": {
+        "title": "Contact",
+        "body": "For privacy-related inquiries, contact:"
+      }
+    },
+    "privacyDolarplus": {
+      "meta": {
+        "title": "Privacy Policy (Dolar+) – Matías Fernández",
+        "description": "Privacy policy for the Dolar+ app."
+      },
+      "hero": {
+        "title": "Privacy Policy (Dolar+)",
+        "intro": "This policy describes how information is handled in relation to the Dolar+ app."
+      },
+      "informationCollected": {
+        "title": "Information Collected",
+        "paragraphs": [
+          "The application uses analytics tools (such as Mixpanel) to collect anonymous usage data in order to improve the product. This may include in-app interaction events, device type, operating system version, and technical diagnostics.",
+          "The app does not collect personally identifiable information, account data, or financial transaction data from users."
+        ]
+      },
+      "useOfInformation": {
+        "title": "Use of Information",
+        "paragraphs": [
+          "Collected analytics data is used exclusively to understand feature usage, improve performance, and enhance the overall user experience.",
+          "Exchange rate data is obtained from publicly available APIs and is used solely to display market information inside the application."
+        ]
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "paragraphs": [
+          "The application uses third-party analytics services (such as Mixpanel). These services may collect technical identifiers such as device identifiers (e.g., IDFV) and IP address for analytics purposes.",
+          "Analytics data is not linked to the user's identity and is not used for advertising or cross-app tracking.",
+          "The application does not use advertising SDKs and does not perform tracking across apps or websites for advertising purposes."
+        ]
+      },
+      "dataStorage": {
+        "title": "Data Storage",
+        "body": "User-entered ledger data is stored locally on the device and is not transmitted to external servers."
+      },
+      "contact": {
+        "title": "Contact",
+        "body": "For privacy-related inquiries, contact:"
+      }
     },
     "projects": {
       "dolarplus": {

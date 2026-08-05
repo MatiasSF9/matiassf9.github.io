@@ -1,73 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy (website) – Matías Fernández</title>
-    <meta name="description" content="Privacy policy for the Matías Fernández website." />
-    <link rel="canonical" href="https://matiasrfernandez.com/en/privacy/" />
-    <link rel="alternate" hreflang="es" href="https://matiasrfernandez.com/es/privacy/" />
-    <link rel="alternate" hreflang="en" href="https://matiasrfernandez.com/en/privacy/" />
-    <link rel="alternate" hreflang="x-default" href="https://matiasrfernandez.com/en/privacy/" />
-    <!-- Open Graph -->
-    <meta property="og:title" content="Privacy Policy (website) – Matías Fernández" />
-    <meta property="og:description" content="Privacy policy for the Matías Fernández website." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://matiasrfernandez.com/en/privacy/" />
-    <meta property="og:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <meta property="og:locale" content="en_US" />
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Privacy Policy (website) – Matías Fernández" />
-    <meta name="twitter:description" content="Privacy policy for the Matías Fernández website." />
-    <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <script src="../../assets/js/theme.js" defer></script>
-    <link rel="stylesheet" href="/assets/css/cookie-banner.css">
-    <script defer src="/assets/js/cookie-consent.js"></script>
-    <script defer src="/assets/js/cookie-banner.js"></script>
-    <script defer src="/assets/js/ga4-consent-loader.js"></script>
-</head>
-<body data-theme="web">
-    <div class="ambient"></div>
-    <div data-include="header"></div>
+---
+layout: default
+lang: en
+copy_group: privacy
+translation_path: privacy/
+permalink: /en/privacy/
+---
+{% assign copy = site.data.copy[page.lang].privacy %}
+<section class="privacy-hero">
+    <div class="container">
+        <h1>{{ copy.hero.title }}</h1>
+        <p class="privacy-intro">{{ copy.hero.intro }}</p>
+    </div>
+</section>
 
-    <section class="privacy-hero">
-        <div class="container">
-            <h1>Privacy Policy (website)</h1>
-            <p class="privacy-intro">This policy describes how information is collected, used, and protected when browsing this website.</p>
+<section class="privacy-content">
+    <div class="container">
+        <div class="privacy-block">
+            <h2>{{ copy.informationCollected.title }}</h2>
+            <p>{{ copy.informationCollected.body }}</p>
         </div>
-    </section>
 
-    <section class="privacy-content">
-        <div class="container">
-            <div class="privacy-block">
-                <h2>Information Collected</h2>
-                <p>This website may collect aggregated and anonymous usage information (such as visited pages and visit duration). No personally identifiable information is collected through the website.</p>
-            </div>
-
-            <div class="privacy-block">
-                <h2>Analytics</h2>
-                <p>The website uses Google Analytics 4 (GA4) to understand general traffic and improve user experience. The configuration is intended to minimize data (for example, IP anonymization and no advertising signals).</p>
-            </div>
-
-            <div class="privacy-block">
-                <h2 id="cookies">Cookies</h2>
-                <p>The website may use technical and/or analytics cookies. If you prefer no analytics, you can browse using tracking blockers or browser settings.</p>
-                <a href="#" onclick="CookieConsent.reset(); location.reload(); return false;">
-                    Change cookie preference
-                </a>
-            </div>
-
-            <div class="privacy-block">
-                <h2>Contact</h2>
-                <p>For privacy-related inquiries, contact:<br>
-                <a href="mailto:contact@matiasrfernandez.com">contact@matiasrfernandez.com</a></p>
-            </div>
+        <div class="privacy-block">
+            <h2>{{ copy.analytics.title }}</h2>
+            <p>{{ copy.analytics.body }}</p>
         </div>
-    </section>
 
-    <div data-include="footer"></div>
-    <script src="../../assets/js/include-loader.js"></script>
-</body>
-</html>
+        <div class="privacy-block">
+            <h2 id="cookies">{{ copy.cookies.title }}</h2>
+            <p>{{ copy.cookies.body }}</p>
+            <a href="#" onclick="CookieConsent.reset(); location.reload(); return false;">
+                {{ copy.cookies.changeLink }}
+            </a>
+        </div>
+
+        <div class="privacy-block">
+            <h2>{{ copy.contact.title }}</h2>
+            <p>{{ copy.contact.body }}<br>
+            <a href="{{ site.data.copy.shared.emails.contactHref }}">{{ site.data.copy.shared.emails.contact }}</a></p>
+        </div>
+    </div>
+</section>
