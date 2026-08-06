@@ -1,41 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy (Dolar+) – Matías Fernández</title>
-    <meta name="description" content="Privacy policy for the Dolar+ app." />
-    <link rel="canonical" href="https://matiasrfernandez.com/en/privacy/apps/dolarplus/" />
-    <link rel="alternate" hreflang="es" href="https://matiasrfernandez.com/es/privacy/apps/dolarplus/" />
-    <link rel="alternate" hreflang="en" href="https://matiasrfernandez.com/en/privacy/apps/dolarplus/" />
-    <link rel="alternate" hreflang="x-default" href="https://matiasrfernandez.com/en/privacy/apps/dolarplus/" />
-    <!-- Open Graph -->
-    <meta property="og:title" content="Privacy Policy (Dolar+) – Matías Fernández" />
-    <meta property="og:description" content="Privacy policy for the Dolar+ app." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://matiasrfernandez.com/en/privacy/apps/dolarplus/" />
-    <meta property="og:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <meta property="og:locale" content="en_US" />
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Privacy Policy (Dolar+) – Matías Fernández" />
-    <meta name="twitter:description" content="Privacy policy for the Dolar+ app." />
-    <meta name="twitter:image" content="https://matiasrfernandez.com/assets/images/og-default.png" />
-    <link rel="stylesheet" href="../../../../assets/css/style.css">
-    <script src="../../../../assets/js/theme.js" defer></script>
-    <link rel="stylesheet" href="/assets/css/cookie-banner.css">
-    <script defer src="/assets/js/cookie-consent.js"></script>
-    <script defer src="/assets/js/cookie-banner.js"></script>
-    <script defer src="/assets/js/ga4-consent-loader.js"></script>
-</head>
-<body data-theme="web">
-    <div class="ambient"></div>
-    <div data-include="header"></div>
-
-    <section class="privacy-hero">
+---
+layout: default
+lang: en
+copy_group: privacyDolarplus
+translation_path: privacy/apps/dolarplus/
+permalink: /en/privacy/apps/dolarplus/
+---
+{% assign copy = site.data.copy[page.lang].privacyDolarplus %}
+<section class="privacy-hero">
     <div class="container">
-        <h1>Privacy Policy (Dolar+)</h1>
-        <p class="privacy-intro">This policy describes how information is handled in relation to the Dolar+ app.</p>
+        <h1>{{ copy.hero.title }}</h1>
+        <p class="privacy-intro">{{ copy.hero.intro }}</p>
     </div>
 </section>
 
@@ -43,58 +17,36 @@
     <div class="container">
 
         <div class="privacy-block">
-            <h2>Information Collected</h2>
-            <p>
-                The application uses analytics tools (such as Mixpanel) to collect anonymous usage data in order to improve the product. 
-                This may include in-app interaction events, device type, operating system version, and technical diagnostics.
-            </p>
-            <p>
-                The app does not collect personally identifiable information, account data, or financial transaction data from users.
-            </p>
+            <h2>{{ copy.informationCollected.title }}</h2>
+            {% for paragraph in copy.informationCollected.paragraphs %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
         </div>
 
         <div class="privacy-block">
-            <h2>Use of Information</h2>
-            <p>
-                Collected analytics data is used exclusively to understand feature usage, improve performance, and enhance the overall user experience.
-            </p>
-            <p>
-                Exchange rate data is obtained from publicly available APIs and is used solely to display market information inside the application.
-            </p>
+            <h2>{{ copy.useOfInformation.title }}</h2>
+            {% for paragraph in copy.useOfInformation.paragraphs %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
         </div>
 
         <div class="privacy-block">
-            <h2>Third-Party Services</h2>
-            <p>
-                The application uses third-party analytics services (such as Mixpanel). These services may collect technical identifiers such as device identifiers (e.g., IDFV) and IP address for analytics purposes.
-            </p>
-            <p>
-                Analytics data is not linked to the user's identity and is not used for advertising or cross-app tracking.
-            </p>
-            <p>
-                The application does not use advertising SDKs and does not perform tracking across apps or websites for advertising purposes.
-            </p>
+            <h2>{{ copy.thirdParty.title }}</h2>
+            {% for paragraph in copy.thirdParty.paragraphs %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
         </div>
 
         <div class="privacy-block">
-            <h2>Data Storage</h2>
-            <p>
-                User-entered ledger data is stored locally on the device and is not transmitted to external servers.
-            </p>
+            <h2>{{ copy.dataStorage.title }}</h2>
+            <p>{{ copy.dataStorage.body }}</p>
         </div>
 
         <div class="privacy-block">
-            <h2>Contact</h2>
-            <p>
-                For privacy-related inquiries, contact:<br>
-                <a href="mailto:support@matiasrfernandez.com">support@matiasrfernandez.com</a>
-            </p>
+            <h2>{{ copy.contact.title }}</h2>
+            <p>{{ copy.contact.body }}<br>
+            <a href="{{ site.data.copy.shared.emails.supportHref }}">{{ site.data.copy.shared.emails.support }}</a></p>
         </div>
 
     </div>
 </section>
-
-    <div data-include="footer"></div>
-    <script src="../../../../assets/js/include-loader.js"></script>
-</body>
-</html>
