@@ -242,8 +242,8 @@
           "text": "Iniciativas activas donde todavía se está definiendo dirección de producto y base técnica.",
           "items": [
             {
-              "title": "Próximo Producto",
-              "description": "Iniciativa en desarrollo enfocada en resolver problemas reales mediante producto, arquitectura y ejecución práctica.",
+              "title": "Open Social Ops",
+              "description": "Sistema local de crecimiento para una cuenta de X: descubre oportunidades, redacta propuestas mediante un runtime de LLM configurable y solo ejecuta acciones con aprobación humana explícita, con reporte de costos y engagement incorporado.",
               "status": "En desarrollo"
             }
           ]
@@ -253,8 +253,8 @@
           "text": "Hipótesis evaluadas mediante pensamiento de producto, exploración técnica y experimentación.",
           "items": [
             {
-              "title": "Exploración en curso",
-              "description": "Hipótesis de producto en evaluación a través de framing técnico, validación conceptual y pensamiento temprano de ejecución.",
+              "title": "ai-sdlc",
+              "description": "Harness de SDLC agnóstico de proveedor que separa análisis de producto, diseño de tests, implementación y revisión en roles de agentes independientes bajo una capa de control determinística, en fase de prueba de concepto manual para validar el flujo multi-agente antes de construir el runner automatizado.",
               "status": "Exploración"
             }
           ]
@@ -637,8 +637,8 @@
           "text": "Active initiatives where product direction and technical foundations are still being shaped.",
           "items": [
             {
-              "title": "Next Product",
-              "description": "Initiative under development focused on solving real problems through product, architecture, and practical execution.",
+              "title": "Open Social Ops",
+              "description": "Locally run growth system for a single X account: discovers opportunities, drafts proposals through a configurable LLM runtime, and executes actions only after explicit human approval, with built-in cost and engagement reporting.",
               "status": "In Progress"
             }
           ]
@@ -648,8 +648,8 @@
           "text": "Hypotheses being evaluated through product thinking, technical exploration, and experimentation.",
           "items": [
             {
-              "title": "Active Exploration",
-              "description": "Product hypothesis under evaluation through technical framing, concept validation, and early execution thinking.",
+              "title": "ai-sdlc",
+              "description": "Provider-agnostic SDLC harness that separates product analysis, test design, implementation, and review into independent agent roles under a deterministic control layer, currently in a manual proof-of-concept phase validating the multi-agent workflow before the automated runner is built.",
               "status": "Exploration"
             }
           ]
