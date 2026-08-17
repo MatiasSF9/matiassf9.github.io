@@ -1,0 +1,102 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Check copy.json is valid JSON with matching ES/EN keys
+        run: |
+          python3 - <<'EOF'
+          import json
+          import sys
+
+          with open("_data/copy.json", encoding="utf-8") as f:
+              data = json.load(f)
+
+          def key_paths(obj, prefix=""):
+              paths = set()
+              if isinstance(obj, dict):
+                  for k, v in obj.items():
+                      p = f"{prefix}.{k}" if prefix else k
+                      paths.add(p)
+                      paths |= key_paths(v, p)
+              return paths
+
+          es_paths = key_paths(data.get("es", {}))
+          en_paths = key_paths(data.get("en", {}))
+
+          only_es = sorted(es_paths - en_paths)
+          only_en = sorted(en_paths - es_paths)
+
+          if only_es or only_en:
+              if only_es:
+                  print("Keys present in 'es' but missing in 'en':")
+                  for p in only_es:
+                      print(f"  {p}")
+              if only_en:
+                  print("Keys present in 'en' but missing in 'es':")
+                  for p in only_en:
+                      print(f"  {p}")
+              sys.exit(1)
+
+          print(f"copy.json OK: {len(es_paths)} keys, es/en in parity.")
+          EOF
+
+      - name: Check for empty tags in built site
+        run: |
+          if grep -rPn --include="*.html" '<(p|h1|h2|h3)\b[^>]*>\s*</\1>' _site/; then
+            echo "Found empty tag(s) in built site (see above)."
+            exit 1
+          fi
+          echo "No empty <p>/<h1>/<h2>/<h3> tags found."
+
+      - name: Check root-relative links resolve
+        run: |
+          python3 - <<'EOF'
+          import os
+          import re
+          import sys
+
+          site_dir = "_site"
+          attr_re = re.compile(r'(?:href|src)="(/[^"#?]*)')
+          broken = []
+
+          for root, _dirs, files in os.walk(site_dir):
+              for name in files:
+                  if not name.endswith(".html"):
+                      continue
+                  path = os.path.join(root, name)
+                  with open(path, encoding="utf-8", errors="ignore") as f:
+                      content = f.read()
+                  for match in attr_re.findall(content):
+                      target = os.path.join(site_dir, match.lstrip("/"))
+                      if os.path.isfile(target):
+                          continue
+                      if os.path.isdir(target) and os.path.isfile(os.path.join(target, "index.html")):
+                          continue
+                      broken.append((path, match))
+
+          if broken:
+              print("Broken root-relative links found:")
+              for path, match in broken:
+                  print(f"  {path}: {match}")
+              sys.exit(1)
+
+          print(f"Link check OK, no broken root-relative links.")
+          EOF

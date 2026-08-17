@@ -1,7 +1,8 @@
 title: Matías Fernández
 site_url: https://matiasrfernandez.com
 baseurl: ""
-plugins: []
+plugins:
+  - jekyll-sitemap
 exclude:
   - CLAUDE.md
   - IA.MD
