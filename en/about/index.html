@@ -66,8 +66,8 @@ permalink: /en/about/
         <h2>{{ copy.cta.title }}</h2>
         <p>{{ copy.cta.body }}</p>
         <div class="about-cta-actions">
-            <a href="/en/contact/#architecture" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">{{ copy.cta.primaryCta }}</a>
-            <a href="/en/contact/#startup" class="btn-secondary" onclick="gtag('event', 'click_partnership', {'event_category': 'engagement'});">{{ copy.cta.secondaryCta }}</a>
+            <a href="{{ '/en/contact/' | relative_url }}#architecture" class="btn-primary" data-ga-event="click_advisory">{{ copy.cta.primaryCta }}</a>
+            <a href="{{ '/en/contact/' | relative_url }}#startup" class="btn-secondary" data-ga-event="click_partnership">{{ copy.cta.secondaryCta }}</a>
         </div>
     </div>
 </section>

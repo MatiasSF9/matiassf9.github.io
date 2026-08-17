@@ -11,7 +11,8 @@
 {{ content }}
     </main>
     {% include footer.html %}
-    <script src="{{ '/assets/js/lang-switcher.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/lang-switcher.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/analytics.js' | relative_url }}"></script>
     {% if page.extra_js %}
         {% for script in page.extra_js %}
     <script src="{{ script | relative_url }}"></script>

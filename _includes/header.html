@@ -1,11 +1,11 @@
 {% assign copy = site.data.copy[page.lang] %}
 <header class="site-header">
     <div class="container header-inner">
-        <a class="brand" href="/{{ page.lang }}/">Matías Fernández</a>
+        <a class="brand" href="{{ '/' | append: page.lang | append: '/' | relative_url }}">Matías Fernández</a>
         <nav class="site-nav">
-            <a href="/{{ page.lang }}/projects/">{{ copy.shared.nav.projects }}</a>
-            <a href="/{{ page.lang }}/about/">{{ copy.shared.nav.about }}</a>
-            <a href="/{{ page.lang }}/contact/">{{ copy.shared.nav.contact }}</a>
+            <a href="{{ '/' | append: page.lang | append: '/projects/' | relative_url }}">{{ copy.shared.nav.projects }}</a>
+            <a href="{{ '/' | append: page.lang | append: '/about/' | relative_url }}">{{ copy.shared.nav.about }}</a>
+            <a href="{{ '/' | append: page.lang | append: '/contact/' | relative_url }}">{{ copy.shared.nav.contact }}</a>
         </nav>
         <div class="header-actions">
             <div class="language-switch" role="group" aria-label="Idioma / Language">

@@ -6,14 +6,14 @@ translation_path: ""
 permalink: /es/
 ---
 {% assign copy = site.data.copy[page.lang].home %}
-<main id="top">
     <section class="hero">
         <div class="hero-container">
             <h1>{{ copy.hero.title }}</h1>
+            <p class="hero-subtitle">{{ copy.hero.subtitle }}</p>
             <p class="hero-description">{{ copy.hero.description }}</p>
             <div class="hero-cta">
-                <a href="contact/#architecture" class="btn-primary">{{ copy.hero.primaryCta }}</a>
-                <a href="projects/" class="btn-secondary">{{ copy.hero.secondaryCta }}</a>
+                <a href="{{ '/es/contact/' | relative_url }}#architecture" class="btn-primary">{{ copy.hero.primaryCta }}</a>
+                <a href="{{ '/es/projects/' | relative_url }}" class="btn-secondary">{{ copy.hero.secondaryCta }}</a>
             </div>
         </div>
     </section>
@@ -36,10 +36,10 @@ permalink: /es/
                     <h2>{{ copy.featuredProduct.title }}</h2>
                     <p class="product-description">{{ copy.featuredProduct.description }}</p>
                     <p class="product-status">{{ copy.featuredProduct.status }}</p>
-                    <a href="projects/dolarplus/" class="btn-primary">{{ copy.featuredProduct.cta }}</a>
+                    <a href="{{ '/es/projects/dolarplus/' | relative_url }}" class="btn-primary">{{ copy.featuredProduct.cta }}</a>
                 </div>
                 <div class="featured-product-image">
-                    <img src="../assets/images/dolarplus-home.png" alt="{{ copy.featuredProduct.imageAlt }}">
+                    <img src="{{ '/assets/images/dolarplus-home.png' | relative_url }}" alt="{{ copy.featuredProduct.imageAlt }}">
                 </div>
             </div>
         </div>
@@ -92,19 +92,18 @@ permalink: /es/
                 <div class="cta-card">
                     <h3>{{ copy.cta.cards[0].title }}</h3>
                     <p>{{ copy.cta.cards[0].body }}</p>
-                    <a href="/es/contact/#architecture" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">{{ copy.cta.cards[0].cta }}</a>
+                    <a href="{{ '/es/contact/' | relative_url }}#architecture" class="btn-primary" data-ga-event="click_advisory">{{ copy.cta.cards[0].cta }}</a>
                 </div>
                 <div class="cta-card">
                     <h3>{{ copy.cta.cards[1].title }}</h3>
                     <p>{{ copy.cta.cards[1].body }}</p>
-                    <a href="/es/contact/#ai" class="btn-primary" onclick="gtag('event', 'click_advisory', {'event_category': 'engagement'});">{{ copy.cta.cards[1].cta }}</a>
+                    <a href="{{ '/es/contact/' | relative_url }}#ai" class="btn-primary" data-ga-event="click_advisory">{{ copy.cta.cards[1].cta }}</a>
                 </div>
                 <div class="cta-card">
                     <h3>{{ copy.cta.cards[2].title }}</h3>
                     <p>{{ copy.cta.cards[2].body }}</p>
-                    <a href="/es/contact/#startup" class="btn-secondary" onclick="gtag('event', 'click_partnership', {'event_category': 'engagement'});">{{ copy.cta.cards[2].cta }}</a>
+                    <a href="{{ '/es/contact/' | relative_url }}#startup" class="btn-secondary" data-ga-event="click_partnership">{{ copy.cta.cards[2].cta }}</a>
                 </div>
             </div>
         </div>
     </section>
-</main>

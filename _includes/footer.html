@@ -3,8 +3,8 @@
     <div class="container footer-inner">
         <p>© 2026 Matías Fernández. {{ copy.shared.footer.tagline }}</p>
         <div class="footer-links">
-            <a href="/{{ page.lang }}/privacy/">{{ copy.shared.nav.privacy }}</a>
-            <a href="/{{ page.lang }}/privacy/#cookies">{{ copy.shared.footer.cookies }}</a>
+            <a href="{{ '/' | append: page.lang | append: '/privacy/' | relative_url }}">{{ copy.shared.nav.privacy }}</a>
+            <a href="{{ '/' | append: page.lang | append: '/privacy/' | relative_url }}#cookies">{{ copy.shared.footer.cookies }}</a>
         </div>
     </div>
 </footer>

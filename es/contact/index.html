@@ -34,7 +34,7 @@ permalink: /es/contact/
         <div id="support" class="contact-block">
             <h2>{{ copy.blocks[3].title }}</h2>
             <p>{{ copy.blocks[3].body }}</p>
-            <p class="contact-email"><a href="{{ emails.supportHref }}" onclick="gtag('event', 'click_support_email', {'event_category': 'engagement'});">{{ emails.support }}</a></p>
+            <p class="contact-email"><a href="{{ emails.supportHref }}" data-ga-event="click_support_email">{{ emails.support }}</a></p>
         </div>
     </div>
 </section>

@@ -37,18 +37,19 @@ Every page under `es/` and `en/` — home, `about`, `contact`, `projects/` (hub 
 
 There is no more client-side include-injection track — `assets/js/include-loader.js` and the `components/` directory were removed once the last static pages (the projects hub and both privacy pages) were migrated onto this pattern; header/footer are always Jekyll includes rendered at build time.
 
-`index.html` at the site root is a minimal client-side + `<noscript>` redirect to `/es/` or `/en/` based on `navigator.language`; it does not go through the Jekyll layout (see "Known inconsistencies" below).
+`index.html` at the site root is a minimal client-side + `<noscript>` redirect to `/es/` or `/en/` based on `navigator.language` (English is the default fallback, matching the site's `x-default` hreflang convention); it does not go through the Jekyll layout (see "Known inconsistencies" below).
 
 ## Shared client-side scripts (`assets/js/`)
 
 - `theme.js` — persists a `web`/`apple`/`android` theme choice (`data-theme` on `<body>`) to `localStorage` (`m2-theme`); toggled via `[data-theme-switch]` buttons in the header.
 - `lang-switcher.js` — handles the ES/EN toggle buttons (`[data-lang-switch]`) on every page.
-- `cookie-consent.js`, `cookie-banner.js`, `ga4-consent-loader.js`, `ga4-loader.js` — EU-style cookie consent gate for Google Analytics 4; `ga4-loader.js` should only be invoked after consent is granted via the consent-loader.
+- `cookie-consent.js`, `cookie-banner.js`, `ga4-consent-loader.js` — EU-style cookie consent gate for Google Analytics 4; `ga4-consent-loader.js` loads GA4 tracking after consent is granted.
+- `analytics.js` — delegated click-tracking listener that reads `data-ga-event` and `data-ga-label` attributes on elements to send GA4 events.
 - `screenshots-carousel.js` — infinite/continuous screenshot carousel used only on the Dolar+ project page (loaded via that page's `extra_js` front matter); respects `prefers-reduced-motion`.
 
 ## Known inconsistencies (from IA.MD notes)
 
 These are accepted trade-offs of static GitHub Pages hosting, not bugs with a clean fix:
 
-- `index.html`'s language redirect is client-side (with a `<noscript>` fallback to `/es/`); GitHub Pages serves no server-side logic, so there's no way to redirect by `Accept-Language` without adding external infrastructure (e.g. a CDN/edge function). This has SEO/UX implications if JS is disabled.
-- Internal links are root-absolute (`/es/...`, `/en/...`); this only works because the site is served at the domain root via `CNAME`. Publishing under a non-root subpath without the custom domain would break them. Switching to relative links to remove this constraint would add its own fragility (every nested page needs the right number of `../`), so it's left as-is.
+- `index.html`'s language redirect is client-side (with a `<noscript>` fallback to `/en/`); GitHub Pages serves no server-side logic, so there's no way to redirect by `Accept-Language` without adding external infrastructure (e.g. a CDN/edge function). This has SEO/UX implications if JS is disabled.
+- Internal links use Liquid's `{{ '/en/xxx/' | relative_url }}` filter rather than hardcoded paths, so they stay correct under any `baseurl` (currently `""`, i.e. served at the domain root via `CNAME`).
