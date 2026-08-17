@@ -4,9 +4,12 @@
 {% include head.html %}
 </head>
 <body data-theme="web">
+    <a href="#main-content" class="skip-link">{{ site.data.copy[page.lang].shared.skipToContent | default: "Skip to content" }}</a>
     <div class="ambient"></div>
     {% include header.html %}
+    <main id="main-content">
 {{ content }}
+    </main>
     {% include footer.html %}
     <script src="{{ '/assets/js/lang-switcher.js' | relative_url }}"></script>
     {% if page.extra_js %}
