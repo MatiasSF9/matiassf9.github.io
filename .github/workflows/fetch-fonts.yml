@@ -1,0 +1,28 @@
+name: Fetch self-hosted fonts
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  fetch-fonts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run fetch-fonts.sh
+        run: |
+          chmod +x tools/fetch-fonts.sh
+          ./tools/fetch-fonts.sh
+
+      - name: Commit and push font files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/fonts
+          if git diff --cached --quiet; then
+            echo "No font changes to commit."
+            exit 0
+          fi
+          git commit -m "Fetch self-hosted font files"
+          git push origin HEAD:"${GITHUB_REF_NAME}"

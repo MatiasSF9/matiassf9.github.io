@@ -27,6 +27,7 @@
       },
       "hero": {
         "title": "Construyo mejores productos digitales combinando arquitectura mobile, liderazgo técnico y ejecución potenciada por AI.",
+        "subtitle": "Arquitectura mobile, liderazgo técnico y ejecución potenciada por AI.",
         "description": "Trabajo en la intersección entre producto, ingeniería y estrategia, con más de 14 años construyendo productos mobile y digitales, liderando equipos técnicos, definiendo arquitectura y llevando ideas a software real.",
         "primaryCta": "Hablar de un reto técnico/producto",
         "secondaryCta": "Ver productos publicados"
@@ -280,7 +281,7 @@
       },
       "cookies": {
         "title": "Cookies",
-        "body": "El sitio puede utilizar cookies técnicas y/o de analítica. Si no deseas analítica, puedes usar el sitio con bloqueadores de tracking o configuraciones del navegador.",
+        "body": "En tu primera visita al sitio verás un aviso de cookies donde puedes aceptar o rechazar las cookies de analítica. La analítica (Google Analytics 4) solo se activa si aceptas. Tu elección, junto con tu preferencia de tema claro/oscuro, se guarda de forma local en tu navegador.",
         "changeLink": "Cambiar preferencia de cookies"
       },
       "contact": {
@@ -422,6 +423,7 @@
       },
       "hero": {
         "title": "I help teams build better digital products through mobile architecture, technical leadership, and AI-enabled execution.",
+        "subtitle": "Mobile Product Architect & AI-Enabled Technical Leader.",
         "description": "I work at the intersection of product, engineering, and strategy — with 14+ years building mobile and digital products, leading technical teams, defining architecture, and turning ideas into shipped software.",
         "primaryCta": "Discuss a technical/product challenge",
         "secondaryCta": "View shipped products"
@@ -675,7 +677,7 @@
       },
       "cookies": {
         "title": "Cookies",
-        "body": "The website may use technical and/or analytics cookies. If you prefer no analytics, you can browse using tracking blockers or browser settings.",
+        "body": "On your first visit, the website shows a cookie notice where you can accept or reject analytics cookies. Analytics (Google Analytics 4) only loads if you accept. Your choice, along with your light/dark theme preference, is remembered locally in your browser.",
         "changeLink": "Change cookie preference"
       },
       "contact": {

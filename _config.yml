@@ -2,3 +2,14 @@ title: Matías Fernández
 site_url: https://matiasrfernandez.com
 baseurl: ""
 plugins: []
+exclude:
+  - CLAUDE.md
+  - IA.MD
+  - README.MD
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - _pr-assets
+  - AUDIT.md
+  - FIX-PLAN.md
+  - tools

@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@font-face { font-family: 'Space Grotesk'; font-weight: 400; font-style: normal; font-display: swap; src: url('/assets/fonts/space-grotesk-400.woff2') format('woff2'); }
+@font-face { font-family: 'Space Grotesk'; font-weight: 500; font-style: normal; font-display: swap; src: url('/assets/fonts/space-grotesk-500.woff2') format('woff2'); }
+@font-face { font-family: 'Space Grotesk'; font-weight: 600; font-style: normal; font-display: swap; src: url('/assets/fonts/space-grotesk-600.woff2') format('woff2'); }
+@font-face { font-family: 'Space Grotesk'; font-weight: 700; font-style: normal; font-display: swap; src: url('/assets/fonts/space-grotesk-700.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-weight: 500; font-style: normal; font-display: swap; src: url('/assets/fonts/playfair-display-500.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-weight: 600; font-style: normal; font-display: swap; src: url('/assets/fonts/playfair-display-600.woff2') format('woff2'); }
+@font-face { font-family: 'Roboto'; font-weight: 400; font-style: normal; font-display: swap; src: url('/assets/fonts/roboto-400.woff2') format('woff2'); }
+@font-face { font-family: 'Roboto'; font-weight: 500; font-style: normal; font-display: swap; src: url('/assets/fonts/roboto-500.woff2') format('woff2'); }
+@font-face { font-family: 'Roboto'; font-weight: 700; font-style: normal; font-display: swap; src: url('/assets/fonts/roboto-700.woff2') format('woff2'); }
 
 :root {
     --bg: radial-gradient(circle at 10% 20%, #f9f4ed 0%, #f5f1ea 50%, #efe7db 100%);
