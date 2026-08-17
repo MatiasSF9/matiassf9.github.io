@@ -17,7 +17,7 @@
     --focus-ring: #1a7f6e;
     --card: #ffffff;
     --glass: rgba(255, 255, 255, 0.55);
-    --shadow: 0 20px 50px rgba(18, 18, 18, 0.15);
+    --shadow: 0 24px 60px rgba(120, 74, 24, 0.18);
     --ambient-1: rgba(255, 198, 120, 0.25);
     --ambient-2: rgba(26, 127, 110, 0.2);
     --font-sans: 'Space Grotesk', sans-serif;
@@ -27,19 +27,20 @@
     --radius-sm: 14px;
     --radius-pill: 999px;
     --border: rgba(0, 0, 0, 0.06);
+    --header-bg: rgba(245, 241, 234, 0.8);
     --header-offset: 80px;
 }
 
 body[data-theme="apple"] {
-    --bg: #f5f5f7;
+    --bg: #f2f4f7;
     --ink: #1d1d1f;
     --muted: #6e6e73;
     --accent: #0071e3;
     --accent-dark: #0051a8;
     --focus-ring: #0071e3;
     --card: #ffffff;
-    --glass: rgba(255, 255, 255, 0.85);
-    --shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
+    --glass: rgba(255, 255, 255, 0.72);
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
     --ambient-1: rgba(0, 113, 227, 0.08);
     --ambient-2: rgba(0, 0, 0, 0.04);
     --font-sans: -apple-system, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', sans-serif;
@@ -48,6 +49,15 @@ body[data-theme="apple"] {
     --radius-md: 20px;
     --radius-sm: 12px;
     --border: rgba(0, 0, 0, 0.08);
+    --header-bg: rgba(255, 255, 255, 0.72);
+}
+
+body[data-theme="apple"] .what-i-do-item,
+body[data-theme="apple"] .cta-card,
+body[data-theme="apple"] .how-i-work-item,
+body[data-theme="apple"] .credibility-item {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 body[data-theme="android"] {
@@ -59,7 +69,7 @@ body[data-theme="android"] {
     --focus-ring: #1a73e8;
     --card: #ffffff;
     --glass: rgba(255, 255, 255, 0.9);
-    --shadow: 0 18px 40px rgba(32, 33, 36, 0.12);
+    --shadow: 0 1px 3px rgba(32, 33, 36, 0.24), 0 6px 12px rgba(32, 33, 36, 0.16);
     --ambient-1: rgba(26, 115, 232, 0.1);
     --ambient-2: rgba(52, 168, 83, 0.08);
     --font-sans: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -68,6 +78,61 @@ body[data-theme="android"] {
     --radius-md: 16px;
     --radius-sm: 10px;
     --border: rgba(32, 33, 36, 0.12);
+    --header-bg: rgba(255, 255, 255, 0.9);
+}
+
+body[data-theme="android"] .project-card {
+    border-radius: var(--radius-md);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: radial-gradient(circle at 10% 20%, #1c1712 0%, #171310 50%, #100e0b 100%);
+        --ink: #f5f1ea;
+        --muted: #b8afa0;
+        --accent: #2bbfa4;
+        --accent-dark: #7fe0cc;
+        --focus-ring: #2bbfa4;
+        --card: #211c14;
+        --glass: rgba(35, 30, 22, 0.55);
+        --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+        --ambient-1: rgba(255, 198, 120, 0.12);
+        --ambient-2: rgba(43, 191, 164, 0.15);
+        --border: rgba(255, 255, 255, 0.08);
+        --header-bg: rgba(23, 19, 14, 0.8);
+    }
+
+    body[data-theme="apple"] {
+        --bg: #000000;
+        --ink: #f5f5f7;
+        --muted: #98989d;
+        --accent: #0a84ff;
+        --accent-dark: #409cff;
+        --focus-ring: #0a84ff;
+        --card: #1c1c1e;
+        --glass: rgba(28, 28, 30, 0.72);
+        --shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        --ambient-1: rgba(10, 132, 255, 0.1);
+        --ambient-2: rgba(255, 255, 255, 0.03);
+        --border: rgba(255, 255, 255, 0.12);
+        --header-bg: rgba(28, 28, 30, 0.72);
+    }
+
+    body[data-theme="android"] {
+        --bg: #121212;
+        --ink: #e8eaed;
+        --muted: #9aa0a6;
+        --accent: #8ab4f8;
+        --accent-dark: #aecbfa;
+        --focus-ring: #8ab4f8;
+        --card: #1e1e1e;
+        --glass: rgba(30, 30, 30, 0.9);
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 6px 12px rgba(0, 0, 0, 0.3);
+        --ambient-1: rgba(138, 180, 248, 0.08);
+        --ambient-2: rgba(129, 201, 149, 0.06);
+        --border: rgba(255, 255, 255, 0.12);
+        --header-bg: rgba(30, 30, 30, 0.9);
+    }
 }
 
 * {
@@ -110,13 +175,8 @@ body {
     right: 0;
     z-index: 10;
     backdrop-filter: blur(12px);
-    background: rgba(245, 241, 234, 0.8);
+    background: var(--header-bg);
     border-bottom: 1px solid var(--border);
-}
-
-body[data-theme="apple"] .site-header,
-body[data-theme="android"] .site-header {
-    background: rgba(255, 255, 255, 0.85);
 }
 
 .header-inner {
