@@ -32,7 +32,7 @@ permalink: /en/projects/
                         <h3 class="project-title">{{ item.title }}</h3>
                         <p class="project-description">{{ item.description }}</p>
                         <p class="project-status project-status--live">{{ item.status }}</p>
-                        <a href="{{ item.link }}" class="project-link">{{ item.linkText }}</a>
+                        <a href="{{ item.link | relative_url }}" class="project-link">{{ item.linkText }}</a>
                     </div>
                     {% endfor %}
                 </div>
